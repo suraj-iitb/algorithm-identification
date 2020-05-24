@@ -1,7 +1,7 @@
 steps = 1
 n_list = []
 
-for _ in range(1, 4):
+for _ in range(1, 9):
     steps = steps * 10
     n_list.append(steps)
 

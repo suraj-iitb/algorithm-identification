@@ -4,3 +4,7 @@
 1.1 :- 4 methods with reference passing in cpp
 1.2 :- 4 methods with pointer passing in cpp
 2.1 : - file operations
+
+More variations:
+1. While & Do While loops
+2. cout vs printf in cpp

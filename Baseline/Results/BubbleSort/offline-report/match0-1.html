@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Data/BubbleSort/bubble1.2.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/bubble1.1.cpp<p></p><pre>
+//Bubble Sort
+#include&lt;iostream&gt;
+using namespace std;
+
+<a name="2"></a><font color="#0000FF"><a href="match0-0.html#2" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_2_18.gif"/></a>
+
+void bubble(int a[10]){
+for(int j=0;j&lt;10;j++){
+    for(int k=j+1;k&lt;9;k++){
+     if(a[k]&lt;a[j]){
+</font>        int temp=a[j];
+        a[j]=a[k];
+        a[k]=temp;
+        }
+        }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="0"></a><font color="#FF0000"><a href="match0-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_33.gif"/></a>
+
+void bubbleSort(int *array, int size) {
+   for(int i = 0; i&lt;size; i++) {
+      int swaps = 0;         //flag to detect any swap is there or not
+      for(int j = 0; j&lt;size-i-1; j++) {
+         if(array[j] &gt; array[j+1]) {       //when the current item is bigger than next
+            swapping(array[j], array[j+1]);
+            swaps = 1;    //set swap flag
+         }
+      }
+      if(!swaps)
+</font>         break;       // No swap in this pass, so array is sorted
+   }
+}
+
+<a name="1"></a><font color="#00FF00"><a href="match0-0.html#1" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_27.gif"/></a>
+
+int main(){
+
+int arr[10];
+cout&lt;&lt;"Enter the array"&lt;&lt;endl;
+for(int i=0;i&lt;10;i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+bubble(arr);
+
+for(int i=0;i&lt;10;i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;endl;
+</font>    }
+
+return 0;
+}</pre>
+</body>
+</html>

@@ -122,7 +122,7 @@ int main()
     end = clock();
 
     ofstream myfile;
-    myfile.open ("time_heap.txt", ios::app);
+    myfile.open ("time_heap1.txt", ios::app);
     double time_taken = double(end - start) / double(CLOCKS_PER_SEC); 
     myfile << arr_size << " " << fixed  << time_taken << setprecision(5) << endl;
     myfile.close();

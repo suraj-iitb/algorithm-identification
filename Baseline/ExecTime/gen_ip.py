@@ -1,9 +1,9 @@
-steps = 1
-n_list = []
+# steps = 1
+n_list = [10,100,1000, 5000,10000,20000,30000,40000,50000,60000,70000, 80000,90000, 100000]
 
-for _ in range(1, 7):
-    steps = steps * 10
-    n_list.append(steps)
+# for _ in range(1, 7):
+#     steps = steps * 10
+#     n_list.append(steps)
 
 for n in n_list:
     with open('input-'+str(n), 'w') as f:

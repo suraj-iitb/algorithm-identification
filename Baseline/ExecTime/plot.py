@@ -4,10 +4,10 @@ x1 = []
 y1 = []
 x2 = []
 y2 = []
-count=0
+count=4
 
-with open('time_heap.txt') as h:
-    with open('time_merge.txt') as m:
+with open('time_heap1.txt') as h:
+    with open('time_merge1.txt') as m:
         
         for i in zip(h,m):
         

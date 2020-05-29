@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Data/BubbleSort/bubble1.1.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/bubble1.1.cpp<p></p><pre>
+#include&lt;iostream&gt;
+using namespace std;
+void swapping(int &amp;a, int &amp;b) {      //swap the content of a and b
+   int temp;
+   temp = a;
+   a = b;
+<a name="1"></a><font color="#00FF00"><a href="match12-1.html#1" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_21.gif"/></a>
+
+   b = temp;
+}
+void display(int *array, int size) {
+   for(int i = 0; i&lt;size; i++)
+      cout &lt;&lt; array[i] &lt;&lt; " ";
+   cout &lt;&lt; endl;
+}
+void bubbleSort(int *array, int size) {
+</font>   for(int i = 0; i&lt;size; i++) {
+      int swaps = 0;         //flag to detect any swap is there or not
+      for(int j = 0; j&lt;size-i-1; j++) {
+         if(array[j] &gt; array[j+1]) {       //when the current item is bigger than next
+            swapping(array[j], array[j+1]);
+            swaps = 1;    //set swap flag
+         }
+      }
+      if(!swaps)
+         break;       // No swap in this pass, so array is sorted
+   }
+}
+int main() {
+<a name="0"></a><font color="#FF0000"><a href="match12-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_31.gif"/></a>
+
+   int n;
+   cout &lt;&lt; "Enter the number of elements: ";
+   cin &gt;&gt; n;
+   int arr[n];     //create an array with given number of elements
+   cout &lt;&lt; "Enter elements:" &lt;&lt; endl;
+   for(int i = 0; i&lt;n; i++) {
+      cin &gt;&gt; arr[i];
+   }
+   cout &lt;&lt; "Array before Sorting: ";
+   display(arr, n);
+   bubbleSort(arr, n);
+   cout &lt;&lt; "Array after Sorting: ";
+   display(arr, n);
+</font>}</pre>
+</body>
+</html>

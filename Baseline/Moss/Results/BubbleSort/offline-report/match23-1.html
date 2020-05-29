@@ -4,17 +4,17 @@
 </head>
 <body bgcolor="white">
 <hr/>
-Data/BubbleSort/bubble0.8.cpp<p></p><pre>
+Data/BubbleSort/bubble0.9.cpp<p></p><pre>
 #include&lt;iostream&gt;
 
 using namespace std;
 
 void swap(int * a, int * b){
-    *a ^= *b;
-    *b ^= *a;
-<a name="0"></a><font color="#FF0000"><a href="match23-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_49.gif"/></a>
+    *a = *a + *b;
+    *b = *a - *b;
+<a name="0"></a><font color="#FF0000"><a href="match23-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_47.gif"/></a>
 
-    *a ^= *b;
+    *a = *a - *b;
 }
 
 int main(){

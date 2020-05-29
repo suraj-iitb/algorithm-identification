@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Data/InsertionSort/insertion0.3.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/insertion0.3.cpp<p></p><pre>
+// C++ program for insertion sort 
+#include &lt;bits/stdc++.h&gt; 
+using namespace std; 
+
+/* Function to sort an array using insertion sort*/
+void insertionSort(int arr[], int n) 
+{ 
+	int i=1, key, j; 
+	while ( i &lt; n ) 
+	{ 
+		key = arr[i]; 
+		j = i - 1; 
+
+		/* Move elements of arr[0..i-1], that are 
+		greater than key, to one position ahead 
+		of their current position */
+		while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) 
+		{ 
+			arr[j + 1] = arr[j]; 
+			j = j - 1; 
+		} 
+		arr[j + 1] = key; 
+        i++;
+	} 
+} 
+
+// A utility function to print an array of size n 
+<a name="0"></a><font color="#FF0000"><a href="match33-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_47.gif"/></a>
+
+void printArray(int arr[], int n) 
+{ 
+	int i; 
+	for (i = 0; i &lt; n; i++) 
+		cout &lt;&lt; arr[i] &lt;&lt; " "; 
+	cout &lt;&lt; endl; 
+} 
+
+/* Driver code */
+int main() 
+{ 
+	int arr[] = { 12, 11, 13, 5, 6 }; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+
+	insertionSort(arr, n); 
+	printArray(arr, n); 
+
+	return 0; 
+</font>} 
+
+// This is code is contributed by rathbhupendra 
+</pre>
+</body>
+</html>

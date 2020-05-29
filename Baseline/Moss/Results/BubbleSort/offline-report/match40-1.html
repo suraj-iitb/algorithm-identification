@@ -4,15 +4,15 @@
 </head>
 <body bgcolor="white">
 <hr/>
-Data/BubbleSort/bubble0.7.cpp<p></p><pre>
+Data/BubbleSort/bubble0.8.cpp<p></p><pre>
 #include&lt;iostream&gt;
 
 using namespace std;
 
 void swap(int * a, int * b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    *a ^= *b;
+    *b ^= *a;
+    *a ^= *b;
 }
 
 int main(){

@@ -1,10 +1,10 @@
 <html>
 <head>
-<title>Data/BubbleSort/bubble0.10.cpp</title>
+<title>Data/BubbleSort/bubble0.11.cpp</title>
 </head>
 <body bgcolor="white">
 <hr/>
-Data/BubbleSort/bubble0.10.cpp<p></p><pre>
+Data/BubbleSort/bubble0.11.cpp<p></p><pre>
 #include&lt;iostream&gt;
 
 <a name="0"></a><font color="#FF0000"><a href="match50-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_20.gif"/></a>
@@ -19,12 +19,14 @@ int main(){
 </font>        cin&gt;&gt;arr[i];
     int i=0;
     while(i&lt;n-1){
-        for(int j=i+1;j&lt;n;j++){
+        int j=i+1;
+        while(j&lt;n){
             if(arr[i]&gt;arr[j]){
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
+            j++;
         }
         i++;
     }

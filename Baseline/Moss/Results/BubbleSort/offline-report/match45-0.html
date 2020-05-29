@@ -1,21 +1,15 @@
 <html>
 <head>
-<title>Data/BubbleSort/bubble0.8.cpp</title>
+<title>Data/BubbleSort/bubble0.10.cpp</title>
 </head>
 <body bgcolor="white">
 <hr/>
-Data/BubbleSort/bubble0.8.cpp<p></p><pre>
+Data/BubbleSort/bubble0.10.cpp<p></p><pre>
 #include&lt;iostream&gt;
 
+<a name="0"></a><font color="#FF0000"><a href="match45-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_22.gif"/></a>
+
 using namespace std;
-
-void swap(int * a, int * b){
-    *a ^= *b;
-    *b ^= *a;
-<a name="0"></a><font color="#FF0000"><a href="match45-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_17.gif"/></a>
-
-    *a ^= *b;
-}
 
 int main(){
     const int n = 10;
@@ -23,15 +17,17 @@ int main(){
     cout&lt;&lt;"Enter the array:"&lt;&lt;endl;
     for(int i=0;i&lt;n;i++)
 </font>        cin&gt;&gt;arr[i];
-
-    for(int i=0;i&lt;n-1;i++){
+    int i=0;
+    while(i&lt;n-1){
         for(int j=i+1;j&lt;n;j++){
             if(arr[i]&gt;arr[j]){
-                swap(&amp;arr[i], &amp;arr[j]);
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
+        i++;
     }
-
     cout&lt;&lt;"The sorted array is:"&lt;&lt;endl;
     for(int i=0;i&lt;10;i++)
         cout&lt;&lt;arr[i]&lt;&lt;endl;

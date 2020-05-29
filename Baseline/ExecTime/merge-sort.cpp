@@ -153,12 +153,12 @@ int main()
     end = clock();
 
     ofstream myfile;
-    myfile.open ("time_merge1.txt", ios::app);
+    myfile.open ("time_merge.txt", ios::app);
     double time_taken = double(end - start) / double(CLOCKS_PER_SEC); 
     myfile << arr_size << " " << fixed  << time_taken << setprecision(5) << endl;
     myfile.close();
     
-    printf("\nSorted array is \n"); 
-    printArray(arr, arr_size); 
+    // printf("\nSorted array is \n"); 
+    // printArray(arr, arr_size); 
     return 0; 
 } 

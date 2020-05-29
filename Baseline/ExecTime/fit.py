@@ -36,5 +36,7 @@ ans_h = param_h[0]*(np.square(x2)) + param_h[1]*(x2*(np.log(x2))) + param_h[2]*n
 
 plt.plot(x1, ans_m, '-', color ='red', label ="Merge sort") 
 plt.plot(x2, ans_h, '-', color ='blue', label ="Heap sort") 
+plt.plot(x1, 0.00000000002*(np.square(x1)), '-', color ='green', label ="coeff*n*n") 
+plt.plot(x1, 0.00000004*(x1*(np.log(x1))), '-', color ='grey', label ="coeff*n*log(n)") 
 plt.legend() 
 plt.savefig('exec.png')

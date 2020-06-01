@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 x1 = []
 y1 = []
 
-with open('time_merge.txt') as m:
+with open('time_bubble.txt') as m:
     for line in m:
         line = line.strip().split(' ')
         x1.append(int(line[0]))
@@ -14,7 +14,7 @@ with open('time_merge.txt') as m:
 x2 = []
 y2 = []
 
-with open('time_heap.txt') as h:
+with open('time_insertion.txt') as h:
     for line in h:
         line = line.strip().split(' ')
         x2.append(int(line[0]))
@@ -34,9 +34,9 @@ print(param_h)
 ans_m = param_m[0]*(np.square(x1)) + param_m[1]*(x1*(np.log(x1))) + param_m[2]*np.float_(x1) + param_m[3]*(np.log(x1)) + param_m[4]
 ans_h = param_h[0]*(np.square(x2)) + param_h[1]*(x2*(np.log(x2))) + param_h[2]*np.float_(x2) + param_h[3]*(np.log(x2)) + param_h[4]
 
-plt.plot(x1, ans_m, '-', color ='red', label ="Merge sort") 
-plt.plot(x2, ans_h, '-', color ='blue', label ="Heap sort") 
-plt.plot(x1, 0.00000000002*(np.square(x1)), '-', color ='green', label ="coeff*n*n") 
-plt.plot(x1, 0.00000004*(x1*(np.log(x1))), '-', color ='grey', label ="coeff*n*log(n)") 
+plt.plot(x1, ans_m, '-', color ='red', label ="Bubble sort") 
+plt.plot(x2, ans_h, '-', color ='blue', label ="Insertion sort") 
+plt.plot(x1, 0.000000002*(np.square(x1)), '-', color ='green', label ="coeff*n*n") 
+# plt.plot(x1, 0.00000004*(x1*(np.log(x1))), '-', color ='grey', label ="coeff*n*log(n)") 
 plt.legend() 
-plt.savefig('exec.png')
+plt.savefig('exec-b&i.png')

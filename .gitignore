@@ -2,6 +2,5 @@ Baseline/Moss/Data/*Sort/a.out
 Baseline/ExecTime/a.out
 Baseline/Moss/Data/BubbleSort/Array1.txt
 Baseline/Moss/Data/BubbleSort/input*
-Baseline/ExecTime/heap_sort
-Baseline/ExecTime/merge_sort
+Baseline/ExecTime/*_sort
 Baseline/ExecTime/Input/input*

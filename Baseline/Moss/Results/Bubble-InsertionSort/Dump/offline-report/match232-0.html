@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-2086942.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-2086942.cpp<p></p><pre>
+#include &lt;cstdio&gt;
+
+int n;
+int a[105];
+
+int main(void){
+	scanf("%d",&amp;n);
+	for(int i=0;i&lt;n;i++){
+		scanf("%d",&amp;a[i]);
+		printf("%d%c",a[i],i==n-1?'\n':' ');
+	}
+	for(int i=1;i&lt;=n-1;i++){
+		int v=a[i];
+		int j=i-1;
+<a name="0"></a><font color="#FF0000"><a href="match232-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_22.gif"/></a>
+
+		while(j&gt;=0 &amp;&amp; a[j]&gt;v){
+			a[j+1]=a[j];
+			j--;
+		}
+		a[j+1]=v;
+		for(int k=0;k&lt;n;k++){
+</font>			printf("%d%c",a[k],k==n-1?'\n':' ');
+		}
+	}
+	return 0;
+}
+</pre>
+</body>
+</html>

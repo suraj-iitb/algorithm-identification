@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-2624632.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-1229572.cpp<p></p><pre>
+#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+using namespace std;
+#define rep2(x,from,to) for(int x=(from);(x)&lt;(to);(x)++)
+#define rep(x,to) rep2(x,0,to)
+int main() {
+	int n;
+	int a[110];
+	cin &gt;&gt; n;
+	rep(i,n) {
+		cin &gt;&gt; a[i];
+	}
+	rep(i,n) {
+		cout &lt;&lt; a[i];
+		if(i &lt; n - 1) cout &lt;&lt; " ";
+	}
+<a name="0"></a><font color="#FF0000"><a href="match199-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_23.gif"/></a>
+
+	cout &lt;&lt; endl;
+	
+	rep2(i,1,n) {
+		int v = a[i];
+		int j = i - 1;
+		while(j &gt;= 0 &amp;&amp; a[j] &gt; v) {
+			a[j+1] = a[j];
+</font>			--j;
+		}
+		a[j+1] = v;
+		rep(j,n) {
+			cout &lt;&lt; a[j];
+			if(j &lt; n - 1) cout &lt;&lt; " ";
+		}
+		cout &lt;&lt; endl;
+	}
+	return 0;
+}
+</pre>
+</body>
+</html>

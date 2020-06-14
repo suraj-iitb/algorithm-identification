@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1601459.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-1601400.cpp<p></p><pre>
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int x[1000][1000];
+
+int main(){
+    memset(x,-1,sizeof(x));
+	int n;
+<a name="0"></a><font color="#FF0000"><a href="match41-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_10.gif"/></a>
+
+	cin&gt;&gt;n;
+	for(int i=0;i&lt;n;i++){
+		cin&gt;&gt;x[0][i];
+	}
+	for(int i=0;i&lt;n;i++){
+</font>		cout&lt;&lt;x[0][i];
+		if(i!=n-1){
+			cout&lt;&lt;' ';
+		}
+		else{
+			cout&lt;&lt;endl;
+		}
+	}
+	for(int i=1;i&lt;n;i++){
+		for(int j=0;j&lt;i;j++){
+			if(x[i-1][i]&lt;x[i-1][j]){
+				x[i][j+1]=x[i-1][j];
+			}
+			else{
+				x[i][j]=x[i-1][j];
+			}
+		}
+		for(int j=i+1;j&lt;n;j++){
+			x[i][j]=x[i-1][j];
+		}
+		for(int j=0;j&lt;i+1;j++){
+			if(x[i][j]==-1){
+<a name="1"></a><font color="#00FF00"><a href="match41-0.html#1" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_9.gif"/></a>
+
+				x[i][j]=x[i-1][i];
+			}
+		}
+		for(int j=0;j&lt;n;j++){
+			cout&lt;&lt;x[i][j];
+</font>			if(j!=n-1){
+				cout&lt;&lt;' ';
+			}
+			else{
+				cout&lt;&lt;endl;
+			}
+		}
+	}
+	return 0;
+}
+</pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-375520.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-375520.cpp<p></p><pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int N;
+int A[101];
+
+void print() {
+  for(int i = 1; i &lt;= N; ++i)
+    cout &lt;&lt; (i!=1?" ":"") &lt;&lt; A[i];
+  cout &lt;&lt; endl;
+}
+
+int main() {
+  cin &gt;&gt; N;
+  for(int i = 1; i &lt;= N; ++i) cin &gt;&gt; A[i];
+
+  print();
+<a name="0"></a><font color="#FF0000"><a href="match153-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_25.gif"/></a>
+
+  for(int j = 2; j &lt;= N; ++j) {
+    int key = A[j];
+    /* insert A[j] into the sorted sequence A[1,....,j-1] */
+    int i = j - 1;
+    while(i &gt; 0 &amp;&amp; A[i] &gt; key) {
+      A[i+1] = A[i];
+</font>      i = i - 1;
+    }
+    A[i+1] = key;
+    print();
+  }
+  return 0;
+}
+</pre>
+</body>
+</html>

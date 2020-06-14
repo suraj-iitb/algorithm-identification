@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-2144895.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-2144895.cpp<p></p><pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+void println(int a[], int n) {
+	for (int i = 0; i &lt; n; i++) {
+		cout &lt;&lt; a[i];
+		if (i + 1 &lt; n) cout &lt;&lt; " ";
+	}
+	cout &lt;&lt; endl;
+}
+
+void iterationSort(int a[], int n) {
+	println(a, n);
+	for (int i = 1; i &lt; n; i++) {
+		int key = a[i];
+		/*insert a[i] into the sorted sequence a[0]..a[i-1]*/
+		int j = i - 1;
+<a name="0"></a><font color="#FF0000"><a href="match29-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_19.gif"/></a>
+
+		while (j &gt;= 0 &amp;&amp; a[j] &gt; key) {
+			a[j + 1] = a[j];
+			j--;
+		}
+		a[j + 1] = key;
+		println(a, n);
+	}
+}
+
+int main() {
+	int n;
+</font><a name="1"></a><font color="#00FF00"><a href="match29-1.html#1" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_18.gif"/></a>
+
+	int a[100];
+	
+	cin &gt;&gt; n;
+	for (int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];
+	iterationSort(a, n);
+</font>	return 0;
+}
+</pre>
+</body>
+</html>

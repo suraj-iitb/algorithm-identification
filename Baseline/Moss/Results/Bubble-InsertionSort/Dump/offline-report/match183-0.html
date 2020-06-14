@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-1732063.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-1732063.cpp<p></p><pre>
+#include&lt;iostream&gt;
+#define N 1000
+using namespace std;
+
+void insertionSort();
+void out();
+
+int n,a[N];
+
+int main(){
+  cin&gt;&gt;n;
+  for(int i=0;i&lt;n;i++)cin&gt;&gt;a[i];
+  insertionSort();
+  return 0;
+}
+
+void insertionSort(){
+  out();
+  for(int i=1;i&lt;n;i++){
+<a name="0"></a><font color="#FF0000"><a href="match183-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_25.gif"/></a>
+
+    int t=a[i],j=i-1;
+    while(j&gt;=0&amp;&amp;a[j]&gt;t){
+      a[j+1]=a[j];
+</font>      j--;
+    }
+    a[j+1]=t;
+    out();
+  }
+}
+
+void out(){
+  for(int i=0;i&lt;n;i++){
+    if(i)cout&lt;&lt;' ';
+    cout&lt;&lt;a[i];
+  }
+  cout&lt;&lt;endl;
+}
+</pre>
+</body>
+</html>

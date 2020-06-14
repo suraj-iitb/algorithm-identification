@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1571428.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-2891330.cpp<p></p><pre>
+#define _USE_MATH_DEFINES
+
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;map&gt;
+
+long long int INF = 1e18;
+using namespace std;
+
+<a name="1"></a><font color="#00FF00"><a href="match4-0.html#1" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_22.gif"/></a>
+
+typedef pair&lt;long long int, long long int&gt; P;
+
+int main(){
+	
+	int n;
+	cin &gt;&gt; n;
+	
+	int A[2000];
+	for(int i = 0; i &lt; n; i++){
+		cin &gt;&gt; A[i];
+	}
+	
+	int ans = 0;
+	
+	for(int i = 0; i &lt; n; i++){
+</font>		for(int j = 0; j &lt; n - 1; j++){
+			if(A[j] &gt; A[j + 1]){
+				ans++;
+				swap(A[j], A[j + 1]);
+			}
+		}
+	}
+	
+	sort(A, A + n);
+<a name="0"></a><font color="#FF0000"><a href="match4-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_26.gif"/></a>
+
+	for(int i = 0; i &lt; n - 1; i++){
+		cout &lt;&lt; A[i] &lt;&lt; " ";
+	}
+	cout &lt;&lt; A[n - 1] &lt;&lt; endl;
+	
+	cout &lt;&lt; ans &lt;&lt; endl;
+	
+	return 0;
+</font>}
+</pre>
+</body>
+</html>

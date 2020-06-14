@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-376593.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-906336.cpp<p></p><pre>
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+void show(int *A, int size) {
+  for(int i = 1; i &lt;= size; ++i) {
+    if(i&gt;1) cout &lt;&lt; " ";
+    cout &lt;&lt; A[i];
+  }
+  cout &lt;&lt; endl;
+}
+
+void insertion_sort(int *A, int size) {
+  show(A, size);
+  for(int j = 2; j &lt;= size; ++j) {
+    int key = A[j];
+<a name="0"></a><font color="#FF0000"><a href="match151-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_21.gif"/></a>
+
+    int i = j - 1;
+    while(i &gt; 0 &amp;&amp; A[i] &gt; key) {
+      A[i+1] = A[i];
+      i = i - 1;
+    }
+    A[i+1] = key;
+</font>    show(A, size);
+  }
+}
+
+int main() {
+  int N;
+  cin &gt;&gt; N;
+  int A[N+1];
+  for(int i = 1; i &lt;= N; ++i) {
+    cin &gt;&gt; A[i];
+  }
+  insertion_sort(A, N);
+  return 0;
+}
+</pre>
+</body>
+</html>

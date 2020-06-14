@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2925584.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-2925584.cpp<p></p><pre>
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define int long long
+
+signed main() {
+  int n;
+  cin &gt;&gt; n;
+
+  vector&lt;int&gt; a(n);
+  for ( int i = 0; i &lt; n; i++ ) cin &gt;&gt; a[i];
+
+  bool flag = true;
+  int cnt = 0;
+  while ( flag ) {
+    flag = false;
+<a name="0"></a><font color="#FF0000"><a href="match15-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_26.gif"/></a>
+
+    for ( int i = n-1; i &gt;= 1; i-- ) {
+      if ( a[i] &lt; a[i-1] ) {	
+	swap(a[i], a[i-1]);
+</font>	flag = true;
+	cnt++;
+      }
+    }
+  }
+
+<a name="1"></a><font color="#00FF00"><a href="match15-1.html#1" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_23.gif"/></a>
+
+  for ( int i = 0; i &lt; n; i++ ) {
+    if ( i ) cout &lt;&lt; " ";	        
+    cout &lt;&lt; a[i];
+  }
+  cout &lt;&lt; endl;
+
+  cout &lt;&lt; cnt &lt;&lt; endl;
+</font>  
+  return 0;
+}
+
+</pre>
+</body>
+</html>

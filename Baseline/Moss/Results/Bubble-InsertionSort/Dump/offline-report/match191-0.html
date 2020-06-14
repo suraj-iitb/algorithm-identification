@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1880720.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-1880720.cpp<p></p><pre>
+#include&lt;iostream&gt;
+
+<a name="0"></a><font color="#FF0000"><a href="match191-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_21.gif"/></a>
+
+using namespace std;
+
+int main()
+{
+	int n, N[100];
+	cin &gt;&gt; n;
+	for (int i = 0; i &lt; n; i++)cin &gt;&gt; N[i];
+</font>	int i = 0, j;
+	int flag = 1, v, count = 0;
+	while (flag)
+	{
+		flag = 0;
+		for (j = n - 1; j &gt; i; j--)
+		{
+			if (N[j] &lt; N[j - 1])
+			{
+				v = N[j];
+				N[j] = N[j - 1];
+				N[j - 1] = v;
+				flag = 1;
+				count++;
+			}
+		}
+		i++;
+	}
+	for (j = 0; j &lt; n - 1; j++)cout &lt;&lt; N[j] &lt;&lt; " ";
+	cout &lt;&lt; N[n - 1] &lt;&lt; endl &lt;&lt; count &lt;&lt; endl;
+    return 0;
+}
+</pre>
+</body>
+</html>

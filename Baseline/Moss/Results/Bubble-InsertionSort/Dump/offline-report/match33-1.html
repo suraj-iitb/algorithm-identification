@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2848234.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-1806828.cpp<p></p><pre>
+#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+#include&lt;algorithm&gt;
+#include&lt;bitset&gt;
+#include&lt;cctype&gt;
+#include&lt;climits&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;deque&gt;
+#include&lt;list&gt;
+#include&lt;map&gt;
+#include&lt;set&gt;
+#include&lt;stack&gt;
+#include&lt;string&gt;
+#include&lt;sstream&gt;
+#include&lt;queue&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+void bubbleSort(int A[], int N) {
+	int flag = 1,
+		cnt = 0;
+	while (flag) {
+		flag = 0;
+		for (int j = N - 1; j &gt;= 1; j--) {
+			if (A[j] &lt; A[j - 1]) {
+				swap(A[j], A[j - 1]);
+				flag = 1;
+				cnt++;
+			}
+		}
+	}
+
+<a name="1"></a><font color="#00FF00"><a href="match33-0.html#1" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_19.gif"/></a>
+
+	for (int i = 0; i &lt; N; i++)	{
+		cout &lt;&lt; A[i];
+		if (i != N - 1)cout &lt;&lt; " ";
+	}
+	cout &lt;&lt; endl;
+</font><a name="0"></a><font color="#FF0000"><a href="match33-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_20.gif"/></a>
+
+	cout &lt;&lt; cnt &lt;&lt; endl;
+}
+
+int main() {
+	int N; cin &gt;&gt; N;
+	int A[100];
+	for (int i = 0; i &lt; N; i++)	{
+		cin &gt;&gt; A[i];
+</font>	}
+	bubbleSort(A, N);
+	
+	return 0;
+}
+</pre>
+</body>
+</html>

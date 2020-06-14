@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1942176.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-1942176.cpp<p></p><pre>
+#include&lt;stdio.h&gt;
+#include &lt;sstream&gt;
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+
+using namespace std;
+
+#define BUF_SIZE 1024
+#define ARRAY_SIZE 100
+
+int main(){
+
+	char buf[BUF_SIZE];
+	int n = atoi(fgets(buf,BUF_SIZE,stdin));
+	int array[ARRAY_SIZE];
+	int change_count = 0;
+
+	for(int i = 0; i &lt; n; i++){
+		cin &gt;&gt; array[i];
+	}
+
+	int tmp = 0;
+<a name="0"></a><font color="#FF0000"><a href="match248-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_20.gif"/></a>
+
+	for(int i = n-1;i &gt; 0;i--){
+		for(int j = 0; j &lt; i;j++){
+			if(array[j] &gt; array[j+1]){
+				tmp = array[j+1];
+</font>				array[j+1] = array[j];
+				array[j] = tmp;
+				change_count++;
+			}
+		}
+	}
+
+	for(int i = 0; i &lt; n; i++){
+		if(i != n-1){
+			printf("%d ",array[i]);
+		}else{
+			printf("%d\n",array[i]);
+		}
+	}
+	printf("%d\n",change_count);
+}
+</pre>
+</body>
+</html>

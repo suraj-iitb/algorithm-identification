@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2781728.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-2781728.cpp<p></p><pre>
+#include&lt;iostream&gt;
+using namespace std;
+
+int bubbleSort(int A[], int n){
+    int count = 0;
+    bool flag = 1;
+
+    while(flag){
+        flag = 0;
+<a name="0"></a><font color="#FF0000"><a href="match143-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_23.gif"/></a>
+
+        for(int i = n-1; i &gt; 0; i--){
+            if(A[i] &lt; A[i-1]){
+                swap(A[i], A[i-1]);
+</font>                count++;
+                flag = 1;
+            }
+        }
+    }
+
+    return count;
+}
+
+int main(){
+    int A[100], n, count;
+    cin &gt;&gt; n;
+    for(int i = 0; i &lt; n; i++){
+        cin &gt;&gt; A[i];
+    }
+
+    count = bubbleSort(A,n);
+
+    for(int i = 0; i &lt; n; i++){
+        if(i)   cout &lt;&lt; " ";
+        cout &lt;&lt; A[i];
+    }
+
+    cout &lt;&lt; endl;
+    cout &lt;&lt; count &lt;&lt; endl;
+
+    return 0;
+}
+</pre>
+</body>
+</html>

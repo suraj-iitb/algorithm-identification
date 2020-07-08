@@ -1,0 +1,1 @@
+python  vectorizer/commands.py ast2vec --in crawler/pickled-data/algorithms_nodes_python3.pkl --out vectorizer/data/vectors.pkl --checkpoint vectorizer/logs/algorithms

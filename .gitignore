@@ -4,3 +4,6 @@ Baseline/Moss/Data/BubbleSort/Array1.txt
 Baseline/Moss/Data/BubbleSort/input*
 Baseline/ExecTime/*_sort
 Baseline/ExecTime/Input/input*
+tbcnn/vectorizer/__pycache__
+tbcnn/vectorizer/ast2vec/__pycache__
+tbcnn/vectorizer/logs

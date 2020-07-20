@@ -36,7 +36,7 @@ with open(id_file, 'r') as ids:
             r = json.loads(r.text)
             code = r['sourceCode']
 
-            code_file  = os.path.join(directory, algorithm + id + '.py')
+            code_file  = os.path.join(directory, algorithm + id + '.cpp')
             with open(code_file, 'w') as c:
                 c.write(code)
 

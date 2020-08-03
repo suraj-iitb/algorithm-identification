@@ -1,10 +1,13 @@
 b_min = 24
 b_max = 53
+b_avg = 30
+
 i_min = 17
 i_max = 66
-
-b_avg = 30
 i_avg = 27
+
+bubble = 'Data/Bubble/Dump/bubble'
+insertion = 'Data/Insertion/Dump/insertion'
 
 with open('results.csv', 'r') as f:
 
@@ -27,7 +30,7 @@ with open('results.csv', 'r') as f:
         
         # print(code1, per1, code2, per2)
 
-        if 'Data/BubbleSort/Dump/bubble' in code1 and 'Data/BubbleSort/Dump/bubble' in code2:
+        if bubble in code1 and bubble in code2:
 
             sum1 = 0
             sum2 = 0
@@ -47,7 +50,7 @@ with open('results.csv', 'r') as f:
                 code2_b = line_b[2]
                 per2_b = float(line_b[3][:-1])
             
-                if 'Data/BubbleSort/Dump/bubble' in code1_b and 'Data/BubbleSort/Dump/bubble' in code2_b:
+                if bubble in code1_b and bubble in code2_b:
                     
                     if code1 not in bubble_processed:
                         if code1 == code1_b:
@@ -90,7 +93,7 @@ with open('results.csv', 'r') as f:
                 # if code2 == 'Data/BubbleSort/Dump/bubble-1673563.cpp':
                 #     print(sum2, count2, avg2)
 
-        if ('Data/BubbleSort/Dump/bubble' in code1 and 'Data/InsertionSort/Dump/insetion' in code2) or ('Data/InsertionSort/Dump/insetion' in code1 and 'Data/BubbleSort/Dump/bubble' in code2):
+        if (bubble in code1 and insertion in code2) or (insertion in code1 and bubble in code2):
 
             sum1 = 0
             sum2 = 0
@@ -110,9 +113,9 @@ with open('results.csv', 'r') as f:
                 code2_b = line_b[2]
                 per2_b = float(line_b[3][:-1])
             
-                if ('Data/BubbleSort/Dump/bubble' in code1_b and 'Data/InsertionSort/Dump/insetion' in code2_b) or ('Data/InsertionSort/Dump/insetion' in code1_b and 'Data/BubbleSort/Dump/bubble' in code2_b):
+                if (bubble in code1_b and insertion in code2_b) or (insertion in code1_b and bubble in code2_b):
                     
-                    if ('Data/BubbleSort/Dump/bubble' in code1 and code1 not in bubble_insertion_processed):
+                    if (bubble in code1 and code1 not in bubble_insertion_processed):
                         if code1 == code1_b:
                             sum1 += per1_b
                             count1 += 1
@@ -127,7 +130,7 @@ with open('results.csv', 'r') as f:
                             if max1_i < per2_b:
                                 max1_i = per2_b
 
-                    if ('Data/BubbleSort/Dump/bubble' in code2 and code2 not in bubble_insertion_processed):
+                    if (bubble in code2 and code2 not in bubble_insertion_processed):
                         if code2 == code1_b:
                             sum2 += per1_b
                             count2 += 1
@@ -158,11 +161,11 @@ with open('results.csv', 'r') as f:
     # print(bubble_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
     # print(bubble_insertion_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
 
-    with open('validate-hyp1.txt', 'w') as h1:
-        with open('validate-hyp2.txt', 'w') as h2:
-            with open('validate-hyp3.txt', 'w') as h3:
-                with open('validate-hyp4.txt', 'w') as h4:
-                    with open('validate-hyp5.txt', 'w') as h5:
+    with open('hypothesis1.txt', 'w') as h1:
+        with open('hypothesis2.txt', 'w') as h2:
+            with open('hypothesis3.txt', 'w') as h3:
+                with open('hypothesis4.txt', 'w') as h4:
+                    with open('hypothesis5.txt', 'w') as h5:
 
                         for bubble in bubble_processed:
 
@@ -210,7 +213,7 @@ with open('results.csv', 'r') as f:
                             else:
                                 h5.write(bubble+'\tInvalid\n')
 
-    with open('validate-hyp1.txt', 'r') as h1:
+    with open('hypothesis1.txt', 'r') as h1:
         valid = 0
         invalid = 0
         lines = [line.strip() for line in h1]
@@ -224,8 +227,8 @@ with open('results.csv', 'r') as f:
                 # print(line[1])
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
-        print('% Valid for hypothesis 1 is: ', val_per)
-    with open('validate-hyp2.txt', 'r') as h2:
+        print('% Recall for hypothesis 1 is: ', val_per)
+    with open('hypothesis2.txt', 'r') as h2:
         valid = 0
         invalid = 0
         lines = [line.strip() for line in h2]
@@ -239,8 +242,8 @@ with open('results.csv', 'r') as f:
                 # print(line[1])
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
-        print('% Valid for hypothesis 2 is: ', val_per)
-    with open('validate-hyp3.txt', 'r') as h3:
+        print('% Recall for hypothesis 2 is: ', val_per)
+    with open('hypothesis3.txt', 'r') as h3:
         valid = 0
         invalid = 0
         lines = [line.strip() for line in h3]
@@ -254,8 +257,8 @@ with open('results.csv', 'r') as f:
                 # print(line[1])
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
-        print('% Valid for hypothesis 3 is: ', val_per)
-    with open('validate-hyp4.txt', 'r') as h4:
+        print('% Recall for hypothesis 3 is: ', val_per)
+    with open('hypothesis4.txt', 'r') as h4:
         valid = 0
         invalid = 0
         lines = [line.strip() for line in h4]
@@ -269,8 +272,8 @@ with open('results.csv', 'r') as f:
                 # print(line[1])
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
-        print('% Valid for hypothesis 4 is: ', val_per)
-    with open('validate-hyp5.txt', 'r') as h5:
+        print('% Recall for hypothesis 4 is: ', val_per)
+    with open('hypothesis5.txt', 'r') as h5:
         valid = 0
         invalid = 0
         lines = [line.strip() for line in h5]
@@ -284,5 +287,5 @@ with open('results.csv', 'r') as f:
                 # print(line[1])
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
-        print('% Valid for hypothesis 5 is: ', val_per)
+        print('% Recall for hypothesis 5 is: ', val_per)
                         

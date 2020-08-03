@@ -1,22 +1,21 @@
-with open('../Data/BubbleSort/Dump/code-id') as b_ids:
+with open('../../Data/Bubble/Dump/code-id.txt') as b_ids:
     b_ids = [id.strip() for id in b_ids]
     b_ids_count = len(b_ids)
 
-with open('../Data/InsertionSort/Dump/code-id') as i_ids:
+with open('../../Data/Insertion/Dump/code-id.txt') as i_ids:
     i_ids = [id.strip() for id in i_ids]
     i_ids_count = len(i_ids)
 
-with open('results.csv', 'r') as f:
+with open('../results.csv', 'r') as f:
     lines = [line.strip().split(',') for line in f]
     lines_count = len(lines)
 
 # print(b_ids_count, i_ids_count, lines_count)
-count = 0
+
 with open('vector.txt', 'w') as v:
     for id in b_ids:
 
         # print(id)
-        count +=1
         id = 'bubble-'+ id
         cpm_id_list = {}
 
@@ -40,7 +39,7 @@ with open('vector.txt', 'w') as v:
                 op = op + ',' + '0'
         
         for i in i_ids:
-            i = 'insetion-'+ i
+            i = 'insertion-'+ i
 
             if i == id:
                 op = op + ',' + '100'
@@ -53,8 +52,8 @@ with open('vector.txt', 'w') as v:
     for id in i_ids:
 
         # print(id)
-        count +=1
-        id = 'insetion-'+ id
+
+        id = 'insertion-'+ id
         cpm_id_list = {}
 
         for line in lines:
@@ -77,7 +76,7 @@ with open('vector.txt', 'w') as v:
                 op = op + ',' + '0'
         
         for i in i_ids:
-            i = 'insetion-'+ i
+            i = 'insertion-'+ i
 
             if i == id:
                 op = op + ',' + '100'

@@ -227,9 +227,11 @@ def metric_calculate(suffix1, suffix2):
         except Exception:
             f1 = 0.0
 
+        print('===========================Hypothesis' + str(i) + '========================================')
         print('Recall for hypothesis ' + str(i) + ' is: ', str(round(recall,2)) + ' %')
         print('Precision for hypothesis ' + str(i) + ' is: ', str(round(precision,2)) + ' %')
         print('F1 Score for hypothesis ' + str(i) + ' is: ', str(round(f1,2)) + ' %')
+        print('======================================================================================\n\n')
    
 
 

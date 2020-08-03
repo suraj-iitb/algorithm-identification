@@ -206,25 +206,30 @@ def metric_calculate(suffix1, suffix2):
                     # print(line[1])
                     fp +=1
 
-        # with open('hypothesis' + str(i) + suffix2 + '.txt', 'r') as h1:
-        #     tn = 0
-        #     fn = 0
-        #     lines = [line.strip() for line in h1]
-        #     for line in lines:
-        #         line = line.split('\t')
-        #         # print(line[1])
-        #         if line[1] == 'Valid':
-        #             # print(line[1])
-        #             tn +=1
-        #         if line[1] == 'Invalid':
-        #             # print(line[1])
-        #             fn +=1
+        with open('hypothesis' + str(i) + suffix2 + '.txt', 'r') as h1:
+            tn = 0
+            fn = 0
+            lines = [line.strip() for line in h1]
+            for line in lines:
+                line = line.split('\t')
+                # print(line[1])
+                if line[1] == 'Valid':
+                    # print(line[1])
+                    tn +=1
+                if line[1] == 'Invalid':
+                    # print(line[1])
+                    fn +=1
 
         recall = tp / (tp +fp) * 100
-        # precision = tp / (tp +fn) * 100
+        precision = tp / (tp +fn) * 100
+        try:
+            f1 = 2*((precision*recall)/(precision+recall))
+        except Exception:
+            f1 = 0.0
 
-        print('% Recall for hypothesis' + str(i) + 'is: ', recall)
-        # print('% Precision for hypothesis' + str(i) + 'is: ', val_per)
+        print('Recall for hypothesis ' + str(i) + ' is: ', str(round(recall,2)) + ' %')
+        print('Precision for hypothesis ' + str(i) + ' is: ', str(round(precision,2)) + ' %')
+        print('F1 Score for hypothesis ' + str(i) + ' is: ', str(round(f1,2)) + ' %')
    
 
 
@@ -264,12 +269,12 @@ with open('results.csv', 'r') as f:
     hypothesis("bubble", bubble_bubble_processed, bubble_insertion_processed, b_max, b_min, b_avg, i_max, i_min, i_avg)
 
     # Insertion
-    # algo1_algo1_processed = {}
-    # algo1_algo2_processed = {}
-    # similarity(lines, lines_count, insertion, bubble, algo1_algo1_processed, algo1_algo2_processed)
-    # insertion_insertion_processed = algo1_algo1_processed
-    # insertion_bubble_processed = algo1_algo2_processed
-    # hypothesis("insertion", bubble_bubble_processed, bubble_insertion_processed)
+    algo1_algo1_processed = {}
+    algo1_algo2_processed = {}
+    similarity(lines, lines_count, insertion, bubble, algo1_algo1_processed, algo1_algo2_processed)
+    insertion_insertion_processed = algo1_algo1_processed
+    insertion_bubble_processed = algo1_algo2_processed
+    hypothesis("insertion", bubble_bubble_processed, bubble_insertion_processed, i_max, i_min, i_avg, b_max, b_min, b_avg)
 
     # Metric Calculation
     metric_calculate("bubble", "insertion")

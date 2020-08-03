@@ -49,15 +49,15 @@ for index in range(len(y_test)):
         if(y_h_test[index] == 1):
             tp += 1
         else:
-            fp += 1
+            fn += 1
     if(y_test[index] == 0):
         if(y_h_test[index] == 0):
             tn += 1
         else:
-            fn += 1
+            fp += 1
 
-recall = tp / (tp +fp) * 100
-precision = tp / (tp +fn) * 100
+recall = tp / (tp +fn) * 100
+precision = tp / (tp +fp) * 100
 try:
     f1 = 2*((precision*recall)/(precision+recall))
 except Exception:

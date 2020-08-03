@@ -194,7 +194,7 @@ def metric_calculate(suffix1, suffix2):
     for i in range(1,6):
         with open('hypothesis' + str(i) + suffix1 + '.txt', 'r') as h1:
             tp = 0
-            fp = 0
+            fn = 0
             lines = [line.strip() for line in h1]
             for line in lines:
                 line = line.split('\t')
@@ -204,11 +204,11 @@ def metric_calculate(suffix1, suffix2):
                     tp +=1
                 if line[1] == 'Invalid':
                     # print(line[1])
-                    fp +=1
+                    fn +=1
 
         with open('hypothesis' + str(i) + suffix2 + '.txt', 'r') as h1:
             tn = 0
-            fn = 0
+            fp = 0
             lines = [line.strip() for line in h1]
             for line in lines:
                 line = line.split('\t')
@@ -218,10 +218,10 @@ def metric_calculate(suffix1, suffix2):
                     tn +=1
                 if line[1] == 'Invalid':
                     # print(line[1])
-                    fn +=1
+                    fp +=1
 
-        recall = tp / (tp +fp) * 100
-        precision = tp / (tp +fn) * 100
+        recall = tp / (tp +fn) * 100
+        precision = tp / (tp +fp) * 100
         try:
             f1 = 2*((precision*recall)/(precision+recall))
         except Exception:

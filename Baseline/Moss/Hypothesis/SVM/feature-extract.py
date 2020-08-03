@@ -12,7 +12,7 @@ with open('../results.csv', 'r') as f:
 
 # print(b_ids_count, i_ids_count, lines_count)
 
-with open('vector.txt', 'w') as v:
+with open('vectors.txt', 'w') as v:
     for id in b_ids:
 
         # print(id)

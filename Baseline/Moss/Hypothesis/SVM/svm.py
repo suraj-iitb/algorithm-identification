@@ -5,10 +5,10 @@ from sklearn.model_selection import GridSearchCV
 
 parameters = {'kernel':('linear', 'rbf'), 'C':[1, 100]}
 
-X =[]
+X = []
 y = []
 
-with open('vector.txt') as vectors:
+with open('vectors.txt') as vectors:
 
     for vector in vectors:
 
@@ -36,12 +36,38 @@ clf.fit(X_train, y_train)
 
 y_h_test = clf.predict(X_test)
 
+print('1: Bubble\n2: Insertion\n')
 print(y_h_test)
 print(np.array(y_test))
 
-accuracy = (y_h_test.size - np.sum(np.absolute(np.subtract(y_h_test, y_test)))) / y_h_test.size
+tp = 0
+fp = 0
+tn = 0
+fn = 0
+for index in range(len(y_test)):
+    if(y_test[index] == 1):
+        if(y_h_test[index] == 1):
+            tp += 1
+        else:
+            fp += 1
+    if(y_test[index] == 0):
+        if(y_h_test[index] == 0):
+            tn += 1
+        else:
+            fn += 1
 
-print("Accuracy:", accuracy)
+recall = tp / (tp +fp) * 100
+precision = tp / (tp +fn) * 100
+try:
+    f1 = 2*((precision*recall)/(precision+recall))
+except Exception:
+    f1 = 0.0
+
+print('\n===========================SVM========================================')
+print('Recall for hypothesis SVM is: ', str(round(recall,2)) + ' %')
+print('Precision for hypothesis SVM is: ', str(round(precision,2)) + ' %')
+print('F1 Score for hypothesis SVM is: ', str(round(f1,2)) + ' %')
+print('======================================================================')
 
 # print(clf.cv_results_)
 

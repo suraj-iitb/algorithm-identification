@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1115420.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-1111412.cpp<p></p><pre>
+#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main(){
+<a name="0"></a><font color="#FF0000"><a href="match134-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_27.gif"/></a>
+
+    int n,a[100];
+    
+    scanf("%d",&amp;n);
+    for(int i=0;i&lt;n;i++)
+        scanf("%d",&amp;a[i]);
+    
+    for(int j=0;j&lt;n;j++)
+</font>        printf(j+1==n ? "%d\n" : "%d ",a[j]);
+    
+    for(int i=1;i&lt;n;i++){
+        for(int j=i;j&gt;0;j--)
+            if(a[j-1]&gt;a[j])
+                swap(a[j-1],a[j]);
+        
+        for(int j=0;j&lt;n;j++)
+            printf(j+1==n ? "%d\n" : "%d ",a[j]);
+    }
+    return 0;
+}
+</pre>
+</body>
+</html>

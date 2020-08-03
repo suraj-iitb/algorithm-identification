@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-749608.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-920644.cpp<p></p><pre>
+#include&lt;iostream&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+int main(){
+  int n,A[100],ans=0;
+  cin&gt;&gt;n;
+  for(int i=0;i&lt;n;i++)cin&gt;&gt;A[i];
+<a name="0"></a><font color="#FF0000"><a href="match52-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_38.gif"/></a>
+
+  for(int i=0;i&lt;n-1;i++){
+    for(int j=n-1;j&gt;i;j--){
+      if(A[j]&lt;A[j-1]){
+    swap(A[j],A[j-1]);
+    ans++;
+      }
+    }
+  }
+  for(int i=0;i&lt;n;i++){
+</font>    if(i)cout&lt;&lt;' ';
+    cout&lt;&lt;A[i];
+  }
+  cout&lt;&lt;endl&lt;&lt;ans&lt;&lt;endl;
+  return 0;
+}
+</pre>
+</body>
+</html>

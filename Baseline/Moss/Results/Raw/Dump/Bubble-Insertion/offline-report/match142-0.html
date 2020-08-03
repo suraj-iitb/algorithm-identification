@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-879889.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-879889.cpp<p></p><pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+class BubbleSort
+{
+ public:
+  void solve( int n, int a[] );
+};
+
+void BubbleSort::solve( int n, int a[] )
+{
+  int cnt = 0;
+  
+<a name="0"></a><font color="#FF0000"><a href="match142-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_20.gif"/></a>
+
+  for( int i = 0; i &lt; n; i++ )
+    {
+      for( int j = n - 1; j &gt; i;j-- )
+        {
+          if( a[j] &lt; a[j-1] )
+            {
+              swap( a[j], a[j-1] );
+</font>              cnt++;
+            }
+        }
+    }
+  
+  cout &lt;&lt; a[0];
+  for( int i = 1; i &lt; n; i++ )
+    {
+      cout &lt;&lt; " " &lt;&lt; a[i] ;
+    }
+  cout &lt;&lt; endl;
+  cout &lt;&lt; cnt &lt;&lt; endl;
+}
+
+int main( void )
+{
+  int n;
+  int a[100];
+
+  BubbleSort *bs = new BubbleSort();
+
+  cin &gt;&gt; n;
+
+  for( int i = 0; i &lt; n; i++ )
+    {
+      cin &gt;&gt; a[i];
+    }
+
+  bs -&gt; solve( n, a );
+
+  delete bs;
+
+  return 0;
+}
+</pre>
+</body>
+</html>

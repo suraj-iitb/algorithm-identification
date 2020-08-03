@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1685516.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-907604.cpp<p></p><pre>
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+  
+  int N; cin &gt;&gt; N;
+  
+  int *arr = new int[N];
+<a name="0"></a><font color="#FF0000"><a href="match132-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_28.gif"/></a>
+
+  for(int i=0; i&lt;N; i++) {
+    cin &gt;&gt; arr[i];
+  }
+  
+  int cnt = 0;
+  for(int i=0; i&lt;N; i++) {
+    for(int j=N-1; j&gt;i; j--) {
+</font>      if(arr[j-1] &gt; arr[j]) {
+        swap(arr[j-1], arr[j]);
+        cnt ++;
+      }
+    }
+  }
+  
+  for(int i=0; i&lt;N; i++) {
+    if(i) cout &lt;&lt; " ";
+    cout &lt;&lt; arr[i];
+  }
+  cout &lt;&lt; endl;
+  
+  cout &lt;&lt; cnt &lt;&lt; endl;
+  
+  return 0;
+}
+</pre>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2925584.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-1278441.cpp<p></p><pre>
+#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;utility&gt;
+using namespace std;
+
+int main(){
+	int n;
+	int a[100];
+	int count=0;
+	
+	scanf(" %d", &amp;n);
+	for(int i=0; i&lt;n; ++i) scanf(" %d", &amp;a[i]);
+	
+	//bubble sort	
+	bool flag=true;
+	while(flag){
+		flag=false;
+		for(int i=n-1; i&gt;0; --i){
+<a name="0"></a><font color="#FF0000"><a href="match138-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_30.gif"/></a>
+
+			if(a[i]&lt;a[i-1]){
+				swap(a[i], a[i-1]);
+				flag=true;
+				count++;
+			}	
+		}
+	}
+	
+	for(int i=0; i&lt;n; ++i){
+</font>		if(i&gt;0) printf(" ");
+		printf("%d", a[i]);
+	}
+	printf("\n%d\n", count);
+	
+}
+</pre>
+</body>
+</html>

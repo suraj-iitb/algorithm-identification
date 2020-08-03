@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2692522.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-2692522.cpp<p></p><pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int N;
+int A[110];
+int main(){
+	cin &gt;&gt; N;
+	for(int i=1;i&lt;=N;i++){
+		cin &gt;&gt; A[i];
+	}
+	int flag = 1;
+	int count = 0;
+	while(flag){
+		flag = 0;
+		int j = N;
+		while(j&gt;=1){
+			if(A[j] &lt; A[j-1]){
+				count++;
+				int tmp = A[j];
+				A[j] = A[j-1];
+				A[j-1] = tmp;
+				flag = 1;
+			}
+			j--;
+		}
+	}
+<a name="0"></a><font color="#FF0000"><a href="match171-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_23.gif"/></a>
+
+	for(int i=1;i&lt;=N;i++){
+		if(i!=N) cout &lt;&lt; A[i] &lt;&lt;" ";
+		else cout &lt;&lt; A[i] &lt;&lt; endl;
+</font>	}
+	cout &lt;&lt; count &lt;&lt; endl;
+}
+</pre>
+</body>
+</html>

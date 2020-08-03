@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-1831723.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-3436121.cpp<p></p><pre>
+#include &lt;iostream&gt;
+<a name="0"></a><font color="#FF0000"><a href="match7-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_53.gif"/></a>
+
+using namespace std;
+
+void insertionSort(int a[], int n){
+    for(int i = 0; i &lt; n; i++){
+        int v = a[i];
+        int j = i - 1;
+        while (j &gt;= 0 &amp;&amp; a[j] &gt; v){
+            a[j+ 1 ] = a[j];
+            j--;
+        }
+        a[j + 1] = v;
+
+        for (int i = 0; i &lt; n; i++){
+</font>            cout &lt;&lt; a[i];
+            if (i != n - 1) cout &lt;&lt; " ";
+            else cout &lt;&lt; endl;
+        }
+    }
+}
+
+int main(void){
+    int n, a[100];
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];
+
+    insertionSort(a, n);
+
+    return 0;
+}
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-1685516.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-655718.cpp<p></p><pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+int main(int argc,char* argv[]){
+  int n;
+  std::cin &gt;&gt; n;
+
+  std::vector&lt;int&gt; array(n);
+
+  for(int i = 0; i &lt; n; i++){
+<a name="0"></a><font color="#FF0000"><a href="match80-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_25.gif"/></a>
+
+    std::cin &gt;&gt; array[i];
+  }
+  
+  int count = 0;
+  for(int i = 0; i &lt; n; i++){
+    for(int j = n - 1; j &gt;= i + 1; j--){
+      if(array[j] &lt; array[j - 1]){
+</font>	std::swap(array[j], array[j-1]);
+	count++;
+      }
+    }
+  }
+  
+  bool first = true;
+  for(int i = 0; i &lt; n; i++){
+    if(!first){
+      std::cout &lt;&lt; " ";
+    }else{
+      first = false;
+    }
+    
+    std::cout &lt;&lt; array[i];
+  }
+  std::cout &lt;&lt; std::endl;
+  std::cout &lt;&lt; count &lt;&lt; std::endl;
+
+  return 0;
+  
+}
+</pre>
+</body>
+</html>

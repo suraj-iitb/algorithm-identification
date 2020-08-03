@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2086970.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-2086970.cpp<p></p><pre>
+#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int n;
+<a name="0"></a><font color="#FF0000"><a href="match47-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_20.gif"/></a>
+
+int a[105];
+
+int main(void){
+	scanf("%d",&amp;n);
+	for(int i=0;i&lt;n;i++){
+		scanf("%d",&amp;a[i]);
+</font>	}
+	int cnt=0;
+	bool flag=true;
+	while(flag){
+		flag=false;
+		for(int j=0;j&lt;n-1;j++){
+			if(a[j+1]&lt;a[j]){
+				cnt++;
+				swap(a[j],a[j+1]);
+				flag=true;
+			}
+		}
+	}
+<a name="1"></a><font color="#00FF00"><a href="match47-1.html#1" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_1_20.gif"/></a>
+
+	for(int i=0;i&lt;n;i++){
+		printf("%d%c",a[i],i==n-1?'\n':' ');
+</font>	}
+	printf("%d\n",cnt);
+	return 0;
+}
+</pre>
+</body>
+</html>

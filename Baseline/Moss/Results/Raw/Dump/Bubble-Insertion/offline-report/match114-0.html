@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-376593.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-376593.cpp<p></p><pre>
+#include&lt;stdio.h&gt;
+
+int main(){
+  int o,n,k,i,j;
+  int key;
+  int A[110];
+  scanf("%d",&amp;n);
+  for(i=1;i&lt;=n;i++)scanf("%d",&amp;A[i]);
+
+  /*for(o=1;o&lt;=n;o++)
+    {
+      if(o == n){printf("%d\n",A[o]);}
+      else printf("%d ",A[o]);
+    }
+  */
+<a name="0"></a><font color="#FF0000"><a href="match114-1.html#0" target="1"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_29.gif"/></a>
+
+  for(j=1;j&lt;=n;j++)
+    {   
+	      key = A[j];		
+	      i = j-1;
+	      while(i&gt;0 &amp;&amp; A[i]&gt;key)
+		{
+		  A[i+1]=A[i];  
+</font>		  i = i-1;
+		}
+	      A[i+1] = key;
+	      for(k=1;k&lt;=n;k++){
+		if(k == n)printf("%d\n",A[k]);
+		else printf("%d ",A[k]);
+	      }
+    }
+  
+  return 0;
+}
+</pre>
+</body>
+</html>

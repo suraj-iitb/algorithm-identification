@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Data/BubbleSort/Dump/bubble-2928116.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/BubbleSort/Dump/bubble-1963539.cpp<p></p><pre>
+#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+using namespace std;
+int main(){
+	int a[10000],n,i,j,t,c=0;	cin&gt;&gt;n;
+	for(i=0;i&lt;n;i++)cin&gt;&gt;a[i];
+	for(i=0;i&lt;n;i++){
+<a name="0"></a><font color="#FF0000"><a href="match51-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_35.gif"/></a>
+
+	for(j=n-1;j&gt;i;j--){
+	if(a[j]&lt;a[j-1]){
+	t=a[j];
+	a[j]=a[j-1];
+	a[j-1]=t;
+	c++;
+	}
+	}
+	}
+	for(i=0;i&lt;n;i++){if(i)cout&lt;&lt;" ";cout&lt;&lt;a[i];}
+</font>	cout&lt;&lt;'\n'&lt;&lt;c&lt;&lt;endl;
+	return 0;
+}
+</pre>
+</body>
+</html>

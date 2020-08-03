@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Data/InsertionSort/Dump/insetion-916961.cpp</title>
+</head>
+<body bgcolor="white">
+<hr/>
+Data/InsertionSort/Dump/insetion-2705852.cpp<p></p><pre>
+#include&lt;iostream&gt;
+using namespace std;
+
+void trace(int A[], int N) {
+  int i;
+  for ( i = 0; i &lt; N; i++ ) {
+    if ( i &gt; 0 ) cout &lt;&lt; " ";
+    cout &lt;&lt; A[i];
+  }
+  cout &lt;&lt; endl;
+}
+
+void insertionSort(int A[], int N) {
+  int i, v, j;
+<a name="0"></a><font color="#FF0000"><a href="match109-0.html#0" target="0"><img align="left" alt="other" border="0" src="http://moss.stanford.edu/bitmaps/tm_0_23.gif"/></a>
+
+  for ( i = 1; i &lt; N; i++ ) {
+    v = A[i];
+    j = i - 1;
+    while ( j &gt;= 0 &amp;&amp; A[j] &gt; v ) A[j + 1] = A[j--];
+</font>    A[j + 1] = v;
+    trace(A, N);
+  }
+}
+
+int main() {
+  int N, i, j;
+  int A[100];
+
+  cin &gt;&gt; N;
+  for ( i = 0; i &lt; N; i++ ) cin &gt;&gt; A[i];
+
+  trace(A, N);
+  insertionSort(A, N);
+
+  return 0;
+}
+</pre>
+</body>
+</html>

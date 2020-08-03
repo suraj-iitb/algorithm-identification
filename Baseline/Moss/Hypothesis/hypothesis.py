@@ -1,24 +1,4 @@
-b_min = 24
-b_max = 53
-b_avg = 30
-
-i_min = 17
-i_max = 66
-i_avg = 27
-
-bubble = 'Data/Bubble/Dump/bubble'
-insertion = 'Data/Insertion/Dump/insertion'
-
-with open('results.csv', 'r') as f:
-
-    lines = [line.strip() for line in f]
-    lines_count = len(lines)
-
-    bubble_processed = {}
-    bubble_insertion_processed = {}
-    
-    # print(lines)
-
+def similarity(lines, lines_count):
     for i in range(lines_count):
         
         line = lines[i].strip().split(',')
@@ -155,12 +135,8 @@ with open('results.csv', 'r') as f:
                 bubble_insertion_processed[code2] = {'avg': avg2, 'max':max2_i}
                 # if code2 == 'Data/BubbleSort/Dump/bubble-1673563.cpp':
                 #     print(sum2, count2, avg2)
-            
-            
 
-    # print(bubble_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
-    # print(bubble_insertion_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
-
+def hypothesis():
     with open('hypothesis1.txt', 'w') as h1:
         with open('hypothesis2.txt', 'w') as h2:
             with open('hypothesis3.txt', 'w') as h3:
@@ -213,6 +189,8 @@ with open('results.csv', 'r') as f:
                             else:
                                 h5.write(bubble+'\tInvalid\n')
 
+
+def metric_calculate():
     with open('hypothesis1.txt', 'r') as h1:
         valid = 0
         invalid = 0
@@ -288,4 +266,35 @@ with open('results.csv', 'r') as f:
                 invalid +=1
         val_per = valid / (valid +invalid) * 100
         print('% Recall for hypothesis 5 is: ', val_per)
-                        
+
+
+
+################################################### Main ###################################################
+b_min = 24
+b_max = 53
+b_avg = 30
+
+i_min = 17
+i_max = 66
+i_avg = 27
+
+bubble = 'Data/Bubble/Dump/bubble'
+insertion = 'Data/Insertion/Dump/insertion'
+
+bubble_processed = {}
+bubble_insertion_processed = {}
+insertion_processed = {}
+insertion_bubble_processed = {}
+
+with open('results.csv', 'r') as f:
+
+    lines = [line.strip() for line in f]
+    lines_count = len(lines)
+
+    # print(lines)
+    # print(bubble_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
+    # print(bubble_insertion_processed['Data/BubbleSort/Dump/bubble-1673563.cpp'])
+
+    similarity(lines, lines_count)
+    hypothesis()
+    metric_calculate()

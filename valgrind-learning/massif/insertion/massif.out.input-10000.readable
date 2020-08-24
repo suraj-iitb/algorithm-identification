@@ -1,0 +1,296 @@
+--------------------------------------------------------------------------------
+Command:            ./insertion
+Massif arguments:   --time-unit=B --stacks=yes --massif-out-file=massif.out.input-10000
+ms_print arguments: massif.out.input-10000
+--------------------------------------------------------------------------------
+
+
+    KB
+117.2^   #                                                                    
+     |   #:::::::::::::::::@:::@:@:::::::::::::::::::::@:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+     |   #:::: :::: ::: :: @:::@:@:: :::: :::: :::: :: @:::@::::@::::::@:::::@
+   0 +----------------------------------------------------------------------->MB
+     0                                                                   50.88
+
+Number of snapshots: 74
+ Detailed snapshots: [1, 3 (peak), 17, 21, 23, 42, 46, 52, 62, 72]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      1,113,544            1,416                0             0        1,416
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2      1,963,888            1,312                0             0        1,312
+  3      2,625,744          120,000           77,824            24       42,152
+64.85% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->60.59% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->60.59% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->60.59% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->60.59% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.27% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.27% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.41% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.41% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.41% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.41% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.41% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.41% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.85% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      3,089,608          118,552           77,824            24       40,704
+  5      4,017,240          118,488           77,824            24       40,640
+  6      4,993,688          118,488           77,824            24       40,640
+  7      5,725,840          118,288           77,824            24       40,440
+  8      7,071,216          118,512           77,824            24       40,664
+  9      7,842,816          118,256           77,824            24       40,408
+ 10      8,700,016          118,512           77,824            24       40,664
+ 11      9,471,616          118,256           77,824            24       40,408
+ 12     10,740,424          118,520           77,824            24       40,672
+ 13     11,580,864          118,528           77,824            24       40,680
+ 14     12,541,256          118,280           77,824            24       40,432
+ 15     13,501,656          118,504           77,824            24       40,656
+ 16     14,702,408          118,488           77,824            24       40,640
+ 17     15,662,824          118,536           77,824            24       40,688
+65.65% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.33% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.33% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.33% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.33% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 18     16,503,160          118,504           77,824            24       40,656
+ 19     17,361,160          118,488           77,824            24       40,640
+ 20     18,047,400          118,504           77,824            24       40,656
+ 21     18,733,656          118,536           77,824            24       40,688
+65.65% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.33% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.33% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.33% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.33% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22     19,763,144          118,504           77,824            24       40,656
+ 23     20,449,400          118,536           77,824            24       40,688
+65.65% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.33% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.33% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.33% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.33% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 24     21,135,712          118,304           77,824            24       40,456
+ 25     21,993,608          118,552           77,824            24       40,704
+ 26     23,023,096          118,488           77,824            24       40,640
+ 27     23,709,336          118,504           77,824            24       40,656
+ 28     24,395,592          118,536           77,824            24       40,688
+ 29     25,081,960          118,520           77,824            24       40,672
+ 30     25,767,696          118,304           77,824            24       40,456
+ 31     27,138,960          118,256           77,824            24       40,408
+ 32     27,824,592          118,240           77,824            24       40,392
+ 33     28,510,248          118,232           77,824            24       40,384
+ 34     29,195,912          118,376           77,824            24       40,528
+ 35     30,567,176          118,328           77,824            24       40,480
+ 36     31,252,808          118,312           77,824            24       40,464
+ 37     31,938,456          118,328           77,824            24       40,480
+ 38     32,624,088          118,280           77,824            24       40,432
+ 39     33,309,784          118,488           77,824            24       40,640
+ 40     34,338,240          118,512           77,824            24       40,664
+ 41     35,023,880          118,584           77,824            24       40,736
+ 42     36,395,144          118,504           77,824            24       40,656
+65.67% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.35% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.35% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.35% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.35% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43     37,423,608          118,520           77,824            24       40,672
+ 44     38,109,264          118,496           77,824            24       40,648
+ 45     39,137,752          118,632           77,824            24       40,784
+ 46     39,823,384          118,472           77,824            24       40,624
+65.69% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.37% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.37% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.37% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.37% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 47     40,509,144          118,440           77,824            24       40,592
+ 48     41,194,776          118,296           77,824            24       40,448
+ 49     42,223,240          118,312           77,824            24       40,464
+ 50     42,687,104          118,256           77,824            24       40,408
+ 51     43,151,024          118,368           77,824            24       40,520
+ 52     43,614,896          118,608           77,824            24       40,760
+65.61% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.30% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.30% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.30% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.30% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.32% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.32% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.45% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.45% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.45% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.45% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.45% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.45% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.86% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53     44,078,776          118,520           77,824            24       40,672
+ 54     44,542,640          118,400           77,824            24       40,552
+ 55     45,006,504          118,248           77,824            24       40,400
+ 56     45,470,416          118,368           77,824            24       40,520
+ 57     45,934,304          118,304           77,824            24       40,456
+ 58     46,398,168          118,456           77,824            24       40,608
+ 59     46,862,032          118,416           77,824            24       40,568
+ 60     47,325,896          118,248           77,824            24       40,400
+ 61     47,789,768          118,312           77,824            24       40,464
+ 62     48,253,632          118,288           77,824            24       40,440
+65.79% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.46% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.46% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.46% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.46% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.33% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.33% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.87% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 63     48,717,496          118,456           77,824            24       40,608
+ 64     49,181,376          118,608           77,824            24       40,760
+ 65     49,645,240          118,440           77,824            24       40,592
+ 66     50,109,104          118,336           77,824            24       40,488
+ 67     50,572,968          118,280           77,824            24       40,432
+ 68     51,036,896          118,368           77,824            24       40,520
+ 69     51,500,760          118,552           77,824            24       40,704
+ 70     51,964,624          118,480           77,824            24       40,632
+ 71     52,428,488          118,328           77,824            24       40,480
+ 72     52,892,352          118,224           77,824            24       40,376
+65.83% (77,824B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->61.50% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->61.50% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->61.50% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->61.50% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->04.33% (5,120B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->04.33% (5,120B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->03.46% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    | ->03.46% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+    |   ->03.46% (4,096B) 0x4F207EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |     ->03.46% (4,096B) 0x4F2E5D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |       ->03.46% (4,096B) 0x4F2E80D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+    |         ->03.46% (4,096B) 0x108B6A: main (insertion.cpp:39)
+    |           
+    ->00.87% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 73     53,356,216          118,552           77,824            24       40,704

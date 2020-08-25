@@ -10,4 +10,4 @@ Massif:
     2. valgrind --tool=massif --time-unit=B --stacks=yes ./main  (with stack trace)
     3. ms_print massif.out.22472 > massif.out.22472.readable
 
-    Note: valgrind --tool=massif --time-unit=B --stacks=yes --massif-out-file=massif.out.input-10000 ./bubble < /home/suraj/Documents/MTP/Baseline/ExecTime/Input/input-10000
+    Note: valgrind --tool=massif --time-unit=B --stacks=yes --massif-out-file=massif.out.input-10000-iter ./quick-iter < /home/suraj/Documents/MTP/Baseline/ExecTime/Input/input-10000

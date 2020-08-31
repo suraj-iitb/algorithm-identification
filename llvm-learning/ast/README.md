@@ -1,0 +1,1 @@
+clang++ -cc1 -ast-dump  insertion0.1.cpp > insertion.ast

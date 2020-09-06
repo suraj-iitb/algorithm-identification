@@ -1,10 +1,16 @@
 Execution/Input/input*
 
 Execution/Code/bubble
+Execution/Code/bubble_g
 Execution/Code/bubble-heap
 Execution/Code/insertion
+Execution/Code/insertion_g
 Execution/Code/selection
+Execution/Code/selection_g
 Execution/Code/merge
+Execution/Code/merge_g
 Execution/Code/quick
+Execution/Code/quick_g
 Execution/Code/quick-iter
 Execution/Code/heap
+Execution/Code/heap_g

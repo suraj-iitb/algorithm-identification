@@ -1,18 +1,10 @@
-Baseline/Moss/Data/*Sort/a.out
-Baseline/ExecTime/a.out
-Baseline/Moss/Data/BubbleSort/Array1.txt
-Baseline/Moss/Data/BubbleSort/input*
-Baseline/ExecTime/*_sort
-Baseline/ExecTime/Input/input*
-tbcnn/vectorizer/__pycache__
-tbcnn/vectorizer/ast2vec/__pycache__
-tbcnn/vectorizer/logs
-
 Execution/Input/input*
 
-Execution/Codes/bubble
-Execution/Codes/insertion
-Execution/Codes/selection
-Execution/Codes/merge
-Execution/Codes/quick
-Execution/Codes/heap
+Execution/Code/bubble
+Execution/Code/bubble-heap
+Execution/Code/insertion
+Execution/Code/selection
+Execution/Code/merge
+Execution/Code/quick
+Execution/Code/quick-iter
+Execution/Code/heap

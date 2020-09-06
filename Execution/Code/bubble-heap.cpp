@@ -1,13 +1,12 @@
-#include<iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[n];
-    cout<<"Enter the array:"<<endl;
-    for(int i=0;i<n;i++)
+    int i,j,n,temp;
+    cin>>n;
+    int *arr = new int[n];  // heap allocation
+    for(i=0;i<n;i++)
         cin>>arr[i];
 
     for(int i=0;i<n-1;i++){
@@ -19,8 +18,9 @@ int main(){
             }
         }
     }
-    cout<<"The sorted array is:"<<endl;
-    for(int i=0;i<n;i++)
-        cout<<arr[i]<<endl;
+
+    // for(int i=0;i<n;i++)
+    //     cout<<arr[i]<<" ";
+    // cout << endl;
 
 }

@@ -12,5 +12,8 @@ Massif:
        valgrind --tool=massif --time-unit=B --stacks=yes ./a.out  (with stack trace)
 
        Note: Use --massif-out-file=<output_file>
+             Use --max-snapshots=10  (snapshots are taken at each call to malloc/new + some extra and half are
+                                      truncated on reaching max no of snapshots)
+             Use --detailed-freq=1
 
     3. ms_print <massif.out.pid/output_file> > <file>

@@ -7,3 +7,6 @@ Baseline/ExecTime/Input/input*
 tbcnn/vectorizer/__pycache__
 tbcnn/vectorizer/ast2vec/__pycache__
 tbcnn/vectorizer/logs
+
+Execution/Input/
+!Execution/Input/gen-input.py

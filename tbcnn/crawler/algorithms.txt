@@ -1,8 +1,0 @@
-problemId,Name,Algorithm
-ALDS1_1_A,Insertion Sort,insertion
-ALDS1_2_A,Bubble Sort,bubble
-ALDS1_2_B,Selection Sort,selection
-ALDS1_2_D,Shell Sort,shell
-ALDS1_5_B,Merge Sort,merge
-ALDS1_6_A,Counting Sort,counting
-ALDS1_6_C,Quick Sort,quick

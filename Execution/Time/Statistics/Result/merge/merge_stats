@@ -1,35 +1,5 @@
-Input size: 100000
-Mean: 27.3599999999999994 ms
-Standard deviation: 6.2905007749780939 ms
-Margin of Error for 90% CI: 1.0442231286463635 ms
-Margin of Error for 95% CI: 1.2480353537556539 ms
-Margin of Error for 99% CI: 1.6518855035092475 ms
-
-Input size: 10000
-Mean: 3.5099999999999998 ms
-Standard deviation: 0.6999285677838846 ms
-Margin of Error for 90% CI: 0.1161881422521248 ms
-Margin of Error for 95% CI: 0.1388658278483227 ms
-Margin of Error for 99% CI: 0.1838012419000481 ms
-
-Input size: 100
-Mean: 1.0000000000000000 ms
-Standard deviation: 0.0000000000000000 ms
-Margin of Error for 90% CI: 0.0000000000000000 ms
-Margin of Error for 95% CI: 0.0000000000000000 ms
-Margin of Error for 99% CI: 0.0000000000000000 ms
-
-Input size: 10
-Mean: 1.0000000000000000 ms
-Standard deviation: 0.0000000000000000 ms
-Margin of Error for 90% CI: 0.0000000000000000 ms
-Margin of Error for 95% CI: 0.0000000000000000 ms
-Margin of Error for 99% CI: 0.0000000000000000 ms
-
-Input size: 1000
-Mean: 1.0000000000000000 ms
-Standard deviation: 0.0000000000000000 ms
-Margin of Error for 90% CI: 0.0000000000000000 ms
-Margin of Error for 95% CI: 0.0000000000000000 ms
-Margin of Error for 99% CI: 0.0000000000000000 ms
-
+100000,27.36,6.29,1.04,1.25,1.65,
+10000,3.51,0.70,0.12,0.14,0.18,
+100,1.00,0.00,0.00,0.00,0.00,
+10,1.00,0.00,0.00,0.00,0.00,
+1000,1.00,0.00,0.00,0.00,0.00,

@@ -1,0 +1,515 @@
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+input:10
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+input:100
+
+real	0m0.002s
+user	0m0.002s
+sys	0m0.000s
+input:1000
+
+real	0m0.005s
+user	0m0.005s
+sys	0m0.000s
+input:10000
+
+real	0m0.010s
+user	0m0.010s
+sys	0m0.000s
+input:20000
+
+real	0m0.014s
+user	0m0.014s
+sys	0m0.000s
+input:30000
+
+real	0m0.019s
+user	0m0.019s
+sys	0m0.000s
+input:40000
+
+real	0m0.024s
+user	0m0.020s
+sys	0m0.004s
+input:50000
+
+real	0m0.029s
+user	0m0.026s
+sys	0m0.004s
+input:60000
+
+real	0m0.051s
+user	0m0.051s
+sys	0m0.000s
+input:70000
+
+real	0m0.038s
+user	0m0.038s
+sys	0m0.000s
+input:80000
+
+real	0m0.057s
+user	0m0.053s
+sys	0m0.004s
+input:90000
+
+real	0m0.045s
+user	0m0.045s
+sys	0m0.000s
+input:100000
+
+real	0m0.050s
+user	0m0.050s
+sys	0m0.000s
+input:110000
+
+real	0m0.057s
+user	0m0.057s
+sys	0m0.000s
+input:120000
+
+real	0m0.061s
+user	0m0.061s
+sys	0m0.000s
+input:130000
+
+real	0m0.065s
+user	0m0.065s
+sys	0m0.000s
+input:140000
+
+real	0m0.077s
+user	0m0.077s
+sys	0m0.000s
+input:150000
+
+real	0m0.081s
+user	0m0.081s
+sys	0m0.000s
+input:160000
+
+real	0m0.082s
+user	0m0.075s
+sys	0m0.008s
+input:170000
+
+real	0m0.091s
+user	0m0.091s
+sys	0m0.000s
+input:180000
+
+real	0m0.091s
+user	0m0.091s
+sys	0m0.000s
+input:190000
+
+real	0m0.095s
+user	0m0.095s
+sys	0m0.000s
+input:200000
+
+real	0m0.102s
+user	0m0.102s
+sys	0m0.000s
+input:210000
+
+real	0m0.105s
+user	0m0.105s
+sys	0m0.000s
+input:220000
+
+real	0m0.134s
+user	0m0.134s
+sys	0m0.000s
+input:230000
+
+real	0m0.123s
+user	0m0.123s
+sys	0m0.000s
+input:240000
+
+real	0m0.134s
+user	0m0.134s
+sys	0m0.000s
+input:250000
+
+real	0m0.127s
+user	0m0.127s
+sys	0m0.000s
+input:260000
+
+real	0m0.130s
+user	0m0.130s
+sys	0m0.000s
+input:270000
+
+real	0m0.147s
+user	0m0.147s
+sys	0m0.000s
+input:280000
+
+real	0m0.162s
+user	0m0.162s
+sys	0m0.000s
+input:290000
+
+real	0m0.152s
+user	0m0.152s
+sys	0m0.000s
+input:300000
+
+real	0m0.165s
+user	0m0.165s
+sys	0m0.000s
+input:310000
+
+real	0m0.178s
+user	0m0.170s
+sys	0m0.008s
+input:320000
+
+real	0m0.192s
+user	0m0.188s
+sys	0m0.004s
+input:330000
+
+real	0m0.218s
+user	0m0.218s
+sys	0m0.000s
+input:340000
+
+real	0m0.211s
+user	0m0.211s
+sys	0m0.000s
+input:350000
+
+real	0m0.206s
+user	0m0.206s
+sys	0m0.000s
+input:360000
+
+real	0m0.219s
+user	0m0.219s
+sys	0m0.000s
+input:370000
+
+real	0m0.200s
+user	0m0.200s
+sys	0m0.000s
+input:380000
+
+real	0m0.216s
+user	0m0.208s
+sys	0m0.008s
+input:390000
+
+real	0m0.198s
+user	0m0.194s
+sys	0m0.004s
+input:400000
+
+real	0m0.208s
+user	0m0.208s
+sys	0m0.000s
+input:410000
+
+real	0m0.211s
+user	0m0.211s
+sys	0m0.000s
+input:420000
+
+real	0m0.217s
+user	0m0.217s
+sys	0m0.000s
+input:430000
+
+real	0m0.222s
+user	0m0.218s
+sys	0m0.004s
+input:440000
+
+real	0m0.244s
+user	0m0.244s
+sys	0m0.000s
+input:450000
+
+real	0m0.235s
+user	0m0.235s
+sys	0m0.000s
+input:460000
+
+real	0m0.237s
+user	0m0.237s
+sys	0m0.000s
+input:470000
+
+real	0m0.244s
+user	0m0.244s
+sys	0m0.000s
+input:480000
+
+real	0m0.269s
+user	0m0.269s
+sys	0m0.000s
+input:490000
+
+real	0m0.255s
+user	0m0.255s
+sys	0m0.000s
+input:500000
+
+real	0m0.282s
+user	0m0.282s
+sys	0m0.000s
+input:510000
+
+real	0m0.293s
+user	0m0.289s
+sys	0m0.004s
+input:520000
+
+real	0m0.299s
+user	0m0.299s
+sys	0m0.000s
+input:530000
+
+real	0m0.308s
+user	0m0.299s
+sys	0m0.008s
+input:540000
+
+real	0m0.314s
+user	0m0.306s
+sys	0m0.008s
+input:550000
+
+real	0m0.316s
+user	0m0.312s
+sys	0m0.004s
+input:560000
+
+real	0m0.299s
+user	0m0.299s
+sys	0m0.000s
+input:570000
+
+real	0m0.328s
+user	0m0.328s
+sys	0m0.000s
+input:580000
+
+real	0m0.300s
+user	0m0.300s
+sys	0m0.000s
+input:590000
+
+real	0m0.307s
+user	0m0.307s
+sys	0m0.000s
+input:600000
+
+real	0m0.342s
+user	0m0.338s
+sys	0m0.004s
+input:610000
+
+real	0m0.317s
+user	0m0.317s
+sys	0m0.000s
+input:620000
+
+real	0m0.358s
+user	0m0.358s
+sys	0m0.000s
+input:630000
+
+real	0m0.332s
+user	0m0.324s
+sys	0m0.008s
+input:640000
+
+real	0m0.394s
+user	0m0.394s
+sys	0m0.000s
+input:650000
+
+real	0m0.339s
+user	0m0.338s
+sys	0m0.000s
+input:660000
+
+real	0m0.380s
+user	0m0.380s
+sys	0m0.000s
+input:670000
+
+real	0m0.348s
+user	0m0.348s
+sys	0m0.000s
+input:680000
+
+real	0m0.358s
+user	0m0.358s
+sys	0m0.000s
+input:690000
+
+real	0m0.395s
+user	0m0.395s
+sys	0m0.000s
+input:700000
+
+real	0m0.366s
+user	0m0.366s
+sys	0m0.000s
+input:710000
+
+real	0m0.374s
+user	0m0.370s
+sys	0m0.004s
+input:720000
+
+real	0m0.398s
+user	0m0.394s
+sys	0m0.004s
+input:730000
+
+real	0m0.440s
+user	0m0.440s
+sys	0m0.000s
+input:740000
+
+real	0m0.444s
+user	0m0.444s
+sys	0m0.000s
+input:750000
+
+real	0m0.446s
+user	0m0.445s
+sys	0m0.000s
+input:760000
+
+real	0m0.472s
+user	0m0.468s
+sys	0m0.004s
+input:770000
+
+real	0m0.412s
+user	0m0.408s
+sys	0m0.004s
+input:780000
+
+real	0m0.464s
+user	0m0.464s
+sys	0m0.000s
+input:790000
+
+real	0m0.416s
+user	0m0.408s
+sys	0m0.008s
+input:800000
+
+real	0m0.505s
+user	0m0.505s
+sys	0m0.000s
+input:810000
+
+real	0m0.515s
+user	0m0.507s
+sys	0m0.008s
+input:820000
+
+real	0m0.488s
+user	0m0.483s
+sys	0m0.004s
+input:830000
+
+real	0m0.446s
+user	0m0.446s
+sys	0m0.000s
+input:840000
+
+real	0m0.450s
+user	0m0.450s
+sys	0m0.000s
+input:850000
+
+real	0m0.453s
+user	0m0.449s
+sys	0m0.004s
+input:860000
+
+real	0m0.471s
+user	0m0.459s
+sys	0m0.012s
+input:870000
+
+real	0m0.522s
+user	0m0.518s
+sys	0m0.004s
+input:880000
+
+real	0m0.486s
+user	0m0.481s
+sys	0m0.004s
+input:890000
+
+real	0m0.483s
+user	0m0.483s
+sys	0m0.000s
+input:900000
+
+real	0m0.538s
+user	0m0.534s
+sys	0m0.004s
+input:910000
+
+real	0m0.508s
+user	0m0.508s
+sys	0m0.000s
+input:920000
+
+real	0m0.556s
+user	0m0.548s
+sys	0m0.008s
+input:930000
+
+real	0m0.559s
+user	0m0.555s
+sys	0m0.004s
+input:940000
+
+real	0m0.513s
+user	0m0.513s
+sys	0m0.000s
+input:950000
+
+real	0m0.567s
+user	0m0.563s
+sys	0m0.004s
+input:960000
+
+real	0m0.519s
+user	0m0.515s
+sys	0m0.004s
+input:970000
+
+real	0m0.589s
+user	0m0.585s
+sys	0m0.004s
+input:980000
+
+real	0m0.536s
+user	0m0.524s
+sys	0m0.012s
+input:990000
+
+real	0m0.545s
+user	0m0.545s
+sys	0m0.000s
+input:1000000

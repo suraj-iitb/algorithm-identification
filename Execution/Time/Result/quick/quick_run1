@@ -1,0 +1,599 @@
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+input:10
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+input:100
+
+real	0m0.007s
+user	0m0.003s
+sys	0m0.000s
+input:1000
+
+real	0m0.225s
+user	0m0.222s
+sys	0m0.000s
+input:10000
+
+real	0m0.751s
+user	0m0.747s
+sys	0m0.004s
+input:20000
+
+real	0m1.836s
+user	0m1.836s
+sys	0m0.000s
+input:30000
+
+real	0m2.753s
+user	0m2.749s
+sys	0m0.004s
+input:40000
+
+real	0m4.279s
+user	0m4.275s
+sys	0m0.004s
+input:50000
+
+real	0m6.468s
+user	0m6.468s
+sys	0m0.000s
+input:60000
+
+real	0m8.362s
+user	0m8.358s
+sys	0m0.004s
+input:70000
+
+real	0m11.267s
+user	0m11.114s
+sys	0m0.028s
+input:80000
+
+real	0m14.508s
+user	0m14.499s
+sys	0m0.008s
+input:90000
+
+real	0m20.186s
+user	0m20.173s
+sys	0m0.008s
+input:100000
+
+real	0m22.019s
+user	0m22.017s
+sys	0m0.000s
+input:110000
+
+real	0m26.605s
+user	0m26.600s
+sys	0m0.004s
+input:120000
+
+real	0m29.773s
+user	0m29.764s
+sys	0m0.008s
+input:130000
+
+real	0m35.563s
+user	0m35.561s
+sys	0m0.000s
+input:140000
+
+real	0m42.215s
+user	0m42.178s
+sys	0m0.016s
+input:150000
+
+real	0m46.778s
+user	0m46.745s
+sys	0m0.012s
+input:160000
+time.sh: line 26:  6972 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	0m50.607s
+user	0m50.508s
+sys	0m0.004s
+input:170000
+time.sh: line 26:  7293 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	0m58.540s
+user	0m58.357s
+sys	0m0.016s
+input:180000
+time.sh: line 26:  7524 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m4.600s
+user	1m4.423s
+sys	0m0.016s
+input:190000
+time.sh: line 26:  7819 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m8.956s
+user	1m8.789s
+sys	0m0.012s
+input:200000
+time.sh: line 26:  7913 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m13.645s
+user	1m13.543s
+sys	0m0.004s
+input:210000
+time.sh: line 26:  8002 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m19.646s
+user	1m19.414s
+sys	0m0.024s
+input:220000
+time.sh: line 26:  8188 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m24.598s
+user	1m24.277s
+sys	0m0.028s
+input:230000
+time.sh: line 26:  8353 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m28.884s
+user	1m28.780s
+sys	0m0.008s
+input:240000
+time.sh: line 26:  8526 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m34.338s
+user	1m34.219s
+sys	0m0.004s
+input:250000
+time.sh: line 26:  8671 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m45.726s
+user	1m45.429s
+sys	0m0.044s
+input:260000
+time.sh: line 26:  8819 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m46.012s
+user	1m45.856s
+sys	0m0.028s
+input:270000
+time.sh: line 26:  8912 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m50.423s
+user	1m50.291s
+sys	0m0.012s
+input:280000
+time.sh: line 26:  9225 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	1m59.402s
+user	1m59.285s
+sys	0m0.004s
+input:290000
+time.sh: line 26:  9475 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m4.974s
+user	2m4.771s
+sys	0m0.024s
+input:300000
+time.sh: line 26:  9750 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m3.780s
+user	2m3.675s
+sys	0m0.004s
+input:310000
+time.sh: line 26:  9848 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m12.003s
+user	2m11.900s
+sys	0m0.004s
+input:320000
+time.sh: line 26: 10073 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m17.875s
+user	2m17.756s
+sys	0m0.020s
+input:330000
+time.sh: line 26: 10311 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m16.894s
+user	2m16.786s
+sys	0m0.008s
+input:340000
+time.sh: line 26: 10528 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m20.795s
+user	2m20.686s
+sys	0m0.012s
+input:350000
+time.sh: line 26: 10731 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m29.823s
+user	2m29.722s
+sys	0m0.004s
+input:360000
+time.sh: line 26: 11059 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m29.564s
+user	2m29.357s
+sys	0m0.028s
+input:370000
+time.sh: line 26: 11322 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m35.061s
+user	2m34.968s
+sys	0m0.000s
+input:380000
+time.sh: line 26: 11493 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m40.487s
+user	2m40.370s
+sys	0m0.016s
+input:390000
+time.sh: line 26: 11663 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m44.431s
+user	2m44.327s
+sys	0m0.004s
+input:400000
+time.sh: line 26: 11890 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m45.993s
+user	2m45.887s
+sys	0m0.008s
+input:410000
+time.sh: line 26: 12056 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m49.800s
+user	2m49.698s
+sys	0m0.000s
+input:420000
+time.sh: line 26: 12213 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m59.752s
+user	2m59.630s
+sys	0m0.024s
+input:430000
+time.sh: line 26: 12457 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	2m57.122s
+user	2m56.996s
+sys	0m0.008s
+input:440000
+time.sh: line 26: 12727 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m2.799s
+user	3m2.691s
+sys	0m0.008s
+input:450000
+time.sh: line 26: 12948 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m12.479s
+user	3m11.968s
+sys	0m0.076s
+input:460000
+time.sh: line 26: 13143 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m12.130s
+user	3m12.026s
+sys	0m0.008s
+input:470000
+time.sh: line 26: 13296 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m16.518s
+user	3m15.571s
+sys	0m0.088s
+input:480000
+time.sh: line 26: 13444 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m14.592s
+user	3m14.191s
+sys	0m0.048s
+input:490000
+time.sh: line 26: 13627 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m17.947s
+user	3m17.832s
+sys	0m0.012s
+input:500000
+time.sh: line 26: 13847 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m23.629s
+user	3m23.242s
+sys	0m0.036s
+input:510000
+time.sh: line 26: 14011 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m26.375s
+user	3m26.272s
+sys	0m0.008s
+input:520000
+time.sh: line 26: 14181 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m30.388s
+user	3m30.278s
+sys	0m0.008s
+input:530000
+time.sh: line 26: 14430 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m38.173s
+user	3m38.060s
+sys	0m0.012s
+input:540000
+time.sh: line 26: 14590 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m29.251s
+user	3m29.142s
+sys	0m0.012s
+input:550000
+time.sh: line 26: 14770 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m35.066s
+user	3m34.948s
+sys	0m0.020s
+input:560000
+time.sh: line 26: 15011 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m38.590s
+user	3m38.201s
+sys	0m0.040s
+input:570000
+time.sh: line 26: 15169 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m42.195s
+user	3m42.040s
+sys	0m0.012s
+input:580000
+time.sh: line 26: 15364 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m45.408s
+user	3m44.811s
+sys	0m0.056s
+input:590000
+time.sh: line 26: 15562 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m51.231s
+user	3m51.121s
+sys	0m0.008s
+input:600000
+time.sh: line 26: 15783 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m52.660s
+user	3m52.528s
+sys	0m0.028s
+input:610000
+time.sh: line 26: 15954 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m56.689s
+user	3m56.425s
+sys	0m0.020s
+input:620000
+time.sh: line 26: 16138 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m57.420s
+user	3m57.148s
+sys	0m0.020s
+input:630000
+time.sh: line 26: 16360 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m58.728s
+user	3m58.459s
+sys	0m0.037s
+input:640000
+time.sh: line 26: 16536 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m0.435s
+user	3m59.918s
+sys	0m0.036s
+input:650000
+time.sh: line 26: 16787 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	3m59.598s
+user	3m59.464s
+sys	0m0.004s
+input:660000
+time.sh: line 26: 17008 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m12.201s
+user	4m11.540s
+sys	0m0.033s
+input:670000
+time.sh: line 26: 17660 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m50.629s
+user	4m50.474s
+sys	0m0.016s
+input:680000
+time.sh: line 26: 18263 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m15.311s
+user	5m15.170s
+sys	0m0.012s
+input:690000
+time.sh: line 26: 18514 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m16.150s
+user	5m16.011s
+sys	0m0.016s
+input:700000
+time.sh: line 26: 18774 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m17.898s
+user	5m17.777s
+sys	0m0.000s
+input:710000
+time.sh: line 26: 19005 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m20.728s
+user	5m20.603s
+sys	0m0.004s
+input:720000
+time.sh: line 26: 19256 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m23.881s
+user	5m23.620s
+sys	0m0.021s
+input:730000
+time.sh: line 26: 19472 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m25.038s
+user	5m24.910s
+sys	0m0.000s
+input:740000
+time.sh: line 26: 19705 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m50.244s
+user	5m50.065s
+sys	0m0.024s
+input:750000
+time.sh: line 26: 20313 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m30.321s
+user	5m30.160s
+sys	0m0.012s
+input:760000
+time.sh: line 26: 20703 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m43.817s
+user	4m43.689s
+sys	0m0.016s
+input:770000
+time.sh: line 26: 21320 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m41.189s
+user	4m41.068s
+sys	0m0.016s
+input:780000
+time.sh: line 26: 21627 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m36.481s
+user	4m36.365s
+sys	0m0.012s
+input:790000
+time.sh: line 26: 21853 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m32.521s
+user	4m32.416s
+sys	0m0.004s
+input:800000
+time.sh: line 26: 22053 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m42.036s
+user	4m41.893s
+sys	0m0.028s
+input:810000
+time.sh: line 26: 22524 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m54.382s
+user	4m54.240s
+sys	0m0.028s
+input:820000
+time.sh: line 26: 22819 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m50.979s
+user	4m50.787s
+sys	0m0.020s
+input:830000
+time.sh: line 26: 23051 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m48.347s
+user	4m48.169s
+sys	0m0.040s
+input:840000
+time.sh: line 26: 23293 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m52.073s
+user	4m51.862s
+sys	0m0.028s
+input:850000
+time.sh: line 26: 23517 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m55.894s
+user	4m55.753s
+sys	0m0.036s
+input:860000
+time.sh: line 26: 23789 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m59.869s
+user	4m59.737s
+sys	0m0.024s
+input:870000
+time.sh: line 26: 24024 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m59.799s
+user	4m59.663s
+sys	0m0.028s
+input:880000
+time.sh: line 26: 24319 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m58.702s
+user	4m58.544s
+sys	0m0.020s
+input:890000
+time.sh: line 26: 24572 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m14.526s
+user	5m14.384s
+sys	0m0.016s
+input:900000
+time.sh: line 26: 25545 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m8.853s
+user	5m8.697s
+sys	0m0.012s
+input:910000
+time.sh: line 26: 25904 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m15.801s
+user	5m15.534s
+sys	0m0.044s
+input:920000
+time.sh: line 26: 26585 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m5.483s
+user	5m5.352s
+sys	0m0.020s
+input:930000
+time.sh: line 26: 26901 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m7.560s
+user	5m7.415s
+sys	0m0.020s
+input:940000
+time.sh: line 26: 27183 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m8.724s
+user	5m8.533s
+sys	0m0.024s
+input:950000
+time.sh: line 26: 27766 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m7.959s
+user	5m7.840s
+sys	0m0.012s
+input:960000
+time.sh: line 26: 28050 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	5m32.666s
+user	5m32.435s
+sys	0m0.029s
+input:970000
+time.sh: line 26: 28514 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	6m44.698s
+user	6m44.499s
+sys	0m0.024s
+input:980000
+time.sh: line 26: 29173 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	6m26.818s
+user	6m26.618s
+sys	0m0.032s
+input:990000
+time.sh: line 26: 29584 Segmentation fault      (core dumped) $binary < ../Input/input-$x
+
+real	4m55.177s
+user	4m55.058s
+sys	0m0.012s
+input:1000000

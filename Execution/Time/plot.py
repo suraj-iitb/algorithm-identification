@@ -1,72 +1,152 @@
+import os
 import numpy as np 
-from scipy.optimize import curve_fit 
-from matplotlib import pyplot as plt 
+from matplotlib import pyplot as plt
+import sys
 
-x1 = []
-y1 = []
+# seperate plots
+if sys.argv[1] == '1':
+    for d1 in os.listdir('Result'):
+        if d1 != 'quick':
+            for file in os.listdir('Result/'+d1):
+                if file == d1+'_run1_processed':
+                    with open('Result/'+d1+'/'+file, 'r') as f:
+                        x = []
+                        y = []
+                        for line in f:
+                            line = line.strip().split('\t')
+                            if len(line) != 0:
+                                x.append(int(line[0]))
+                                y.append(float(line[1]))
+                                
+                        plt.scatter(x, y, label=d1+" sort")
+                        plt.xlabel('n')
+                        plt.ylabel('T (ms)')
+                        plt.legend()
+                        plt.savefig('Figures/' + d1 + '.png')
+                        plt.clf()
 
-with open('time_bubble.txt') as b:
-    for line in b:
-        line = line.strip().split(' ')
-        x1.append(int(line[0]))
-        y1.append(float(line[1]))
+# combine based on complexity
+if sys.argv[1] == '2':
+    # n*logn
+    for d1 in ['heap', 'merge']:
+        for file in os.listdir('Result/'+d1):
+            if file == d1+'_run1_processed':
+                with open('Result/'+d1+'/'+file, 'r') as f:
+                    x = []
+                    y = []
+                    for line in f:
+                        line = line.strip().split('\t')
+                        if len(line) != 0:
+                            x.append(int(line[0]))
+                            y.append(float(line[1]))
+                            
+                    plt.scatter(x, y, label=d1+" sort")
+                    plt.xlabel('n')
+                    plt.ylabel('T (ms)')
+                    plt.legend()
+    plt.savefig('Figures/nlogn.png')
+    plt.clf()
 
-x2 = []
-y2 = []
+    # n*n
+    for d1 in ['bubble', 'insertion', 'selection']:
+        for file in os.listdir('Result/'+d1):
+            if file == d1+'_run1_processed':
+                with open('Result/'+d1+'/'+file, 'r') as f:
+                    x = []
+                    y = []
+                    for line in f:
+                        line = line.strip().split('\t')
+                        if len(line) != 0:
+                            x.append(int(line[0]))
+                            y.append(float(line[1]))
+                            
+                    plt.scatter(x, y, label=d1+" sort")
+                    plt.xlabel('n')
+                    plt.ylabel('T (ms)')
+                    plt.legend()
+    plt.savefig('Figures/nn.png')
+    plt.clf()
 
-with open('time_insertion.txt') as i:
-    for line in i:
-        line = line.strip().split(' ')
-        x2.append(int(line[0]))
-        y2.append(float(line[1]))
 
-x3 = []
-y3 = []
+# combine all complexity
+if sys.argv[1] == '3':
+    for d1 in os.listdir('Result'):
+        if d1 != 'quick':
+            for file in os.listdir('Result/'+d1):
+                if file == d1+'_run1_processed':
+                    with open('Result/'+d1+'/'+file, 'r') as f:
+                        x = []
+                        y = []
+                        for line in f:
+                            line = line.strip().split('\t')
+                            if len(line) != 0:
+                                x.append(int(line[0]))
+                                y.append(float(line[1]))
+                                
+                        plt.scatter(x, y, label=d1+" sort")
+                        plt.xlabel('n')
+                        if sys.argv[2] == 'log':
+                            plt.ylabel('log T (ms)')
+                            plt.yscale("log")
+                        else:
+                            plt.ylabel('T (ms)')
+                        plt.legend()
+    if sys.argv[2] == 'log':
+        plt.savefig('Figures/all(log-scale).png')
+    else:
+        plt.savefig('Figures/all.png')
+    plt.clf()
 
-with open('time_merge.txt') as m:
-    for line in m:
-        line = line.strip().split(' ')
-        x3.append(int(line[0]))
-        y3.append(float(line[1]))
+# different y axis
+if sys.argv[1] == '4':
+    # common work
+    color_list = ['black', 'grey']
+    count = 0
+    color = 'tab:red'
+    fig, ax1 = plt.subplots()
+    ax1.set_xlabel('n')
+    ax1.set_ylabel('T (ms)', color=color)
 
-x4 = []
-y4 = []
+    # n*logn
+    for d1 in ['heap', 'merge']:
+        for file in os.listdir('Result/'+d1):
+            if file == d1+'_run1_processed':
+                with open('Result/'+d1+'/'+file, 'r') as f:
+                    x = []
+                    y = []
+                    for line in f:
+                        line = line.strip().split('\t')
+                        if len(line) != 0:
+                            x.append(int(line[0]))
+                            y.append(float(line[1]))
+                            
+                    ax1.scatter(x, y, label=d1+" sort", color=color_list[count])
+                    ax1.tick_params(axis='y', labelcolor=color)
+                    count += 1
 
-with open('time_heap.txt') as h:
-    for line in h:
-        line = line.strip().split(' ')
-        x4.append(int(line[0]))
-        y4.append(float(line[1]))
- 
+    # common work
+    color = 'tab:blue'
+    ax2 = ax1.twinx()
+    ax2.set_ylabel('T (ms)', color=color)
 
-def test(x, c1, c2, c3, c4, c5): 
-    return c1*np.square(x) + c2*x*np.log(x) + c3*x + c4*np.log(x) + c5
-
-param_b, _ = curve_fit(test, x1, y1)
-param_i, _ = curve_fit(test, x2, y2) 
-param_m, _ = curve_fit(test, x3, y3)
-param_h, _ = curve_fit(test, x4, y4) 
-
-print("Bubble sort coefficients:") 
-print(param_b) 
-print("Insertion sort coefficients:") 
-print(param_i) 
-print("Merge sort coefficients:") 
-print(param_m) 
-print("Heap sort coefficients:") 
-print(param_h) 
-
-ans_b = param_b[1]*(x1*(np.log(x1))) + param_b[2]*np.float_(x1) + param_b[3]*(np.log(x1)) + param_b[4] +param_b[0]*(np.square(x1))
-ans_i = param_i[1]*(x2*(np.log(x2))) + param_i[2]*np.float_(x2) + param_i[3]*(np.log(x2)) + param_i[4] +param_i[0]*(np.square(x2))
-ans_m = param_m[1]*(x1*(np.log(x1))) + param_m[2]*np.float_(x1) + param_m[3]*(np.log(x1)) + param_m[4] + param_m[0]*(np.square(x1))
-ans_h = param_h[1]*(x2*(np.log(x2))) + param_h[2]*np.float_(x2) + param_h[3]*(np.log(x2)) + param_h[4] + param_h[0]*(np.square(x2)) 
-
-# plt.ylim(0, 2)
-plt.plot(x1, ans_b, '-', color ='red', label ="Bubble sort") 
-plt.plot(x2, ans_i, '-', color ='blue', label ="Insertion sort") 
-plt.plot(x3, ans_m, '-', color ='yellow', label ="Merge sort") 
-plt.plot(x4, ans_h, '-', color ='orange', label ="Heap sort") 
-# plt.plot(x1, 0.000000002*(np.square(x1)), '-', color ='green', label ="coeff*n*n") 
-# plt.plot(x1, 0.00000004*(x1*(np.log(x1))), '-', color ='grey', label ="coeff*n*log(n)") 
-plt.legend() 
-plt.savefig('exec-all.png')
+    # n*n
+    for d1 in ['bubble', 'insertion', 'selection']:
+        for file in os.listdir('Result/'+d1):
+            if file == d1+'_run1_processed':
+                with open('Result/'+d1+'/'+file, 'r') as f:
+                    x = []
+                    y = []
+                    for line in f:
+                        line = line.strip().split('\t')
+                        if len(line) != 0:
+                            x.append(int(line[0]))
+                            y.append(float(line[1]))
+                            
+                    ax2.scatter(x, y, label=d1+" sort")
+                    ax2.tick_params(axis='y', labelcolor=color)
+                    
+    fig.tight_layout()
+    ax1.legend()
+    ax2.legend()
+    plt.savefig('Figures/all(diff-y-axis).png')
+    plt.clf()

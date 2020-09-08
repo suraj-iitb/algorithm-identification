@@ -1,0 +1,136 @@
+--------------------------------------------------------------------------------
+Command:            ./../Code/quick_g
+Massif arguments:   --time-unit=B --stacks=yes --massif-out-file=Results/quick/quick-90000 --max-snapshots=10 --detailed-freq=1
+ms_print arguments: Results/quick/quick-90000
+--------------------------------------------------------------------------------
+
+
+    MB
+4.518^                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                                                              @@@@@@@@@#
+     |                                                              @        #
+     |                                                              @        #
+     |                                                              @        #
+     |                                                              @        #
+     |                                                              @        #
+     |                                       @@@@@@@@@@@@@@@@@@@@@@@@        #
+     |                                       @                      @        #
+     |                                       @                      @        #
+     |                                       @                      @        #
+     |               @@@@@@@@@@@@@@@@@@@@@@@@@                      @        #
+     |               @                       @                      @        #
+     |               @                       @                      @        #
+   0 +----------------------------------------------------------------------->GB
+     0                                                                   60.68
+
+Number of snapshots: 9
+ Detailed snapshots: [0, 1, 2, 3, 4, 5, 6, 7, 8 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  1 14,133,257,520          924,688           76,800            16      847,872
+08.31% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->07.86% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->07.86% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->07.86% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->07.86% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.44% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2 35,951,225,184        1,857,856           76,800            16    1,781,040
+04.13% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.91% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->03.91% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->03.91% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->03.91% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.22% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3 56,864,912,544        3,212,896           76,800            16    3,136,080
+02.39% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.26% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->02.26% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->02.26% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->02.26% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.13% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4 65,006,320,608        4,552,384           76,800            16    4,475,568
+01.69% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->01.60% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->01.60% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->01.60% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->01.60% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.09% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5 65,064,065,456        4,597,936           76,800            16    4,521,120
+01.67% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->01.58% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->01.58% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->01.58% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->01.58% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.09% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6 65,107,811,568        4,643,920           76,800            16    4,567,104
+01.65% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->01.57% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->01.57% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->01.57% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->01.57% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.09% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  7 65,137,099,376        4,690,384           76,800            16    4,613,568
+01.64% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->01.55% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->01.55% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->01.55% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->01.55% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.09% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8 65,151,464,240        4,737,328           76,800            16    4,660,512
+01.62% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->01.53% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->01.53% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->01.53% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->01.53% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->00.09% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+

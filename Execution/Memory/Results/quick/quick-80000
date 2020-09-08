@@ -1,0 +1,110 @@
+desc: --time-unit=B --stacks=yes --massif-out-file=Results/quick/quick-80000 --max-snapshots=10 --detailed-freq=1
+cmd: ./../Code/quick_g
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=9724127488
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=691904
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=23519020288
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=1321664
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=36948384000
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=2112992
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=51448780288
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=4024544
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=51481883248
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=4065584
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=51503407216
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=4107056
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=51513020144
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=4148912
+heap_tree=peak
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)

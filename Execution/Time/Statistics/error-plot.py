@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+## Variables ####
+y_scale = True
+output = 'all_sd_log_scale.png'
+metric = 'sd'
+################
+
 index = {'10000': 0, '30000':1, '50000':2, '70000':3, '100000':4}
 
 raw_mean = {'n': [10000, 30000, 50000, 70000, 100000],
@@ -54,6 +60,11 @@ fig, ax = plt.subplots(figsize=(10,5))
 
 # Create a bar with bubble data,
 # in position pos,
+if metric == 'sd':
+    error = raw_sd['bubble']
+else:
+    error = raw_ci['bubble']
+
 plt.bar(pos, 
         #using df['bubble'] data,
         df['bubble'],
@@ -65,11 +76,16 @@ plt.bar(pos,
         color='blue', 
         # with label the first value in n
         # label=df['n'][0],
-        yerr=raw_sd['bubble'],
+        yerr=error,
         capsize=5)
 
 # Create a bar with insertion data,
 # in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['insertion']
+else:
+    error = raw_ci['insertion']
+
 plt.bar([p + width for p in pos], 
         #using df['insertion'] data,
         df['insertion'],
@@ -81,11 +97,16 @@ plt.bar([p + width for p in pos],
         color='#F78F1E', 
         # with label the second value in n
         # label=df['n'][1],
-        yerr=raw_sd['insertion'],
+        yerr=error,
         capsize=5)
 
 # Create a bar with selection data,
 # in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['selection']
+else:
+    error = raw_ci['selection']
+
 plt.bar([p + width*2 for p in pos], 
         #using df['selection'] data,
         df['selection'], 
@@ -97,11 +118,16 @@ plt.bar([p + width*2 for p in pos],
         color='#AAC222', 
         # with label the third value in n
         # label=df['n'][2],
-        yerr=raw_sd['selection'],
+        yerr=error,
         capsize=5) 
 
 # Create a bar with quick data,
 # in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['quick']
+else:
+    error = raw_ci['quick']
+
 plt.bar([p + width*3 for p in pos], 
         #using df['quick'] data,
         df['quick'], 
@@ -113,11 +139,16 @@ plt.bar([p + width*3 for p in pos],
         color='red', 
         # with label the third value in first_name
         # label=df['n'][4],
-        yerr=raw_sd['quick'],
+        yerr=error,
         capsize=5)
 
 # Create a bar with heap data,
 # in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['heap']
+else:
+    error = raw_ci['heap']
+
 plt.bar([p + width*4 for p in pos], 
         #using df['heap'] data,
         df['heap'], 
@@ -129,11 +160,16 @@ plt.bar([p + width*4 for p in pos],
         color='black', 
         # with label the third value in first_name
         # label=df['n'][3],
-        yerr=raw_sd['heap'],
+        yerr=error,
         capsize=5)
 
 # Create a bar with merge data,
 # in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['merge']
+else:
+    error = raw_ci['merge']
+
 plt.bar([p + width*5 for p in pos], 
         #using df['merge'] data,
         df['merge'], 
@@ -145,14 +181,19 @@ plt.bar([p + width*5 for p in pos],
         color='grey', 
         # with label the third value in first_name
         # label=df['n'][5],
-        yerr=raw_sd['merge'],
+        yerr=error,
         capsize=5)
 
 # scale
-ax.set_yscale('log')
+if y_scale:
+    ax.set_yscale('log')
 
 # Set the y axis label
-ax.set_ylabel('log (time)')
+if y_scale:
+    ax.set_ylabel('log (time)')
+else:
+    ax.set_ylabel('Time')
+
 ax.set_xlabel('Input Size')
 
 # Set the chart's title
@@ -171,4 +212,4 @@ ax.set_xticklabels(df['n'])
 # Adding the legend and showing the plot
 plt.legend(['Bubble', 'Insertion', 'Selection', 'Quick', 'Heap', 'Merge'], loc='upper left')
 plt.grid()
-plt.savefig('Figures/all_sd_log_scale.png')
+plt.savefig('Figures/'+output)

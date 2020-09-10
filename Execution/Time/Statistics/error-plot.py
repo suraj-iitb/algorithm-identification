@@ -5,8 +5,8 @@ import os
 
 ## Variables ####
 y_scale = True
-output = 'all_sd_log_scale.png'
-metric = 'sd'
+output = 'all_ci_log_scale.png'
+metric = 'ci'
 ################
 
 index = {'10000': 0, '30000':1, '50000':2, '70000':3, '100000':4}

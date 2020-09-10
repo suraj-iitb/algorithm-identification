@@ -1,0 +1,112 @@
+--------------------------------------------------------------------------------
+Command:            ./../Code/quick-iter_g
+Massif arguments:   --time-unit=B --stacks=yes --massif-out-file=Results/quick-iter/quick-iter-30000 --max-snapshots=10 --detailed-freq=1
+ms_print arguments: Results/quick-iter/quick-iter-30000
+--------------------------------------------------------------------------------
+
+
+    KB
+309.9^###################                                                     
+     |#                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+     |#                  @                     @                             @
+   0 +----------------------------------------------------------------------->GB
+     0                                                                   39.14
+
+Number of snapshots: 5
+ Detailed snapshots: [0, 1 (peak), 2, 3, 4]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  1    150,636,144          317,344           76,800            16      240,528
+24.20% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.91% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->22.91% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->22.91% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->22.91% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->01.29% (4,096B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.29% (4,096B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->01.29% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+      ->01.29% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+        ->01.29% (4,096B) 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+          ->01.29% (4,096B) 0x5237157: scanf (scanf.c:33)
+            ->01.29% (4,096B) 0x108D02: main (quick-iter.cpp:67)
+              
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2 11,097,219,712          317,296           76,800            16      240,480
+24.20% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.91% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->22.91% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->22.91% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->22.91% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->01.29% (4,096B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.29% (4,096B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->01.29% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+      ->01.29% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+        ->01.29% (4,096B) 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+          ->01.29% (4,096B) 0x5237157: scanf (scanf.c:33)
+            ->01.29% (4,096B) 0x108D02: main (quick-iter.cpp:67)
+              
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3 24,198,717,824          317,328           76,800            16      240,512
+24.20% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.91% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->22.91% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->22.91% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->22.91% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->01.29% (4,096B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.29% (4,096B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->01.29% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+      ->01.29% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+        ->01.29% (4,096B) 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+          ->01.29% (4,096B) 0x5237157: scanf (scanf.c:33)
+            ->01.29% (4,096B) 0x108D02: main (quick-iter.cpp:67)
+              
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4 42,028,375,680          317,328           76,800            16      240,512
+24.20% (76,800B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->22.91% (72,704B) 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+| ->22.91% (72,704B) 0x4010782: call_init (dl-init.c:72)
+|   ->22.91% (72,704B) 0x4010782: _dl_init (dl-init.c:119)
+|     ->22.91% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+|       
+->01.29% (4,096B) 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.29% (4,096B) 0x524A3E8: _IO_doallocbuf (genops.c:365)
+    ->01.29% (4,096B) 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+      ->01.29% (4,096B) 0x524A461: _IO_default_uflow (genops.c:380)
+        ->01.29% (4,096B) 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+          ->01.29% (4,096B) 0x5237157: scanf (scanf.c:33)
+            ->01.29% (4,096B) 0x108D02: main (quick-iter.cpp:67)
+              

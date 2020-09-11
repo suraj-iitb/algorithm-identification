@@ -17,7 +17,8 @@ raw_mean = {'n': [10000, 50000, 100000],
         'selection': [0,0,0],
         'heap': [0,0,0],
         'quick': [0,0,0],
-        'merge': [0,0,0]}
+        'merge': [0,0,0],
+        'quick-iter': [0,0,0]}
 
 raw_sd = {'n': [10000, 50000, 100000],
         'bubble': [0,0,0],
@@ -25,7 +26,8 @@ raw_sd = {'n': [10000, 50000, 100000],
         'selection': [0,0,0],
         'heap': [0,0,0],
         'quick': [0,0,0],
-        'merge': [0,0,0]}
+        'merge': [0,0,0],
+        'quick-iter': [0,0,0]}
 
 raw_ci = {'n': [10000, 50000, 100000],
         'bubble': [0,0,0],
@@ -33,27 +35,27 @@ raw_ci = {'n': [10000, 50000, 100000],
         'selection': [0,0,0],
         'heap': [0,0,0],
         'quick': [0,0,0],
-        'merge': [0,0,0]}
+        'merge': [0,0,0],
+        'quick-iter': [0,0,0]}
 
 for d1 in os.listdir('Results'):
-    if d1 != 'quick-iter':
-        for file in os.listdir('Results/'+d1):
-            if file.endswith('stats.csv'):
-                with open('Results/'+d1+'/'+file) as f:
-                    for line in f:
-                        line = line.strip()
-                        if line != '':
-                            line = line.split(',')
-                            if line[0] in list(index.keys()):
-                                raw_mean[d1][index[line[0]]] = float(line[1])
-                                raw_sd[d1][index[line[0]]] = float(line[2])
-                                raw_ci[d1][index[line[0]]] = float(line[4])
+    for file in os.listdir('Results/'+d1):
+        if file.endswith('stats.csv'):
+            with open('Results/'+d1+'/'+file) as f:
+                for line in f:
+                    line = line.strip()
+                    if line != '':
+                        line = line.split(',')
+                        if line[0] in list(index.keys()):
+                            raw_mean[d1][index[line[0]]] = float(line[1])
+                            raw_sd[d1][index[line[0]]] = float(line[2])
+                            raw_ci[d1][index[line[0]]] = float(line[4])
 
-df = pd.DataFrame(raw_mean, columns = ['n', 'bubble', 'insertion', 'selection', 'heap', 'quick', 'merge'])
+df = pd.DataFrame(raw_mean, columns = ['n', 'bubble', 'insertion', 'selection', 'heap', 'quick', 'merge', 'quick-iter'])
 
 # Setting the positions and width for the bars
 pos = list(range(len(df['n'])))
-width = 0.15
+width = 0.1
     
 # Plotting the bars
 fig, ax = plt.subplots(figsize=(10,5))
@@ -184,6 +186,27 @@ plt.bar([p + width*5 for p in pos],
         yerr=error,
         capsize=5)
 
+# Create a bar with quick-iter data,
+# in position pos + some width buffer,
+if metric == 'sd':
+    error = raw_sd['quick-iter']
+else:
+    error = raw_ci['quick-iter']
+
+plt.bar([p + width*6 for p in pos], 
+        #using df['quick-iter'] data,
+        df['quick-iter'], 
+        # of width
+        width, 
+        # with alpha 0.5
+        alpha=0.5, 
+        # with color
+        color='gold', 
+        # with label the third value in first_name
+        # label=df['n'][5],
+        yerr=error,
+        capsize=5)
+
 # scale
 if y_scale:
     ax.set_yscale('log')
@@ -210,6 +233,6 @@ ax.set_xticklabels(df['n'])
 # plt.ylim([0, max(df['pre_score'] + df['mid_score'] + df['post_score'])] )
 
 # Adding the legend and showing the plot
-plt.legend(['Bubble', 'Insertion', 'Selection', 'Quick', 'Heap', 'Merge'], loc='upper left')
+plt.legend(['Bubble', 'Insertion', 'Selection', 'Quick', 'Heap', 'Merge', 'Quick-Iter'], loc='upper left')
 plt.grid()
 plt.savefig('Figures/'+output)

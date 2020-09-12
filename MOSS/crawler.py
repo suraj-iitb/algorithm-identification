@@ -2,8 +2,8 @@ import requests
 import json
 
 ############# Variables ############
-path = 'Data/Merge/Dump/'
-name = 'merge'
+path = 'Data/Counting/Dump/'
+name = 'counting'
 ext = '.cpp'
 code_id = 'code-id.txt'
 ####################################

@@ -4,7 +4,9 @@ d = {'b':[], 'i':[], 's':[], 'q':[], 'm':[], 'c':[]}
 # dict_max = {'b':0, 'i':0, 's':0, 'q':0, 'm':0, 'c':0}
 # print(d.keys())
 
-with open('Results/all/10.csv') as f:
+path = 'Results/all/20/20'
+
+with open(path+'.csv') as f:
     for line in f:
         line = line.strip().split(',')
         lines.append(line)
@@ -13,7 +15,7 @@ with open('Results/all/10.csv') as f:
 # print(codes)
 # print(len(codes))
 
-with open('Results/all/10_scores.csv', 'w') as f:
+with open(path+'_scores.csv', 'w') as f:
     for code in codes:
         for l in lines:
             if code == l[0]:

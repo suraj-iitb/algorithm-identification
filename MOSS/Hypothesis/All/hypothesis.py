@@ -1,5 +1,7 @@
 d = {'b':[], 'i':[], 's':[], 'q':[], 'm':[], 'c':[]}
 
+path = 'Results/all/20/20'
+
 with open('Results/max-avg/max-avg.csv') as f:
     for line in f:
         line = line.strip().split(',')
@@ -23,8 +25,8 @@ with open('Results/max-avg/max-avg.csv') as f:
             d['c'].append(float(line[3]))
 
 # Hyp 1
-with open('Results/all/10_scores.csv') as g:
-    with open('Results/all/10_labels_hyp1.csv', 'w') as f:
+with open(path+'_scores.csv') as g:
+    with open(path+'_labels_hyp1.csv', 'w') as f:
         for line in g:
             line = line.strip().split(',')
             if float(line[1])>=d['b'][0] and float(line[3])<d['i'][0] and float(line[5])<d['s'][0] and \
@@ -49,8 +51,8 @@ with open('Results/all/10_scores.csv') as g:
                 f.write(line[0]+ '\n')
 
 # Hyp 2
-with open('Results/all/10_scores.csv') as g:
-    with open('Results/all/10_labels_hyp2.csv', 'w') as f:
+with open(path+'_scores.csv') as g:
+    with open(path+'_labels_hyp2.csv', 'w') as f:
         for line in g:
             line = line.strip().split(',')
             if float(line[1])>=d['b'][1] and float(line[3])<d['i'][1] and float(line[5])<d['s'][1] and \
@@ -76,8 +78,8 @@ with open('Results/all/10_scores.csv') as g:
 
 
 # Hyp 3
-with open('Results/all/10_scores.csv') as g:
-    with open('Results/all/10_labels_hyp3.csv', 'w') as f:
+with open(path+'_scores.csv') as g:
+    with open(path+'_labels_hyp3.csv', 'w') as f:
         for line in g:
             line = line.strip().split(',')
             if float(line[2])>=d['b'][0] and float(line[4])<d['i'][0] and float(line[6])<d['s'][0] and \
@@ -102,8 +104,8 @@ with open('Results/all/10_scores.csv') as g:
                 f.write(line[0]+ '\n')
 
 # Hyp 4
-with open('Results/all/10_scores.csv') as g:
-    with open('Results/all/10_labels_hyp4.csv', 'w') as f:
+with open(path+'_scores.csv') as g:
+    with open(path+'_labels_hyp4.csv', 'w') as f:
         for line in g:
             line = line.strip().split(',')
             if float(line[2])>=d['b'][1] and float(line[4])<d['i'][1] and float(line[6])<d['s'][1] and \

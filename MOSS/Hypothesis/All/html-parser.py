@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 
 sys.setrecursionlimit(10000)
 
-path = '../../Results/Raw/Dump/Bubble/online-report.html'
-op = 'Results/bubble.csv'
+path = '../../Results/Raw/Dump/All/10/online-report.html'
+op = 'Results/all/10.csv'
 
 data = [] 
 
@@ -37,4 +37,4 @@ with open(op, 'w') as f:
     for i in range(0, len(new_data), 2):
         a = new_data[i].split('(')
         b = new_data[i+1].split('(')
-        f.write(a[0].strip() + ',' + a[1][:-2] + ',' + b[0].strip() + ',' + b[1][:-2] + '\n')
+        f.write(a[0].strip().split('/')[-1] + ',' + a[1][:-2] + ',' + b[0].strip().split('/')[-1] + ',' + b[1][:-2] + '\n')

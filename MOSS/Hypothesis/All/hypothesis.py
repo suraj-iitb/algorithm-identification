@@ -1,6 +1,6 @@
 d = {'b':[], 'i':[], 's':[], 'q':[], 'm':[], 'c':[]}
 
-path = 'Results/all/10/10'
+path = 'Results/all/100/100'
 
 with open('Results/max-avg/max-avg.csv') as f:
     for line in f:

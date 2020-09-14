@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 
 sys.setrecursionlimit(10000)
 
-path = '../../Results/Raw/Dump/All/20/online-report.html'
-op = 'Results/all/20/20.csv'
+path = '../../Results/Raw/Dump/All/100/online-report.html'
+op = 'Results/all/100/100.csv'
 
 data = [] 
 

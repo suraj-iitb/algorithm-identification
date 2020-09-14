@@ -4,7 +4,7 @@ d = {'b':[], 'i':[], 's':[], 'q':[], 'm':[], 'c':[]}
 # dict_max = {'b':0, 'i':0, 's':0, 'q':0, 'm':0, 'c':0}
 # print(d.keys())
 
-path = 'Results/all/20/20'
+path = 'Results/all/100/100'
 
 with open(path+'.csv') as f:
     for line in f:

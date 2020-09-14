@@ -6,7 +6,7 @@ d = {'b': 'bubble', 'i': 'insertion', 's': 'selection', 'q':'quick', 'm': 'merge
 y_true = []
 y_pred = []
 
-path = 'Results/all/20/'
+path = 'Results/all/100/'
 for file in os.listdir(path):
     if 'labels' in file:
         print(file)

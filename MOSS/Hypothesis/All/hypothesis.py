@@ -1,6 +1,6 @@
 d = {'b':[], 'i':[], 's':[], 'q':[], 'm':[], 'c':[]}
 
-path = 'Results/all/20/20'
+path = 'Results/all/10/10'
 
 with open('Results/max-avg/max-avg.csv') as f:
     for line in f:
@@ -48,7 +48,7 @@ with open(path+'_scores.csv') as g:
                 float(line[7])<d['q'][0] and float(line[9])<d['m'][0] and float(line[11])>=d['c'][0] :
                 f.write(line[0]+ ',counting\n')
             else:
-                f.write(line[0]+ '\n')
+                f.write(line[0]+ ',none\n')
 
 # Hyp 2
 with open(path+'_scores.csv') as g:
@@ -74,7 +74,7 @@ with open(path+'_scores.csv') as g:
                 float(line[7])<d['q'][1] and float(line[9])<d['m'][1] and float(line[11])>=d['c'][1] :
                 f.write(line[0]+ ',counting\n')
             else:
-                f.write(line[0]+ '\n')
+                f.write(line[0]+ ',none\n')
 
 
 # Hyp 3
@@ -101,7 +101,7 @@ with open(path+'_scores.csv') as g:
                 float(line[8])<d['q'][0] and float(line[10])<d['m'][0] and float(line[12])>=d['c'][0] :
                 f.write(line[0]+ ',counting\n')
             else:
-                f.write(line[0]+ '\n')
+                f.write(line[0]+ ',none\n')
 
 # Hyp 4
 with open(path+'_scores.csv') as g:
@@ -127,4 +127,4 @@ with open(path+'_scores.csv') as g:
                 float(line[8])<d['q'][1] and float(line[10])<d['m'][1] and float(line[12])>=d['c'][1] :
                 f.write(line[0]+ ',counting\n')
             else:
-                f.write(line[0]+ '\n')
+                f.write(line[0]+ ',none\n')

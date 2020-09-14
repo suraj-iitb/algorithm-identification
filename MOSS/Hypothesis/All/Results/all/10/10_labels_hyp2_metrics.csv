@@ -1,0 +1,19 @@
+[[1 0 3 0 6 0 0]
+ [0 6 1 0 2 0 0]
+ [1 1 2 0 4 0 0]
+ [0 0 0 0 9 0 0]
+ [0 0 0 0 0 0 0]
+ [0 0 0 0 3 7 0]
+ [0 0 0 0 7 0 2]]              precision    recall  f1-score   support
+
+      bubble       0.50      0.10      0.17        10
+    counting       0.86      0.67      0.75         9
+   insertion       0.33      0.25      0.29         8
+       merge       0.00      0.00      0.00         9
+        none       0.00      0.00      0.00         0
+       quick       1.00      0.70      0.82        10
+   selection       1.00      0.22      0.36         9
+
+    accuracy                           0.33        55
+   macro avg       0.53      0.28      0.34        55
+weighted avg       0.63      0.33      0.40        55

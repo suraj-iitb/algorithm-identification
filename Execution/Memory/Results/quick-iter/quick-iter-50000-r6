@@ -1,0 +1,154 @@
+desc: --time-unit=B --stacks=yes --massif-out-file=Results/quick-iter/quick-iter-50000-r6 --max-snapshots=10 --detailed-freq=1
+cmd: ./../Code/quick-iter_g
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=2745872
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=202608
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 4096 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x524A3E8: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x524A461: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x5237157: scanf (scanf.c:33)
+       n0: 4096 0x108D02: main (quick-iter.cpp:67)
+#-----------
+snapshot=2
+#-----------
+time=51958344
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=200600
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 4096 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x524A3E8: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x524A461: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x5237157: scanf (scanf.c:33)
+       n0: 4096 0x108D02: main (quick-iter.cpp:67)
+#-----------
+snapshot=3
+#-----------
+time=120144976
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=202320
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 4096 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x524A3E8: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x524A461: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x5237157: scanf (scanf.c:33)
+       n0: 4096 0x108D02: main (quick-iter.cpp:67)
+#-----------
+snapshot=4
+#-----------
+time=182161832
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=200600
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 4096 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x524A3E8: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x524A461: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x5237157: scanf (scanf.c:33)
+       n0: 4096 0x108D02: main (quick-iter.cpp:67)
+#-----------
+snapshot=5
+#-----------
+time=231374512
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=202608
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n1: 4096 0x523A1FB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x524A3E8: _IO_doallocbuf (genops.c:365)
+   n1: 4096 0x52492C3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:495)
+    n1: 4096 0x524A461: _IO_default_uflow (genops.c:380)
+     n1: 4096 0x5227C59: _IO_vfscanf (vfscanf.c:630)
+      n1: 4096 0x5237157: scanf (scanf.c:33)
+       n0: 4096 0x108D02: main (quick-iter.cpp:67)
+#-----------
+snapshot=6
+#-----------
+time=249364144
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=400528
+heap_tree=peak
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=298576640
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=400480
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=347789112
+mem_heap_B=76800
+mem_heap_extra_B=16
+mem_stacks_B=400520
+heap_tree=detailed
+n2: 76800 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4EC2425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 4096 in 1 place, below massif's threshold (1.00%)

@@ -8,21 +8,21 @@ fi
 binary=./../../Code/$1
 file=Result/$1/$1
 
-for i in 10 100 1000
-do
-    for j in {1..100}
-    do
-        (time $binary < ../../Input/input-$i) &>> ${file}_${i}
-    done
-done
+# for i in 10 100 1000
+# do
+#     for j in {1..100}
+#     do
+#         (time $binary < ../../Input/input-$i) &>> ${file}_${i}
+#     done
+# done
 
-i=10000
+i=70000
 while [ "$i" -le 100000 ] 
 do
-    for j in {1..100}
+    for j in {1..20}
     do
-        (time $binary < ../../Input/input-$i) &>> ${file}_${i}
+        (time $binary < ../../Input/input-${i}-r${j}) &>> ${file}_${i}_r
     done
 
-    i=$(( $i+10000 ))
+    i=$(( $i+30000 ))
 done

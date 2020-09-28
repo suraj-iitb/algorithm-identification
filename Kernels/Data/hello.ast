@@ -1,0 +1,1 @@
+FileAST(FuncDef(Decl(FuncDecl(ParamList(Decl(TypeDecl(IdentifierType)),Decl(TypeDecl(IdentifierType))),TypeDecl(IdentifierType))),Compound(Decl(PtrDecl(TypeDecl(IdentifierType))),Decl(TypeDecl(IdentifierType),BinaryOp(ID,ID)),Return(ID))))

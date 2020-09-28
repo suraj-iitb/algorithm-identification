@@ -6,21 +6,24 @@ def show(node, buf=sys.stdout):
 
     l = len(node.children())
     # current node
-    buf.write(node.__class__.__name__)
-    if l != 0:
-        buf.write('(')
-    
-    count = 0
-    # its children
-    for (child_name, child) in node.children():
-        show(child, buf)
+    node_name = node.__class__.__name__
+    if node_name != 'Typedef':
+        buf.write(node_name)
+        if l != 0:
+            buf.write('(')
+        
+        count = 0
+        # its children
+        for (child_name, child) in node.children():
+            count  += 1
+            if child.__class__.__name__ != 'Typedef':
+                show(child, buf)
 
-        count  += 1
-        if count != l:
-            buf.write(',')
+                if count != l:
+                    buf.write(',')
 
-    if l != 0:
-        buf.write(')')
+        if l != 0:
+            buf.write(')')
 
 sys.path.extend(['.', '..'])
 from pycparser import c_parser, c_ast, parse_file

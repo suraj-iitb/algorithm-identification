@@ -1,0 +1,240 @@
+FileAST: 
+  FuncDef: 
+    Decl: swap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+        TypeDecl: swap, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          ID: a
+      Assignment: =
+        UnaryOp: *
+          ID: a
+        UnaryOp: *
+          ID: b
+      Assignment: =
+        UnaryOp: *
+          ID: b
+        ID: t
+  FuncDef: 
+    Decl: partition, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arr, [], [], []
+            ArrayDecl: []
+              TypeDecl: arr, []
+                IdentifierType: ['int']
+          Decl: low, [], [], []
+            TypeDecl: low, []
+              IdentifierType: ['int']
+          Decl: high, [], [], []
+            TypeDecl: high, []
+              IdentifierType: ['int']
+        TypeDecl: partition, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: pivot, [], [], []
+        TypeDecl: pivot, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: arr
+          ID: high
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          ID: low
+          Constant: int, 1
+      For: 
+        DeclList: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+            ID: low
+        BinaryOp: <=
+          ID: j
+          BinaryOp: -
+            ID: high
+            Constant: int, 1
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          If: 
+            BinaryOp: <
+              ArrayRef: 
+                ID: arr
+                ID: j
+              ID: pivot
+            Compound: 
+              UnaryOp: p++
+                ID: i
+              FuncCall: 
+                ID: swap
+                ExprList: 
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: arr
+                      ID: i
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: arr
+                      ID: j
+      FuncCall: 
+        ID: swap
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: arr
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+          UnaryOp: &
+            ArrayRef: 
+              ID: arr
+              ID: high
+      Return: 
+        BinaryOp: +
+          ID: i
+          Constant: int, 1
+  FuncDef: 
+    Decl: quickSort, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arr, [], [], []
+            ArrayDecl: []
+              TypeDecl: arr, []
+                IdentifierType: ['int']
+          Decl: low, [], [], []
+            TypeDecl: low, []
+              IdentifierType: ['int']
+          Decl: high, [], [], []
+            TypeDecl: high, []
+              IdentifierType: ['int']
+        TypeDecl: quickSort, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: low
+          ID: high
+        Compound: 
+          Decl: pi, [], [], []
+            TypeDecl: pi, []
+              IdentifierType: ['int']
+            FuncCall: 
+              ID: partition
+              ExprList: 
+                ID: arr
+                ID: low
+                ID: high
+          FuncCall: 
+            ID: quickSort
+            ExprList: 
+              ID: arr
+              ID: low
+              BinaryOp: -
+                ID: pi
+                Constant: int, 1
+          FuncCall: 
+            ID: quickSort
+            ExprList: 
+              ID: arr
+              BinaryOp: +
+                ID: pi
+                Constant: int, 1
+              ID: high
+  FuncDef: 
+    Decl: printArray, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arr, [], [], []
+            ArrayDecl: []
+              TypeDecl: arr, []
+                IdentifierType: ['int']
+          Decl: size, [], [], []
+            TypeDecl: size, []
+              IdentifierType: ['int']
+        TypeDecl: printArray, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: size
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: printf
+          ExprList: 
+            Constant: string, "%d "
+            ArrayRef: 
+              ID: arr
+              ID: i
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "\n"
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: arr, [], [], []
+        ArrayDecl: []
+          TypeDecl: arr, []
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 10
+          Constant: int, 7
+          Constant: int, 8
+          Constant: int, 9
+          Constant: int, 1
+          Constant: int, 5
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        BinaryOp: /
+          UnaryOp: sizeof
+            ID: arr
+          UnaryOp: sizeof
+            ArrayRef: 
+              ID: arr
+              Constant: int, 0
+      FuncCall: 
+        ID: quickSort
+        ExprList: 
+          ID: arr
+          Constant: int, 0
+          BinaryOp: -
+            ID: n
+            Constant: int, 1
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "Sorted array: \n"
+      FuncCall: 
+        ID: printArray
+        ExprList: 
+          ID: arr
+          ID: n
+      Return: 
+        Constant: int, 0

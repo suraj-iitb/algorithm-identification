@@ -11,6 +11,7 @@ CFLAGS =   $(SFLAGS) -O3 -fomit-frame-pointer -ffast-math -Wall
 LDFLAGS =  $(SFLAGS) -O3 -lm -Wall
 #CFLAGS =  $(SFLAGS) -pg -Wall
 #LDFLAGS = $(SFLAGS) -pg -lm -Wall 
+LIBS=-L. -lm                               # used libraries
 
 all: svm_multiclass_learn svm_multiclass_classify
 

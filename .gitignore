@@ -17,9 +17,11 @@ Execution/Code/quick-iter_g
 Execution/Code/heap
 Execution/Code/heap_g
 
+Kernels/Data/TK1.2-ARG0vsARG1.tar.gz
+Kernels/Data/multi_class.tar.gz
+Kernels/Prediction/*
 Kernels/svm-light-TK-1.5.zip
 Kernels/svm_multiclass.tar.gz
-Kernels/Data/TK1.2-ARG0vsARG1.tar.gz
 Kernels/svm-light-TK-1.5/svm_classify
 Kernels/svm-light-TK-1.5/svm_classify.o
 Kernels/svm-light-TK-1.5/svm_common.o

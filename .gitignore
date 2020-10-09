@@ -19,3 +19,15 @@ Execution/Code/heap_g
 
 Kernels/svm-light-TK-1.5.zip
 Kernels/svm_multiclass.tar.gz
+Kernels/Data/TK1.2-ARG0vsARG1.tar.gz
+Kernels/svm-light-TK-1.5/svm_classify
+Kernels/svm-light-TK-1.5/svm_classify.o
+Kernels/svm-light-TK-1.5/svm_common.o
+Kernels/svm-light-TK-1.5/svm_hideo.o
+Kernels/svm-light-TK-1.5/svm_learn
+Kernels/svm-light-TK-1.5/svm_learn.o
+Kernels/svm-light-TK-1.5/svm_learn_main.o
+Kernels/svm-light-TK-1.5/tree_kernel.o
+Kernels/svm-light-TK-1.5/tree_manager.o
+Kernels/svm-light-TK-1.5/svm_predictions
+Kernels/Models/*

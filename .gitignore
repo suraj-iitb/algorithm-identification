@@ -31,3 +31,15 @@ Kernels/svm-light-TK-1.5/tree_kernel.o
 Kernels/svm-light-TK-1.5/tree_manager.o
 Kernels/svm-light-TK-1.5/svm_predictions
 Kernels/Models/*
+Kernels/svm_multiclass/svm_light/svm_common.o
+Kernels/svm_multiclass/svm_light/svm_hideo.o
+Kernels/svm_multiclass/svm_light/svm_learn.o
+Kernels/svm_multiclass/svm_light/svm_learn_main.o
+Kernels/svm_multiclass/svm_multiclass_classify
+Kernels/svm_multiclass/svm_multiclass_learn
+Kernels/svm_multiclass/svm_struct/svm_struct_classify.o
+Kernels/svm_multiclass/svm_struct/svm_struct_common.o
+Kernels/svm_multiclass/svm_struct/svm_struct_learn.o
+Kernels/svm_multiclass/svm_struct/svm_struct_main.o
+Kernels/svm_multiclass/svm_struct_api.o
+Kernels/svm_multiclass/svm_struct_learn_custom.o

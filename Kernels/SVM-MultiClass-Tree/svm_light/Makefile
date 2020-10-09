@@ -91,7 +91,15 @@ svm_learn_main.o: svm_learn_main.c svm_learn.h svm_common.h
 svm_classify: svm_classify.o svm_common.o tree_manager.o tree_kernel.o
 	$(LD)  $(LFLAGS) svm_classify.o svm_common.o tree_kernel.o tree_manager.o -o svm_classify $(LIBS)
 
-svm_classify.o: svm_classify.c svm_common.h kernel.h 
+# Create library libsvmlight.so, so that external code can get access to the
+# learning and classification functions of svm-light by linking this library.
+
+svm_learn_hideo_noexe: svm_learn_main.o svm_learn.o svm_common.o svm_hideo.o tree_manager.o tree_kernel.o 
+
+libsvmlight_hideo: svm_learn_main.o svm_learn.o svm_common.o svm_hideo.o tree_manager.o tree_kernel.o
+	$(LD) -shared svm_learn.o svm_common.o svm_hideo.o tree_manager.o tree_kernel.o -o libsvmlight.so
+
+svm_classify.o: svm_classify.c svm_common.h kernel.h
 	$(CC) -c $(CFLAGS) svm_classify.c -o svm_classify.o
 
 

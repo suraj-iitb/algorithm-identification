@@ -3,9 +3,7 @@
 #include <string.h>         // memset()
 #include <stdbool.h>
 #include <errno.h>          // errno
-#ifdef linux
- #include <error.h>         // error()
-#endif
+
 
 #define MAX_N 2000000
 #define MAX_V 10000

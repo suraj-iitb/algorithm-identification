@@ -34,19 +34,22 @@ if __name__ == "__main__":
     # argparser.add_argument('filename', help='name of file to parse')
     # args = argparser.parse_args()
 
-    f = open('../Data/AST/data-b-i.train', 'w')
-    for name in ['Bubble', 'Insertion']:
+    f = open('../Data/AST/counting.ast', 'w')
+    for name in ['Counting']:
         directory = '../../MOSS/Data/' + name +'/Dump/C/'
         dir = os.listdir(directory)
         
         for file in dir:
             # print(os.path.join(directory, file))
             if not file.endswith('.txt'):
-                ast = parse_file(os.path.join(directory, file), use_cpp=True, cpp_path='gcc', cpp_args=['-E', r'-Iutils/fake_libc_include'])
-                if name == 'Bubble':
-                    f.write('1 ')
-                else:
-                    f.write('-1 ')
-                f.write('|BT|')
+                try:
+                    ast = parse_file(os.path.join(directory, file), use_cpp=True, cpp_path='gcc', cpp_args=['-E', r'-Iutils/fake_libc_include'])
+                except Exception as e:
+                    print(e)
+                # if name == 'Bubble':
+                #     f.write('1 ')
+                # else:
+                #     f.write('-1 ')
+                f.write('counting |BT|')
                 show(ast, f)
                 f.write(' |ET|\n')

@@ -2,14 +2,16 @@ import requests
 import json
 
 ############# Variables ############
-path = 'Data/Selection/Dump/C/'
-name = 'selection'
+path = 'Data/Counting/Dump/C/'
+name = 'counting'
 ext = '.c'
 code_id = 'code-id.txt'
 ####################################
 
 with open(path+code_id, 'r') as ids:
+    count = 1
     for id in ids:
+        print('Count:', count)
         id = id.strip()
         r = requests.get('https://judgeapi.u-aizu.ac.jp/reviews/'+id)
         r = json.loads(r.text)
@@ -17,4 +19,5 @@ with open(path+code_id, 'r') as ids:
 
         with open(path+name+id+ext, 'w') as f:
             f.write(code)
+        count += 1
 

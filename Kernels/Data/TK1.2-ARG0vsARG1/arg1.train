@@ -1,0 +1,3 @@
+1 |BT| (A (a) (b) (c)) |ET|
+-1 |BT| (A (a) (b) (c) (A (a) (b) (c))) |ET|
+-1 |BT| (A (a) (b) (c) (A (a) (b) (c)) (A (a) (b) (c))) |ET|

@@ -2,9 +2,9 @@ import requests
 import json
 
 ############# Variables ############
-path = 'Data/Counting/Dump/'
-name = 'counting'
-ext = '.cpp'
+path = 'Data/Selection/Dump/C/'
+name = 'selection'
+ext = '.c'
 code_id = 'code-id.txt'
 ####################################
 

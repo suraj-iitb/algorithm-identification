@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+/*
+1 selectionSort(A, N) // N??????????´??????????0-?????????????????????A
+2   for i ??? 0 ?????? N-1 ?????§
+3     minj = i
+4     for j ??? i ?????? N-1 ?????§
+5       if A[j] < A[minj]
+6         minj = j
+7     A[i] ??¨ A[minj] ?????????
+ */
+
+#define		MXPRG		100
+
+int			selectionSort( int *ARY , int );	//???????????°?????????
+
+int			A[MXPRG];
+
+int		main(void)
+{
+	int		i;
+	int		N;
+	int		chg;
+
+	scanf("%d",&N);
+	for(i=0; i<N; i++)
+	{
+		scanf("%d",&A[i]);
+	}
+
+	chg = selectionSort( A, N);
+	for(i=0; i<N-1; i++)
+	{
+		printf("%d",A[i]);
+		printf(" ");
+	}
+	printf("%d",A[N-1]);
+	printf("\n");
+
+	printf("%d\n",chg);
+	return 0;
+}
+
+int		selectionSort( int ary[], int num )
+{
+	int		i;
+	int		j;
+	int		minj;
+	int		chg;
+	int		tmp;
+
+	chg = 0;
+	for(i=0; i<=num-1; i++)
+	{
+		minj = i;
+		for(j=i; j<=num-1; j++ )
+		{
+			if( A[j] < A[minj] )
+			{
+				minj = j;
+			}
+		}
+		if( A[minj] < A[i] )
+		{
+			tmp = A[i];
+			A[i] = A[minj];
+			A[minj] = tmp;
+			chg += 1;
+		}
+	}
+	return chg;
+}

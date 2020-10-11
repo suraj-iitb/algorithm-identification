@@ -1,6 +1,7 @@
 from __future__ import print_function
 import argparse
 import sys
+import os
 
 def show(node, buf=sys.stdout):
 
@@ -10,7 +11,7 @@ def show(node, buf=sys.stdout):
     if node_name != 'Typedef':
         buf.write(node_name)
         if l != 0:
-            buf.write('(')
+            buf.write(' (')
         
         count = 0
         # its children
@@ -29,11 +30,19 @@ sys.path.extend(['.', '..'])
 from pycparser import c_parser, c_ast, parse_file
 
 if __name__ == "__main__":
-    argparser = argparse.ArgumentParser('Dump AST')
-    argparser.add_argument('filename', help='name of file to parse')
-    args = argparser.parse_args()
+    # argparser = argparse.ArgumentParser('Dump AST')
+    # argparser.add_argument('filename', help='name of file to parse')
+    # args = argparser.parse_args()
 
-    ast = parse_file(args.filename, use_cpp=True,
-            cpp_path='gcc',
-            cpp_args=['-E', r'-Iutils/fake_libc_include'])
-    show(ast)
+    f = open('../Data/AST/bubble.train', 'w')
+
+    directory = '../../MOSS/Data/Bubble/Dump/C/'
+    dir = os.listdir(directory)
+    
+    for file in dir:
+        # print(os.path.join(directory, file))
+        if not file.endswith('.txt'):
+            ast = parse_file(os.path.join(directory, file), use_cpp=True, cpp_path='gcc', cpp_args=['-E', r'-Iutils/fake_libc_include'])
+            f.write('(')
+            show(ast, f)
+            f.write(')\n')

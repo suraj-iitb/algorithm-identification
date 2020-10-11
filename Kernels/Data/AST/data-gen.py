@@ -35,5 +35,3 @@ for i in range(0, len(algo)):
                         elif (count > 600):
                             break
         j += 1
-        break
-    break

@@ -19,7 +19,6 @@ Execution/Code/heap_g
 
 Kernels/Data/TK1.2-ARG0vsARG1.tar.gz
 Kernels/Data/multi_class.tar.gz
-Kernels/Prediction/*
 Kernels/svm-light-TK-1.5.zip
 Kernels/svm_multiclass.tar.gz
 Kernels/svm-light-TK-1.5/svm_classify

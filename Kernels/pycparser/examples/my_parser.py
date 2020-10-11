@@ -9,9 +9,9 @@ def show(node, buf=sys.stdout):
     # current node
     node_name = node.__class__.__name__
     if node_name != 'Typedef':
-        buf.write(node_name)
-        if l != 0:
-            buf.write(' (')
+        buf.write(' ('+node_name)
+        # if l != 0:
+        #     buf.write(' (')
         
         count = 0
         # its children
@@ -20,11 +20,11 @@ def show(node, buf=sys.stdout):
             if child.__class__.__name__ != 'Typedef':
                 show(child, buf)
 
-                if count != l:
-                    buf.write(',')
+                # if count != l:
+                #     buf.write(' ')
 
-        if l != 0:
-            buf.write(')')
+        # if l != 0:
+        buf.write(')')
 
 sys.path.extend(['.', '..'])
 from pycparser import c_parser, c_ast, parse_file
@@ -47,6 +47,6 @@ if __name__ == "__main__":
                     f.write('1 ')
                 else:
                     f.write('-1 ')
-                f.write('|BT| (')
+                f.write('|BT|')
                 show(ast, f)
-                f.write(') |ET|\n')
+                f.write(' |ET|\n')

@@ -1,6 +1,0 @@
-Bubble: 384
-Counting: 129
-Insertion: 897
-Merge: 835
-Quick: 734
-Selection: 1315

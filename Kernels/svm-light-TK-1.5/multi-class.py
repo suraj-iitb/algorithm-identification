@@ -5,14 +5,14 @@ for i in range(0, len(algo)):
     j = i + 1
     while j < len(algo):
         print(algo[i], algo[j])
-        with open('../Prediction/'+algo[i]+'_'+algo[j]+'-r1.pred', 'r') as f:
+        with open('../Prediction/'+algo[i]+'_'+algo[j]+'-r3.pred', 'r') as f:
             lines = f.read().split('\n')
             pred[algo[i]+'_'+algo[j]] = lines
         j += 1
 print(pred)
 
-with open('../Prediction/final-ans-r1.pred', 'w') as ans:
-    with open('../Data/AST/algo-r1.test', 'r') as f:
+with open('../Prediction/final-ans-r3.pred', 'w') as ans:
+    with open('../Data/AST/algo-r3.test', 'r') as f:
         lines = f.read().split('\n')
         line_no = 0
         for line in lines:

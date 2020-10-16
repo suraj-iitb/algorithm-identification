@@ -22,10 +22,12 @@ with open('../Results/all/10/10_svm.csv', 'w') as s:
                         line = line.strip().split(',')
                         if line[0] == code:
                             print(line[0])
-                            temp.append(str([line[2],line[1]]))
+                            temp.append(line[2])
+                            temp.append(line[1])
                         if line[2] == code:
                             print(line[2])
-                            temp.append(str([line[0],line[3]]))
+                            temp.append(line[0])
+                            temp.append(line[3])
                     s.write(code + ',' + ','.join(temp) + '\n')
                     count += 1
                 else:

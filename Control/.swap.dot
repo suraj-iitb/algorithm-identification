@@ -1,0 +1,5 @@
+digraph "CFG for 'swap' function" {
+	label="CFG for 'swap' function";
+
+	Node0x62e7190 [shape=record,label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32*, align 8\l  %5 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32* %1, i32** %4, align 8\l  %6 = load i32*, i32** %3, align 8\l  %7 = load i32, i32* %6, align 4\l  store i32 %7, i32* %5, align 4\l  %8 = load i32*, i32** %4, align 8\l  %9 = load i32, i32* %8, align 4\l  %10 = load i32*, i32** %3, align 8\l  store i32 %9, i32* %10, align 4\l  %11 = load i32, i32* %5, align 4\l  %12 = load i32*, i32** %4, align 8\l  store i32 %11, i32* %12, align 4\l  ret void\l}"];
+}

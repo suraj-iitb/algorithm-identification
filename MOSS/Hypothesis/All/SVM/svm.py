@@ -9,7 +9,7 @@ parameters = {'kernel':('linear', 'rbf'), 'C':[1, 100]}
 X = []
 y = []
 
-with open('../Results/all/50/50_svm_feature_vector.csv') as vectors:
+with open('../Results/all/100/100_svm_feature_vector.csv') as vectors:
 
     for vector in vectors:
 
@@ -49,7 +49,7 @@ y_h_test = clf.predict(X_test)
 print(y_h_test)
 print(np.array(y_test))
 
-with open('../Results/all/50/metrics-50.txt', 'w') as op:
+with open('../Results/all/100/metrics-100.txt', 'w') as op:
     # Print the confusion matrix
     op.write(str(metrics.confusion_matrix(y_test, y_h_test)))
 

@@ -49,7 +49,7 @@ y_h_test = clf.predict(X_test)
 print(y_h_test)
 print(np.array(y_test))
 
-with open('../Results/all/100/metrics-100.txt', 'w') as op:
+with open('../Results/all/100/metrics-r3.txt', 'w') as op:
     # Print the confusion matrix
     op.write(str(metrics.confusion_matrix(y_test, y_h_test)))
 

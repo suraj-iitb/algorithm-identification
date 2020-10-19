@@ -1,6 +1,5 @@
 import os
-
-limit = 100
+import random
 
 algorithm = {'bubble':[], 'insertion':[], 'selection':[], 'counting':[], 'merge':[], 'quick':[]}
 lines = []
@@ -13,6 +12,7 @@ with open('../Results/all/100/100.csv', 'r') as f:
 with open('../Results/all/100/100_svm.csv', 'w') as s:
     for algo in os.listdir('../../../Data'):
         count = 1
+        limit = random.randrange(100)
         for code in os.listdir('../../../Data/' + algo + '/Dump'):
             if not code.endswith('.txt') and not code.endswith('C'):
                 temp = []

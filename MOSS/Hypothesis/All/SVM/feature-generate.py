@@ -1,7 +1,7 @@
 import os
 
-with open('../Results/all/75/75_svm.csv', 'r') as s:
-    with open('../Results/all/75/75_svm_feature_vector.csv', 'w') as ans:
+with open('../Results/all/50/50_svm.csv', 'r') as s:
+    with open('../Results/all/50/50_svm_feature_vector.csv', 'w') as ans:
         for line in s:
             line = line.strip().split(',')
             sim = line[1:]

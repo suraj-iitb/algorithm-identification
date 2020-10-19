@@ -1,20 +1,20 @@
 import os
 
-limit = 10
+limit = 75
 
 algorithm = {'bubble':[], 'insertion':[], 'selection':[], 'counting':[], 'merge':[], 'quick':[]}
 lines = []
 
-with open('../Results/all/10/10.csv', 'r') as f:
+with open('../Results/all/75/75.csv', 'r') as f:
     for line in f:
         lines.append(line.strip())
 # print(lines)
 
-with open('../Results/all/10/10_svm.csv', 'w') as s:
+with open('../Results/all/75/75_svm.csv', 'w') as s:
     for algo in os.listdir('../../../Data'):
         count = 1
         for code in os.listdir('../../../Data/' + algo + '/Dump'):
-            if not code.endswith('.txt'):
+            if not code.endswith('.txt') and not code.endswith('C'):
                 temp = []
                 if count <= limit:
                     # print(code)

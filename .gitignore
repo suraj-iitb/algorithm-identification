@@ -45,3 +45,6 @@ Kernels/svm_multiclass/svm_struct/svm_struct_main.o
 Kernels/svm_multiclass/svm_struct_api.o
 Kernels/svm_multiclass/svm_struct_learn_custom.o
 Kernels/svm-light-TK-1.5/trans_predictions
+
+GraKeL
+gk

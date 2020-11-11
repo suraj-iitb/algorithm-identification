@@ -1,0 +1,77 @@
+Algorithm   Misclassification
+Bubble: 15
+    Insertion: 6
+        bubble2632666: contains insertion sort fun also
+        bubble3275457: implements insertion sort also
+        bubble1299882: flag & malloc
+        bubble3853986: lot of jargons in code like malloc, assert, memset, fgetc, isdigit, continue etc
+        bubble2362106: flag, counters
+        bubble2633703: flag, counters
+
+    Selection: 5
+        bubble2598511: learnt it wrong
+        bubble2928707: learnt it wrong (similar to top uses flag)
+        bubble4434530: uses flag
+        bubble4045853: uses flag
+        bubble4857269: swap fun, counter
+    Counitng: 0
+    Merge: 3
+        bubble1896879: learnt it wrong
+        bubble3909652: learnt it wrong
+        bubble3537305: pointer indexing instead of array
+    Quick:1
+        bubble2529536: Code contains unusual data types and like uint16_t some modifiers like PRIu8
+
+
+
+Merge: 12
+    Bubble: 0
+
+    Insertion: 1
+        merge3002502: no wrong
+    Selection: 3
+        merge1515388: Maybe because of sort function (it doesn't require swap at all)
+        merge2128156: mymalloc #define 
+        merge4152567: jargons like mypr fun, getchar_unlocked, #if etc
+    Counting:2
+        merge861675: getnum, putnum, fread, puts, memcpy
+        merge1794400: nothing wrong
+    Quick: 6
+        merge3750272: wrong code (used qsort and some fun f to count)
+        merge4029017: fine except #define
+        merge2833145: printarray function
+        merge2609835: nothing wrong
+        merge3295512: nothing wrong
+        merge2980256: nothing wrong
+
+
+Quick: 22
+    Bubble: 1
+        quick4171236: merge sort code also
+
+    Insertion: 1
+        quick4000142: merge sort code also
+
+    Selection: 3
+        quick4127443: merge sort code also
+        quick2955009: get_uint, put_uint, getchar_unlocked, putchar_unlocked
+        quick3884151: isstable, swap, fgets, malloc
+    Counting: 0
+
+    Merge: 17
+        quick672841: merge sort code also
+        quick2856923: merge  sort code also
+        quick4616656: merge sort code also
+        quick4152114: merge sort code also
+        quick2999393: some jargon like check_stabilit
+        quick3073171: merge sort code also
+        quick4120242: merge sort code also
+        quick4610743: merge sort code also
+        quick3738822: merge sort code also
+        quick4173033: merge sort code also
+        quick1379392: isstable, printstable etc
+        quick3085325: isstable
+        quick4139574: merge sort code also
+        quick4158350: isstable
+        quick2479771: merge sort code also
+        quick4609396: merge sort code also

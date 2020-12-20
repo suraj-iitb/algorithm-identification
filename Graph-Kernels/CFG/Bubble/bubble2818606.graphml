@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Tue Oct 27 10:38:40 2020 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">in</data>
+    <node id="1000176">
+      <data key="d4">(METHOD,in)</data>
+    </node>
+    <node id="1000179">
+      <data key="d4">(&lt;operator&gt;.assignment,n = 0)</data>
+    </node>
+    <node id="1000183">
+      <data key="d4">(&lt;operator&gt;.assignment,c = getchar_unlocked())</data>
+    </node>
+    <node id="1000185">
+      <data key="d4">(getchar_unlocked,getchar_unlocked())</data>
+    </node>
+    <node id="1000188">
+      <data key="d4">(&lt;operator&gt;.assignment,n = 10*n + (c &amp; 0xf))</data>
+    </node>
+    <node id="1000190">
+      <data key="d4">(&lt;operator&gt;.addition,10*n + (c &amp; 0xf))</data>
+    </node>
+    <node id="1000191">
+      <data key="d4">(&lt;operator&gt;.multiplication,10*n)</data>
+    </node>
+    <node id="1000194">
+      <data key="d4">(&lt;operator&gt;.and,c &amp; 0xf)</data>
+    </node>
+    <node id="1000197">
+      <data key="d4">(&lt;operator&gt;.assignment,c = getchar_unlocked())</data>
+    </node>
+    <node id="1000199">
+      <data key="d4">(getchar_unlocked,getchar_unlocked())</data>
+    </node>
+    <node id="1000200">
+      <data key="d4">(&lt;operator&gt;.greaterEqualsThan,c &gt;= &apos;0&apos;)</data>
+    </node>
+    <node id="1000203">
+      <data key="d4">(RETURN,return n;,return n;)</data>
+    </node>
+    <node id="1000205">
+      <data key="d4">(METHOD_RETURN,int)</data>
+    </node>
+
+    <edge source="1000176" target="1000179">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000179" target="1000185">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000183" target="1000191">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000185" target="1000183">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000188" target="1000199">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000190" target="1000188">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000191" target="1000194">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000194" target="1000190">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000197" target="1000200">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000199" target="1000197">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000200" target="1000191">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000200" target="1000203">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000203" target="1000205">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

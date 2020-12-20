@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Tue Oct 27 10:44:06 2020 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">quickS</data>
+    <node id="1000347">
+      <data key="d4">(METHOD,quickS)</data>
+    </node>
+    <node id="1000355">
+      <data key="d4">(&lt;operator&gt;.lessThan,p&lt;r)</data>
+    </node>
+    <node id="1000359">
+      <data key="d4">(&lt;operator&gt;.assignment,q=partition(A,n,p,r))</data>
+    </node>
+    <node id="1000361">
+      <data key="d4">(partition,partition(A,n,p,r))</data>
+    </node>
+    <node id="1000366">
+      <data key="d4">(quickS,quickS(A,n,p,q-1))</data>
+    </node>
+    <node id="1000370">
+      <data key="d4">(&lt;operator&gt;.subtraction,q-1)</data>
+    </node>
+    <node id="1000373">
+      <data key="d4">(quickS,quickS(A,n,q+1,r))</data>
+    </node>
+    <node id="1000376">
+      <data key="d4">(&lt;operator&gt;.addition,q+1)</data>
+    </node>
+    <node id="1000380">
+      <data key="d4">(METHOD_RETURN,void)</data>
+    </node>
+
+    <edge source="1000347" target="1000355">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000355" target="1000361">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000355" target="1000380">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000359" target="1000370">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000361" target="1000359">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000366" target="1000376">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000370" target="1000366">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000373" target="1000380">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000376" target="1000373">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

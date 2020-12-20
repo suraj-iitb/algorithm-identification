@@ -16,14 +16,13 @@ m = mosspy.Moss(userid, lang)
 
 # Submission Files
 for algo in os.listdir('Data'):
-    if not algo.endswith('.txt'):
-        count = 1
-        for code in os.listdir('Data/' + algo + '/Dump/C'):
-            if not code.endswith('.txt'):
-                if count <= limit:
-                    print(code)
-                    m.addFile('Data/' + algo + '/Dump/C/' + code)
-                    count += 1
+    count = 1
+    for code in os.listdir('Data/' + algo + '/Dump'):
+        if not code.endswith('.txt'):
+            if count <= limit:
+                print(code)
+                m.addFile('Data/' + algo + '/Dump/' + code)
+                count += 1
 
 # Submission Report URL
 url = m.send()

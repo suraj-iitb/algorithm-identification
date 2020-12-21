@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Mon Dec 21 22:40:08 2020 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="node" attr.name="bordercolor" attr.type="string">
+    <default>#000000</default>
+  </key>
+  <key id="d6" for="node" attr.name="borderstyle" attr.type="string">
+    <default>none</default>
+  </key>
+  <key id="d7" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d8" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <node id="0">
+      <data key="d4">0: start</data>
+    </node>
+    <node id="1">
+      <data key="d4">6: enter: get_data(dataset)</data>
+    </node>
+    <node id="10">
+      <data key="d4">17: exit: one_hot_encode(X, labels)</data>
+    </node>
+    <node id="11">
+      <data key="d4">25: &apos;\n    Args:\n    X - numpy array of shape (n_samples, 1)\n    labels - list of all possible labels for current category\n\n     Returns:\n    X in one hot encoded format (numpy array of shape (n_samples, n_labels))\n    &apos;</data>
+    </node>
+    <node id="12">
+      <data key="d4">26: X.shape = (X.shape[0], 1)</data>
+    </node>
+    <node id="13">
+      <data key="d4">27: newX = np.zeros((X.shape[0], len(labels)))</data>
+    </node>
+    <node id="14">
+      <data key="d4">28: label_encoding = {}</data>
+    </node>
+    <node id="15">
+      <data key="d4">29: for: (True if enumerate(labels) else False)</data>
+    </node>
+    <node id="16">
+      <data key="d4">29: (i, l) = enumerate(labels).shift()</data>
+    </node>
+    <node id="17">
+      <data key="d4">30: label_encoding[l] = i</data>
+    </node>
+    <node id="18">
+      <data key="d4">31: for: (True if range(X.shape[0]) else False)</data>
+    </node>
+    <node id="19">
+      <data key="d4">31: i = range(X.shape[0]).shift()</data>
+    </node>
+    <node id="2">
+      <data key="d4">6: exit: get_data(dataset)</data>
+    </node>
+    <node id="20">
+      <data key="d4">32: newX[(i, label_encoding[X[(i, 0)]])] = 1</data>
+    </node>
+    <node id="21">
+      <data key="d4">33: return newX</data>
+    </node>
+    <node id="22">
+      <data key="d4">89: if: (__name__ == &apos;__main__&apos;)</data>
+    </node>
+    <node id="23">
+      <data key="d4">90: np.random.seed(335)</data>
+    </node>
+    <node id="24">
+      <data key="d4">92: (X_train, Y_train, X_test, Y_test) = get_data(&apos;D1&apos;)</data>
+    </node>
+    <node id="25">
+      <data key="d5">black</data>
+      <data key="d6">dotted</data>
+      <data key="d4">94: C = (max(np.max(Y_train), np.max(Y_test)) + 1)</data>
+    </node>
+    <node id="26">
+      <data key="d4">95: D = X_train.shape[1]</data>
+    </node>
+    <node id="27">
+      <data key="d4">97: lr = LogisticRegression(C, D)</data>
+    </node>
+    <node id="28">
+      <data key="d4">98: lr.train(X_train, Y_train)</data>
+    </node>
+    <node id="29">
+      <data key="d4">99: acc = lr.eval(X_test, Y_test)</data>
+    </node>
+    <node id="3">
+      <data key="d4">7: datasets = [&apos;D1&apos;, &apos;D2&apos;]</data>
+    </node>
+    <node id="30">
+      <data key="d4">100: print(f&apos;Test Accuracy: {acc}&apos;)</data>
+    </node>
+    <node id="31">
+      <data key="d4">0: stop</data>
+    </node>
+    <node id="4">
+      <data key="d4">9: X_train = np.loadtxt(f&apos;data/{dataset}/training_data&apos;)</data>
+    </node>
+    <node id="5">
+      <data key="d4">10: Y_train = np.loadtxt(f&apos;data/{dataset}/training_labels&apos;, dtype=int)</data>
+    </node>
+    <node id="6">
+      <data key="d4">11: X_test = np.loadtxt(f&apos;data/{dataset}/test_data&apos;)</data>
+    </node>
+    <node id="7">
+      <data key="d4">12: Y_test = np.loadtxt(f&apos;data/{dataset}/test_labels&apos;, dtype=int)</data>
+    </node>
+    <node id="8">
+      <data key="d4">14: return (X_train, Y_train, X_test, Y_test)</data>
+    </node>
+    <node id="9">
+      <data key="d4">17: enter: one_hot_encode(X, labels)</data>
+    </node>
+
+    <edge source="0" target="22">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="1" target="3">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="11" target="12">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="12" target="13">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="13" target="14">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="14" target="15">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="15" target="18">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="15" target="16">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="16" target="17">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="17" target="15">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="18" target="19">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="18" target="21">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="19" target="20">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="2" target="25">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="20" target="18">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="21" target="10">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="22" target="23">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="22" target="31">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="23" target="24">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="24" target="1">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="24" target="25">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="25" target="26">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="26" target="27">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="27" target="28">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="28" target="29">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="29" target="30">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="3" target="4">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="30" target="31">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="4" target="5">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="5" target="6">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="6" target="7">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="7" target="8">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="8" target="2">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="9" target="11">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+  </graph>
+</graphml>

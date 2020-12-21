@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Mon Dec 21 22:39:58 2020 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="node" attr.name="bordercolor" attr.type="string">
+    <default>#000000</default>
+  </key>
+  <key id="d6" for="node" attr.name="borderstyle" attr.type="string">
+    <default>none</default>
+  </key>
+  <key id="d7" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d8" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <node id="0">
+      <data key="d4">0: start</data>
+    </node>
+    <node id="1">
+      <data key="d4">5: np.random.seed(337)</data>
+    </node>
+    <node id="10">
+      <data key="d4">24: mse = summ</data>
+    </node>
+    <node id="11">
+      <data key="d4">27: return mse</data>
+    </node>
+    <node id="12">
+      <data key="d4">29: enter: ordinary_least_squares(X_train, Y_train, X_test, Y_test, lr, max_iter)</data>
+    </node>
+    <node id="13">
+      <data key="d4">29: exit: ordinary_least_squares(X_train, Y_train, X_test, Y_test, lr, max_iter)</data>
+    </node>
+    <node id="14">
+      <data key="d4">30: train_mses = []</data>
+    </node>
+    <node id="15">
+      <data key="d4">31: test_mses = []</data>
+    </node>
+    <node id="16">
+      <data key="d4">33: m = X_train.shape[1]</data>
+    </node>
+    <node id="17">
+      <data key="d4">34: n = X_train.shape[0]</data>
+    </node>
+    <node id="18">
+      <data key="d4">36: W = np.random.normal(0.0, 1.0, (m, 1))</data>
+    </node>
+    <node id="19">
+      <data key="d4">39: for: (True if range(max_iter) else False)</data>
+    </node>
+    <node id="2">
+      <data key="d4">7: enter: mse(X, Y, W)</data>
+    </node>
+    <node id="20">
+      <data key="d4">39: i = range(max_iter).shift()</data>
+    </node>
+    <node id="21">
+      <data key="d4">41: train_mse = mse(X_train, Y_train, W)[0][0]</data>
+    </node>
+    <node id="22">
+      <data key="d4">43: test_mse = mse(X_test, Y_test, W)[0][0]</data>
+    </node>
+    <node id="23">
+      <data key="d4">46: train_mses.append(train_mse)</data>
+    </node>
+    <node id="24">
+      <data key="d4">47: test_mses.append(test_mse)</data>
+    </node>
+    <node id="25">
+      <data key="d4">50: inn = (np.matmul(X_train, W) - Y_train)</data>
+    </node>
+    <node id="26">
+      <data key="d4">51: inn = inn.reshape(n, 1)</data>
+    </node>
+    <node id="27">
+      <data key="d4">52: net = 0</data>
+    </node>
+    <node id="28">
+      <data key="d4">53: op = W[0, :]</data>
+    </node>
+    <node id="29">
+      <data key="d4">54: net0 = (inn.sum(axis=0) / n)</data>
+    </node>
+    <node id="3">
+      <data key="d4">7: exit: mse(X, Y, W)</data>
+    </node>
+    <node id="30">
+      <data key="d4">55: inn2 = np.repeat(inn, m, axis=1)</data>
+    </node>
+    <node id="31">
+      <data key="d4">56: sub = np.multiply(X_train, inn2)</data>
+    </node>
+    <node id="32">
+      <data key="d4">57: net = (sub.sum(axis=0) / n)</data>
+    </node>
+    <node id="33">
+      <data key="d4">58: net = net.reshape((m, 1))</data>
+    </node>
+    <node id="34">
+      <data key="d4">59: W = (W - (lr * net))</data>
+    </node>
+    <node id="35">
+      <data key="d4">60: W[0, :] = (op - (lr * net0))</data>
+    </node>
+    <node id="36">
+      <data key="d4">68: &apos;\n\t\tfor j in range(m):\n\t\t\tx=X_train[:,j]\n\t\t\tsub=np.multiply(x,inn)\n\t\t\tnet=np.sum(sub)/n\n\t\t\tW[j]=W[j]-lr*( net)\n\t\t\t&apos;</data>
+    </node>
+    <node id="37">
+      <data key="d4">74: return (W, train_mses, test_mses)</data>
+    </node>
+    <node id="38">
+      <data key="d4">76: enter: ridge_regression(X_train, Y_train, X_test, Y_test, reg, lr, max_iter)</data>
+    </node>
+    <node id="39">
+      <data key="d4">76: exit: ridge_regression(X_train, Y_train, X_test, Y_test, reg, lr, max_iter)</data>
+    </node>
+    <node id="4">
+      <data key="d4">15: &apos;\n\tCompute mean squared error between predictions and true y values\n\n\tArgs:\n\tX - numpy array of shape (n_samples, n_features)\n\tY  - numpy array of shape (n_samples, 1)\n\tW - numpy array of shape (n_features, 1)\n\t&apos;</data>
+    </node>
+    <node id="40">
+      <data key="d4">79: &apos;\n\treg - regularization parameter (lambda in Q2.1 c)\n\t&apos;</data>
+    </node>
+    <node id="41">
+      <data key="d4">80: train_mses = []</data>
+    </node>
+    <node id="42">
+      <data key="d4">81: test_mses = []</data>
+    </node>
+    <node id="43">
+      <data key="d4">85: m = X_train.shape[1]</data>
+    </node>
+    <node id="44">
+      <data key="d4">86: n = X_train.shape[0]</data>
+    </node>
+    <node id="45">
+      <data key="d4">88: W = np.random.normal(0.0, 1.0, (m, 1))</data>
+    </node>
+    <node id="46">
+      <data key="d4">92: for: (True if range(max_iter) else False)</data>
+    </node>
+    <node id="47">
+      <data key="d4">92: i = range(max_iter).shift()</data>
+    </node>
+    <node id="48">
+      <data key="d4">95: trmse = mse(X_train, Y_train, W)[0][0]</data>
+    </node>
+    <node id="49">
+      <data key="d4">96: temse = mse(X_test, Y_test, W)[0][0]</data>
+    </node>
+    <node id="5">
+      <data key="d4">18: N = X.shape[0]</data>
+    </node>
+    <node id="50">
+      <data key="d4">97: add1 = np.matmul(np.transpose(W), W)[0][0]</data>
+    </node>
+    <node id="51">
+      <data key="d4">98: add1 = (add1 * reg)</data>
+    </node>
+    <node id="52">
+      <data key="d4">99: train_mse = trmse</data>
+    </node>
+    <node id="53">
+      <data key="d4">100: test_mse = temse</data>
+    </node>
+    <node id="54">
+      <data key="d4">103: train_mses.append(train_mse)</data>
+    </node>
+    <node id="55">
+      <data key="d4">104: test_mses.append(test_mse)</data>
+    </node>
+    <node id="56">
+      <data key="d4">107: inn = (np.matmul(X_train, W) - Y_train)</data>
+    </node>
+    <node id="57">
+      <data key="d4">108: inn = inn.reshape(n, 1)</data>
+    </node>
+    <node id="58">
+      <data key="d4">109: net = 0</data>
+    </node>
+    <node id="59">
+      <data key="d4">113: inn2 = np.repeat(inn, m, axis=1)</data>
+    </node>
+    <node id="6">
+      <data key="d4">20: yp = np.matmul(X, W)</data>
+    </node>
+    <node id="60">
+      <data key="d4">114: sub = np.multiply(X_train, inn2)</data>
+    </node>
+    <node id="61">
+      <data key="d4">115: net = (sub.sum(axis=0) / n)</data>
+    </node>
+    <node id="62">
+      <data key="d4">116: net = net.reshape((m, 1))</data>
+    </node>
+    <node id="63">
+      <data key="d4">118: W = (W - (lr * net))</data>
+    </node>
+    <node id="64">
+      <data key="d4">122: return (W, train_mses, test_mses)</data>
+    </node>
+    <node id="65">
+      <data key="d4">124: enter: weighted_regression(X, Y, r)</data>
+    </node>
+    <node id="66">
+      <data key="d4">124: exit: weighted_regression(X, Y, r)</data>
+    </node>
+    <node id="67">
+      <data key="d4">129: &apos;\n\tFill up this function for problem 3.\n\tUse closed form expression.\n\tr_train is a (n,) array, where n is number of training  samples\n\t&apos;</data>
+    </node>
+    <node id="68">
+      <data key="d4">132: R = np.square(r)</data>
+    </node>
+    <node id="69">
+      <data key="d4">133: R = np.diag(R)</data>
+    </node>
+    <node id="7">
+      <data key="d4">21: diff = (yp - Y)</data>
+    </node>
+    <node id="70">
+      <data key="d4">134: inter = np.matmul(np.transpose(X), R)</data>
+    </node>
+    <node id="71">
+      <data key="d4">135: lhs = np.matmul(inter, X)</data>
+    </node>
+    <node id="72">
+      <data key="d4">136: rhs = np.matmul(inter, Y)</data>
+    </node>
+    <node id="73">
+      <data key="d4">137: lhsi = np.linalg.inv(lhs)</data>
+    </node>
+    <node id="74">
+      <data key="d4">138: W = np.matmul(lhsi, rhs)</data>
+    </node>
+    <node id="75">
+      <data key="d4">141: return W</data>
+    </node>
+    <node id="76">
+      <data key="d4">143: if: (__name__ == &apos;__main__&apos;)</data>
+    </node>
+    <node id="77">
+      <data key="d4">145: (X, Y) = load_data2(&apos;data2.csv&apos;)</data>
+    </node>
+    <node id="78">
+      <data key="d4">146: (X, Y) = preprocess(X, Y)</data>
+    </node>
+    <node id="79">
+      <data key="d4">147: (X_train, Y_train, X_test, Y_test) = split_data(X, Y)</data>
+    </node>
+    <node id="8">
+      <data key="d4">22: summ = np.matmul(np.transpose(diff), diff)</data>
+    </node>
+    <node id="80">
+      <data key="d4">150: (W_ridge, train_mses, test_mses) = ridge_regression(X_train, Y_train, X_test, Y_test, 10)</data>
+    </node>
+    <node id="81">
+      <data key="d5">black</data>
+      <data key="d6">dotted</data>
+      <data key="d4">153: plt.figure(figsize=(4, 4))</data>
+    </node>
+    <node id="82">
+      <data key="d4">154: plt.plot(train_mses)</data>
+    </node>
+    <node id="83">
+      <data key="d4">155: plt.plot(test_mses)</data>
+    </node>
+    <node id="84">
+      <data key="d4">156: plt.legend([&apos;Train MSE&apos;, &apos;Test MSE&apos;])</data>
+    </node>
+    <node id="85">
+      <data key="d4">157: plt.xlabel(&apos;Iteration&apos;)</data>
+    </node>
+    <node id="86">
+      <data key="d4">158: plt.ylabel(&apos;MSE&apos;)</data>
+    </node>
+    <node id="87">
+      <data key="d4">159: plt.show()</data>
+    </node>
+    <node id="88">
+      <data key="d4">0: stop</data>
+    </node>
+    <node id="9">
+      <data key="d4">23: summ = (summ / (2 * N))</data>
+    </node>
+
+    <edge source="0" target="1">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="1" target="76">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="10" target="11">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="11" target="3">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="12" target="14">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="14" target="15">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="15" target="16">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="16" target="17">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="17" target="18">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="18" target="19">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="19" target="20">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="19" target="37">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="2" target="4">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="20" target="21">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="21" target="22">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="22" target="23">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="23" target="24">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="24" target="25">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="25" target="26">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="26" target="27">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="27" target="28">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="28" target="29">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="29" target="30">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="30" target="31">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="31" target="32">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="32" target="33">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="33" target="34">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="34" target="35">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="35" target="36">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="36" target="19">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="37" target="13">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="38" target="40">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="39" target="81">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="4" target="5">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="40" target="41">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="41" target="42">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="42" target="43">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="43" target="44">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="44" target="45">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="45" target="46">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="46" target="47">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="46" target="64">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="47" target="48">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="48" target="49">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="49" target="50">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="5" target="6">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="50" target="51">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="51" target="52">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="52" target="53">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="53" target="54">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="54" target="55">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="55" target="56">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="56" target="57">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="57" target="58">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="58" target="59">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="59" target="60">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="6" target="7">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="60" target="61">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="61" target="62">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="62" target="63">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="63" target="46">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="64" target="39">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="65" target="67">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="67" target="68">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="68" target="69">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="69" target="70">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="7" target="8">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="70" target="71">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="71" target="72">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="72" target="73">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="73" target="74">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="74" target="75">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="75" target="66">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="76" target="77">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="76" target="88">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="77" target="78">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="78" target="79">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="79" target="80">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="8" target="9">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="80" target="38">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="80" target="81">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="81" target="82">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="82" target="83">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="83" target="84">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="84" target="85">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="85" target="86">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="86" target="87">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="87" target="88">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+    <edge source="9" target="10">
+      <data key="d0">filled</data>
+      <data key="d7"></data>
+    </edge>
+  </graph>
+</graphml>

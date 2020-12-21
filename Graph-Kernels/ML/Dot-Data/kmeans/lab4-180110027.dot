@@ -1,0 +1,51 @@
+strict digraph "" {
+	node [label="\N"];
+	0	 [label="0: start"];
+	1	 [label="5: np.random.seed(5927)"];
+	0 -> 1;
+	2	 [label="7: np.arange(5)"];
+	1 -> 2;
+	3	 [label="104: '\nmarks = 0\ndata = np.array([[i+1,i*2.3] for i in range(3)])\ncenters = np.array([[5, 1], [-1., 2]])\nop = np.array([[3.0, \
+4.6], [1.5, 1.15]])\nkmeans = KMeans(D=2, n_clusters=2)\nkmeans.cluster_centers = centers\nit = kmeans.train(data, max_iter = 5)\nif \
+np.allclose(kmeans.cluster_centers, op) and it==1:\n    marks += 1\n\n#kmeans.old\nkmeans.old\n\nfor i in range(4):\n    print(i)\ni\n\n#\
+kmeans.train(data, max_iter = 5)\nit\n\nmarks\n\nnp.allclose(kmeans.cluster_centers, op)\n\n'"];
+	2 -> 3;
+	4	 [label="132: if: (__name__ == '__main__')"];
+	3 -> 4;
+	5	 [label="133: parser = argparse.ArgumentParser()"];
+	4 -> 5;
+	17	 [label="174: \"\nfor i in range(3):\n    #fig = plt.figure(figsize=(5,15))\n    #c = 1\n    #plt.figure()\n    #fig,ax = plt.subplots(nrows=\
+1,ncols=3, figsize=(15,5))\n    #c = 0\n    for k in [2,5,10]:\n        image = plt.imread(f'data/' + str(i+1) + '.png')\n        \
+x = image.reshape(-1, 3)\n        kmeans = KMeans(D=3, n_clusters=k)\n        kmeans.init_clusters(x)\n        kmeans.train(x)\n        \
+out = kmeans.replace_by_center(x)\n        fig = plt.figure(figsize=(5,5))\n        #fig.add_subplot(1, 3, 1)  #rows,cols,i\n        \
+plt.imshow(out.reshape(image.shape))\n        plt.title(str(i+1) + '.png for k=' + str(k) + '{ignore axes}')\n        fig.savefig('\
+plots/q3_image' + str(i+1) + 'K=' + str(k) +'.pdf')\n        plt.show()\n        #ax[c].imshow(out.reshape(image.shape))\n        #\
+c = c+1\n        #c = c+1\n    #plt.tight_layout()\n    #plt.title(str(i) + '.png for k = 2,5,10 [Left to Right] {ignore axes}')\n    \n\""];
+	4 -> 17;
+	6	 [label="134: parser.add_argument('--image', default='1', choices=['1', '2', '3'])"];
+	5 -> 6;
+	18	 [label="0: stop"];
+	17 -> 18;
+	7	 [label="135: parser.add_argument('--k', default=5, type=int)"];
+	6 -> 7;
+	8	 [label="137: args = parser.parse_args()"];
+	7 -> 8;
+	9	 [label="139: image = plt.imread(f'data/{args.image}.png')"];
+	8 -> 9;
+	10	 [label="140: x = image.reshape((- 1), 3)"];
+	9 -> 10;
+	11	 [label="141: kmeans = KMeans(D=3, n_clusters=args.k)"];
+	10 -> 11;
+	12	 [label="142: kmeans.init_clusters(x)"];
+	11 -> 12;
+	13	 [label="143: kmeans.train(x)"];
+	12 -> 13;
+	14	 [label="144: out = kmeans.replace_by_center(x)"];
+	13 -> 14;
+	15	 [label="145: plt.imshow(out.reshape(image.shape))"];
+	14 -> 15;
+	16	 [label="146: plt.show()"];
+	15 -> 16;
+	16 -> 17;
+}
+

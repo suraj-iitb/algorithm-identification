@@ -467,7 +467,7 @@ if __name__ == '__main__':
         cfg.gen_cfg(slurp(args.pythonfile).strip())
         g = CFGNode.to_graph(arcs)
         g.draw(args.pythonfile + '.png', prog='dot')
-        print(g.string(), file=sys.stderr)
+        print(g.string())
     elif args.cfg:
         cfg,first,last = get_cfg(args.pythonfile)
         for i in sorted(cfg.keys()):

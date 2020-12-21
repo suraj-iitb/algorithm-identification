@@ -1,0 +1,38 @@
+strict digraph "" {
+	node [label="\N"];
+	0	 [label="0: start"];
+	1	 [label="5: np.random.seed(5927)"];
+	0 -> 1;
+	2	 [label="60: if: (__name__ == '__main__')"];
+	1 -> 2;
+	3	 [label="61: parser = argparse.ArgumentParser()"];
+	2 -> 3;
+	16	 [label="0: stop"];
+	2 -> 16;
+	4	 [label="62: parser.add_argument('--image', default='1', choices=['1', '2', '3'])"];
+	3 -> 4;
+	5	 [label="63: parser.add_argument('--k', default=5, type=int)"];
+	4 -> 5;
+	6	 [label="65: args = parser.parse_args()"];
+	5 -> 6;
+	7	 [label="67: image = plt.imread(f'data/{args.image}.png')"];
+	6 -> 7;
+	8	 [label="68: x = image.reshape((- 1), 3)"];
+	7 -> 8;
+	9	 [label="69: kmeans = KMeans(D=3, n_clusters=args.k)"];
+	8 -> 9;
+	10	 [label="70: kmeans.init_clusters(x)"];
+	9 -> 10;
+	11	 [label="71: kmeans.train(x)"];
+	10 -> 11;
+	12	 [label="72: out = kmeans.replace_by_center(x)"];
+	11 -> 12;
+	13	 [label="73: plt.imshow(out.reshape(image.shape))"];
+	12 -> 13;
+	14	 [label="74: plt.savefig(('3.2.%s_%d.png' % (args.image, args.k)))"];
+	13 -> 14;
+	15	 [label="75: plt.show()"];
+	14 -> 15;
+	15 -> 16;
+}
+

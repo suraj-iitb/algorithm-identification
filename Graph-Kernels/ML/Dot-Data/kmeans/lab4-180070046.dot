@@ -1,0 +1,50 @@
+strict digraph "" {
+	node [label="\N"];
+	0	 [label="0: start"];
+	1	 [label="5: np.random.seed(5927)"];
+	0 -> 1;
+	2	 [label="61: if: (__name__ == '__main__')"];
+	1 -> 2;
+	3	 [label="62: parser = argparse.ArgumentParser()"];
+	2 -> 3;
+	20	 [label="0: stop"];
+	2 -> 20;
+	4	 [label="63: parser.add_argument('--image', default='1', choices=['1', '2', '3'])"];
+	3 -> 4;
+	5	 [label="64: parser.add_argument('--k', default=5, type=int)"];
+	4 -> 5;
+	6	 [label="66: args = parser.parse_args()"];
+	5 -> 6;
+	7	 [label="78: \"image = plt.imread(f'data/{args.image}.png')\n\tx = image.reshape(-1, 3)\n\tkmeans = KMeans(D=3, n_clusters=args.k)\n\tkmeans.init_\
+clusters(x)\n\tkmeans.train(x)\n\tout = kmeans.replace_by_center(x)\n\tplt.imshow(out.reshape(image.shape))\n\tplt.show()\n\n\tx1 = \
+x.copy()\""];
+	6 -> 7;
+	8	 [label="80: for: (True if range(1, 4) else False)"];
+	7 -> 8;
+	8 -> 20;
+	9	 [label="80: i = range(1, 4).shift()"];
+	8 -> 9;
+	10	 [label="81: for: (True if [2, 5, 10] else False)"];
+	9 -> 10;
+	10 -> 8;
+	11	 [label="81: j = [2, 5, 10].shift()"];
+	10 -> 11;
+	12	 [label="82: image = plt.imread(f'data/{i}.png')"];
+	11 -> 12;
+	19	 [label="90: plt.show()"];
+	19 -> 10;
+	13	 [label="83: x = image.reshape((- 1), 3)"];
+	12 -> 13;
+	14	 [label="85: kmeans = KMeans(D=3, n_clusters=j)"];
+	13 -> 14;
+	15	 [label="86: kmeans.init_clusters(x)"];
+	14 -> 15;
+	16	 [label="87: kmeans.train(x)"];
+	15 -> 16;
+	17	 [label="88: out = kmeans.replace_by_center(x)"];
+	16 -> 17;
+	18	 [label="89: plt.imshow(out.reshape(image.shape))"];
+	17 -> 18;
+	18 -> 19;
+}
+

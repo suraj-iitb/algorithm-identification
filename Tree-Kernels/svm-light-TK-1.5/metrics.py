@@ -5,13 +5,13 @@ algo = ['bubble', 'insertion', 'selection', 'counting', 'merge', 'quick']
 y_pred = []
 y_true = []
 
-with open('../Prediction/final-ans-r3.pred', 'r') as f:
+with open('../Prediction1/final-ans-r1.pred', 'r') as f:
     for i in f:
         if i != '':
             i = i.strip()
             y_pred.append(i)
 
-with open('../Data/AST/algo-r3.test', 'r') as g:
+with open('../Data1/AST/algo-r1.test', 'r') as g:
     for i in g:
         if i != '':
             i = i.strip().split(' ')
@@ -20,7 +20,7 @@ with open('../Data/AST/algo-r3.test', 'r') as g:
 print(len(y_true))
 print(len(y_pred))      
 
-with open('../Prediction/metrics-r3.txt', 'w') as op:
+with open('../Prediction1/metrics-r1.txt', 'w') as op:
     # Print the confusion matrix
     op.write(str(metrics.confusion_matrix(y_true, y_pred)))
 

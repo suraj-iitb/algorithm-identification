@@ -34,13 +34,14 @@ if __name__ == "__main__":
     # argparser.add_argument('filename', help='name of file to parse')
     # args = argparser.parse_args()
 
-    f = open('../Data/AST/counting.ast', 'w')
-    for name in ['Counting']:
-        directory = '../../MOSS/Data/' + name +'/Dump/C/'
+    for name in ['Insertion', 'Selection', 'Counting', 'Merge', 'Quick']:
+        algo = name.lower()
+        f = open('../Data1/AST/'+algo+'.ast', 'w')
+        directory = '/home/suraj/Data_Dump/' + name +'/C/Code/'
         dir = os.listdir(directory)
         
         for file in dir:
-            # print(os.path.join(directory, file))
+            print(os.path.join(directory, file))
             if not file.endswith('.txt'):
                 try:
                     ast = parse_file(os.path.join(directory, file), use_cpp=True, cpp_path='gcc', cpp_args=['-E', r'-Iutils/fake_libc_include'])
@@ -50,6 +51,6 @@ if __name__ == "__main__":
                 #     f.write('1 ')
                 # else:
                 #     f.write('-1 ')
-                f.write('counting |BT|')
+                f.write(algo +' |BT|')
                 show(ast, f)
                 f.write(' |ET|\n')

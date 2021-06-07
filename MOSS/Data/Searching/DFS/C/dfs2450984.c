@@ -1,0 +1,41 @@
+#include <stdio.h>
+#define max 100
+ 
+int arr[max][max];
+int d[max],f[max];
+int count = 0,n;
+ 
+void dfs(int i){
+ 
+  int j;
+  count++;
+  d[i] = count;
+ 
+  for(j = 0 ; j < n ; j++){
+    if(arr[i][j] != 0 && d[j] == 0)dfs(j);
+  }
+ 
+  count++;
+  f[i] = count;
+}
+ 
+ 
+int main(){
+  int i,j;
+  int u,k,v;
+ 
+  scanf("%d",&n);
+ 
+  for(i  = 0 ; i < n ; i++){
+    scanf("%d%d",&u,&k);
+    for(j = 0 ; j < k ; j++){
+      scanf("%d",&v);
+      arr[u-1][v-1] =1;
+    }
+  }
+ 
+  for(i = 0 ; i < n ; i++)if(d[i] == 0)dfs(i);
+ 
+  for(i = 0 ; i < n ; i++)printf("%d %d %d\n",i+1 , d[i] , f[i]);
+  return 0;
+}

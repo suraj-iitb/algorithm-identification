@@ -1,0 +1,71 @@
+#include<stdio.h>
+#define WHITE 0
+#define GRAY 1
+#define BLACK 2
+#define N 100
+
+int n,time;
+int A[N][N];
+int color[N],d[N],f[N];
+
+void DFS();
+void DFS_visit(int);
+
+int main(){
+  int i,j,u,k,v;
+
+  scanf("%d",&n);
+
+  for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+      A[i][j]=0;
+    }
+  }
+
+  for(i=0;i<n;i++){
+    scanf("%d%d",&u,&k);
+    u--;
+    for(j=0;j<k;j++){
+      scanf("%d",&v);
+      v--;
+      A[u][v]=1;
+    }
+  }
+
+  DFS();
+
+  return 0;
+}
+
+void DFS(){
+  int i;
+  for(i=0;i<n;i++){
+    color[i]=WHITE;
+  }
+
+  time=0;
+
+  for(i=0;i<n;i++){
+    if(color[i]==WHITE) DFS_visit(i);
+  }
+for(i=0;i<n;i++){
+    printf("%d %d %d\n",i+1,d[i],f[i]);
+  }
+}
+
+void DFS_visit(int x){
+  int i;
+
+  color[x]=GRAY;
+  d[x]=++time;
+  for(i=0;i<n;i++){
+    if(A[x][i]==0) continue;
+    if(color[i]==WHITE){
+      DFS_visit(i);
+    }
+  }
+  color[x]=BLACK;
+  f[x]=++time;
+}
+
+

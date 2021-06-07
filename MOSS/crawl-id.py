@@ -2,9 +2,9 @@ import requests
 import json
 
 ####### Variables ########
-problemId = 'ALDS1_6_A'
+problemId = 'ALDS1_11_B'
 language = 'c'
-id_file = 'Data/Counting/Dump/C/code-id.txt'
+id_file = 'Data/Searching/DFS/C/code-id.txt'
 ##########################
 
 r = requests.get('https://judgeapi.u-aizu.ac.jp/solutions/problems/' + problemId + '/lang/' + language +'/rating?page=0&size=10000')

@@ -1,17 +1,17 @@
 from sklearn import metrics
 
-algo = ['bubble', 'insertion', 'selection', 'counting', 'merge', 'quick']
+algo = ['linear', 'binary', 'bfs', 'dfs']
 
 y_pred = []
 y_true = []
 
-with open('../Prediction1/final-ans-r1.pred', 'r') as f:
+with open('../Prediction/Searching/final-ans.pred', 'r') as f:
     for i in f:
         if i != '':
             i = i.strip()
             y_pred.append(i)
 
-with open('../Data1/AST/algo-r1.test', 'r') as g:
+with open('../Data/Searching/AST/algo-r1.test', 'r') as g:
     for i in g:
         if i != '':
             i = i.strip().split(' ')
@@ -20,7 +20,7 @@ with open('../Data1/AST/algo-r1.test', 'r') as g:
 print(len(y_true))
 print(len(y_pred))      
 
-with open('../Prediction1/metrics-r1.txt', 'w') as op:
+with open('../Prediction/Searching/metrics-r1.txt', 'w') as op:
     # Print the confusion matrix
     op.write(str(metrics.confusion_matrix(y_true, y_pred)))
 

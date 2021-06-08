@@ -34,10 +34,11 @@ if __name__ == "__main__":
     # argparser.add_argument('filename', help='name of file to parse')
     # args = argparser.parse_args()
 
-    for name in ['Insertion', 'Selection', 'Counting', 'Merge', 'Quick']:
+    for name in ['Linear', 'Binary', 'BFS', 'DFS']:
         algo = name.lower()
-        f = open('../Data1/AST/'+algo+'.ast', 'w')
-        directory = '/home/suraj/Data_Dump/' + name +'/C/Code/'
+        f = open('../Data/Searching/AST/'+algo+'.ast', 'w')
+        # /home/suraj/Documents/MTP/MOSS/Data/Searching/BFS
+        directory = '/home/suraj/Documents/MTP/MOSS/Data/Searching/' + name +'/C/'
         dir = os.listdir(directory)
         
         for file in dir:

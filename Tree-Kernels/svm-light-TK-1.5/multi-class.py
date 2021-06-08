@@ -1,23 +1,23 @@
-algo = ['bubble', 'insertion', 'selection', 'counting', 'merge', 'quick']
+algo = ['linear', 'binary', 'bfs', 'dfs']
 
 pred = {}
 for i in range(0, len(algo)):
     j = i + 1
     while j < len(algo):
         print(algo[i], algo[j])
-        with open('../Prediction1/'+algo[i]+'_'+algo[j]+'-r1.pred', 'r') as f:
+        with open('../Prediction/Searching/'+algo[i]+'_'+algo[j]+'.pred', 'r') as f:
             lines = f.read().split('\n')
             pred[algo[i]+'_'+algo[j]] = lines
         j += 1
 print(pred)
 
-with open('../Prediction1/final-ans-r1.pred', 'w') as ans:
-    with open('../Data1/AST/algo-r1.test', 'r') as f:
+with open('../Prediction/Searching/final-ans.pred', 'w') as ans:
+    with open('../Data/Searching/AST/algo-r1.test', 'r') as f:
         lines = f.read().split('\n')
         line_no = 0
         for line in lines:
             print(line)
-            count = {'bubble':0, 'insertion':0, 'selection':0, 'counting':0, 'merge':0, 'quick':0}
+            count = {'linear':0, 'binary':0, 'bfs':0, 'dfs':0}
             for i in range(0, len(algo)):
                 j = i + 1
                 while j < len(algo):

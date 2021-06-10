@@ -2,8 +2,8 @@ import requests
 import json
 
 ############# Variables ############
-path = 'Data/Searching/DFS/C/'
-name = 'dfs'
+path = 'Data/Path/All/C/'
+name = 'all'
 ext = '.c'
 code_id = 'code-id.txt'
 ####################################

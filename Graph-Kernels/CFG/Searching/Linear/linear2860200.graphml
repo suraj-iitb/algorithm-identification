@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Tue Jun  8 21:49:38 2021 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">insert</data>
+    <node id="1000106">
+      <data key="d4">(METHOD,insert)</data>
+    </node>
+    <node id="1000109">
+      <data key="d4">(&lt;operator&gt;.cast,(elem *)malloc(sizeof(elem)))</data>
+    </node>
+    <node id="1000110">
+      <data key="d4">(UNKNOWN,elem *,elem *)</data>
+    </node>
+    <node id="1000111">
+      <data key="d4">(malloc,malloc(sizeof(elem)))</data>
+    </node>
+    <node id="1000112">
+      <data key="d4">(&lt;operator&gt;.sizeOf,sizeof(elem))</data>
+    </node>
+    <node id="1000114">
+      <data key="d4">(&lt;operator&gt;.assignment,data = data)</data>
+    </node>
+    <node id="1000117">
+      <data key="d4">(&lt;operator&gt;.assignment,next = head.next)</data>
+    </node>
+    <node id="1000119">
+      <data key="d4">(&lt;operator&gt;.fieldAccess,head.next)</data>
+    </node>
+    <node id="1000121">
+      <data key="d4">(FIELD_IDENTIFIER,next,next)</data>
+    </node>
+    <node id="1000122">
+      <data key="d4">(METHOD_RETURN,void)</data>
+    </node>
+
+    <edge source="1000106" target="1000110">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000109" target="1000114">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000110" target="1000112">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000111" target="1000109">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000112" target="1000111">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000114" target="1000121">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000117" target="1000122">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000119" target="1000117">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000121" target="1000119">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

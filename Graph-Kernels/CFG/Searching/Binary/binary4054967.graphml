@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Wed Jun  9 00:27:45 2021 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">Binary_Search</data>
+    <node id="1000177">
+      <data key="d4">(METHOD,Binary_Search)</data>
+    </node>
+    <node id="1000184">
+      <data key="d4">(&lt;operator&gt;.equals,L == ((L+(R))/2))</data>
+    </node>
+    <node id="1000186">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R))/2)</data>
+    </node>
+    <node id="1000187">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R))</data>
+    </node>
+    <node id="1000193">
+      <data key="d4">(&lt;operator&gt;.equals,*(array + ((L+(R-1))/2)) == key)</data>
+    </node>
+    <node id="1000194">
+      <data key="d4">(&lt;operator&gt;.indirection,*(array + ((L+(R-1))/2)))</data>
+    </node>
+    <node id="1000195">
+      <data key="d4">(&lt;operator&gt;.addition,array + ((L+(R-1))/2))</data>
+    </node>
+    <node id="1000197">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R-1))/2)</data>
+    </node>
+    <node id="1000198">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R-1))</data>
+    </node>
+    <node id="1000200">
+      <data key="d4">(&lt;operator&gt;.subtraction,R-1)</data>
+    </node>
+    <node id="1000205">
+      <data key="d4">(RETURN,return key;,return key;)</data>
+    </node>
+    <node id="1000208">
+      <data key="d4">(RETURN,return -1;,return -1;)</data>
+    </node>
+    <node id="1000209">
+      <data key="d4">(&lt;operator&gt;.minus,-1)</data>
+    </node>
+    <node id="1000213">
+      <data key="d4">(&lt;operator&gt;.lessThan,*(array + ((L+(R))/2)) &lt; key)</data>
+    </node>
+    <node id="1000214">
+      <data key="d4">(&lt;operator&gt;.indirection,*(array + ((L+(R))/2)))</data>
+    </node>
+    <node id="1000215">
+      <data key="d4">(&lt;operator&gt;.addition,array + ((L+(R))/2))</data>
+    </node>
+    <node id="1000217">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R))/2)</data>
+    </node>
+    <node id="1000218">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R))</data>
+    </node>
+    <node id="1000223">
+      <data key="d4">(RETURN,return Binary_Search(array,(L+(R))/2+1,key,R);,return Binary_Search(array,(L+(R))/2+1,key,R);)</data>
+    </node>
+    <node id="1000224">
+      <data key="d4">(Binary_Search,Binary_Search(array,(L+(R))/2+1,key,R))</data>
+    </node>
+    <node id="1000226">
+      <data key="d4">(&lt;operator&gt;.addition,(L+(R))/2+1)</data>
+    </node>
+    <node id="1000227">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R))/2)</data>
+    </node>
+    <node id="1000228">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R))</data>
+    </node>
+    <node id="1000237">
+      <data key="d4">(&lt;operator&gt;.greaterThan,*(array + ((L+(R))/2)) &gt; key)</data>
+    </node>
+    <node id="1000238">
+      <data key="d4">(&lt;operator&gt;.indirection,*(array + ((L+(R))/2)))</data>
+    </node>
+    <node id="1000239">
+      <data key="d4">(&lt;operator&gt;.addition,array + ((L+(R))/2))</data>
+    </node>
+    <node id="1000241">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R))/2)</data>
+    </node>
+    <node id="1000242">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R))</data>
+    </node>
+    <node id="1000247">
+      <data key="d4">(RETURN,return Binary_Search(array,L,key,(L+(R))/2);,return Binary_Search(array,L,key,(L+(R))/2);)</data>
+    </node>
+    <node id="1000248">
+      <data key="d4">(Binary_Search,Binary_Search(array,L,key,(L+(R))/2))</data>
+    </node>
+    <node id="1000252">
+      <data key="d4">(&lt;operator&gt;.division,(L+(R))/2)</data>
+    </node>
+    <node id="1000253">
+      <data key="d4">(&lt;operator&gt;.addition,L+(R))</data>
+    </node>
+    <node id="1000258">
+      <data key="d4">(RETURN,return key;,return key;)</data>
+    </node>
+    <node id="1000260">
+      <data key="d4">(METHOD_RETURN,int)</data>
+    </node>
+
+    <edge source="1000177" target="1000187">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000184" target="1000200">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000184" target="1000218">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000186" target="1000184">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000187" target="1000186">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000193" target="1000205">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000193" target="1000209">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000194" target="1000193">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000195" target="1000194">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000197" target="1000195">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000198" target="1000197">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000200" target="1000198">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000205" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000208" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000209" target="1000208">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000213" target="1000228">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000213" target="1000242">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000214" target="1000213">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000215" target="1000214">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000217" target="1000215">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000218" target="1000217">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000223" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000224" target="1000223">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000226" target="1000224">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000227" target="1000226">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000228" target="1000227">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000237" target="1000253">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000237" target="1000258">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000238" target="1000237">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000239" target="1000238">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000241" target="1000239">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000242" target="1000241">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000247" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000248" target="1000247">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000252" target="1000248">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000253" target="1000252">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000258" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

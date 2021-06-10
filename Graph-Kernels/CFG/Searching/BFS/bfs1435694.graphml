@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Tue Jun  8 22:17:09 2021 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">BFS</data>
+    <node id="1000243">
+      <data key="d4">(METHOD,BFS)</data>
+    </node>
+    <node id="1000250">
+      <data key="d4">(&lt;operator&gt;.assignment,i=1)</data>
+    </node>
+    <node id="1000253">
+      <data key="d4">(&lt;operator&gt;.lessEqualsThan,i&lt;=num)</data>
+    </node>
+    <node id="1000256">
+      <data key="d4">(&lt;operator&gt;.postIncrement,i++)</data>
+    </node>
+    <node id="1000259">
+      <data key="d4">(&lt;operator&gt;.assignment,color[i]=WHITE)</data>
+    </node>
+    <node id="1000260">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,color[i])</data>
+    </node>
+    <node id="1000264">
+      <data key="d4">(&lt;operator&gt;.assignment,d[i]=1000000000)</data>
+    </node>
+    <node id="1000265">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,d[i])</data>
+    </node>
+    <node id="1000269">
+      <data key="d4">(&lt;operator&gt;.assignment,color[s] =GRAY)</data>
+    </node>
+    <node id="1000270">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,color[s])</data>
+    </node>
+    <node id="1000274">
+      <data key="d4">(&lt;operator&gt;.assignment,d[s] = 0)</data>
+    </node>
+    <node id="1000275">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,d[s])</data>
+    </node>
+    <node id="1000279">
+      <data key="d4">(Enqueue,Enqueue(s))</data>
+    </node>
+    <node id="1000282">
+      <data key="d4">(&lt;operator&gt;.notEquals,head !=tail)</data>
+    </node>
+    <node id="1000286">
+      <data key="d4">(&lt;operator&gt;.assignment,i = Dequeue())</data>
+    </node>
+    <node id="1000288">
+      <data key="d4">(Dequeue,Dequeue())</data>
+    </node>
+    <node id="1000290">
+      <data key="d4">(&lt;operator&gt;.assignment,v=1)</data>
+    </node>
+    <node id="1000293">
+      <data key="d4">(&lt;operator&gt;.lessEqualsThan,v&lt;=num)</data>
+    </node>
+    <node id="1000296">
+      <data key="d4">(&lt;operator&gt;.postIncrement,v++)</data>
+    </node>
+    <node id="1000300">
+      <data key="d4">(&lt;operator&gt;.logicalAnd,color[v] == WHITE &amp;&amp; num4[i][v] == 1)</data>
+    </node>
+    <node id="1000301">
+      <data key="d4">(&lt;operator&gt;.equals,color[v] == WHITE)</data>
+    </node>
+    <node id="1000302">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,color[v])</data>
+    </node>
+    <node id="1000306">
+      <data key="d4">(&lt;operator&gt;.equals,num4[i][v] == 1)</data>
+    </node>
+    <node id="1000307">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,num4[i][v])</data>
+    </node>
+    <node id="1000308">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,num4[i])</data>
+    </node>
+    <node id="1000314">
+      <data key="d4">(&lt;operator&gt;.assignment,color[v] = GRAY)</data>
+    </node>
+    <node id="1000315">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,color[v])</data>
+    </node>
+    <node id="1000319">
+      <data key="d4">(&lt;operator&gt;.assignment,d[v] =d[i] + 1)</data>
+    </node>
+    <node id="1000320">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,d[v])</data>
+    </node>
+    <node id="1000323">
+      <data key="d4">(&lt;operator&gt;.addition,d[i] + 1)</data>
+    </node>
+    <node id="1000324">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,d[i])</data>
+    </node>
+    <node id="1000328">
+      <data key="d4">(Enqueue,Enqueue(v))</data>
+    </node>
+    <node id="1000330">
+      <data key="d4">(&lt;operator&gt;.assignment,color[i] = BLACK)</data>
+    </node>
+    <node id="1000331">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,color[i])</data>
+    </node>
+    <node id="1000335">
+      <data key="d4">(METHOD_RETURN,void)</data>
+    </node>
+
+    <edge source="1000243" target="1000250">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000250" target="1000253">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000253" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000253" target="1000260">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000253" target="1000270">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000256" target="1000253">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000259" target="1000265">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000260" target="1000259">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000264" target="1000256">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000265" target="1000264">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000269" target="1000275">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000270" target="1000269">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000274" target="1000279">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000275" target="1000274">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000279" target="1000282">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000282" target="1000288">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000282" target="1000335">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000286" target="1000290">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000288" target="1000286">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000290" target="1000293">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000293" target="1000302">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000293" target="1000302">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000293" target="1000331">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000296" target="1000293">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000300" target="1000296">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000300" target="1000315">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000301" target="1000300">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000301" target="1000308">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000302" target="1000301">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000306" target="1000300">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000307" target="1000306">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000308" target="1000307">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000314" target="1000320">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000315" target="1000314">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000319" target="1000328">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000320" target="1000324">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000323" target="1000319">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000324" target="1000323">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000328" target="1000296">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000330" target="1000282">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000331" target="1000330">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Fri Jun 11 00:21:22 2021 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">main</data>
+    <node id="1000110">
+      <data key="d4">(METHOD,main)</data>
+    </node>
+    <node id="1000112">
+      <data key="d4">(std::ios::sync_with_stdio,std::ios::sync_with_stdio(false))</data>
+    </node>
+    <node id="1000114">
+      <data key="d4">(std::cin.tie,std::cin.tie(0))</data>
+    </node>
+    <node id="1000119">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,cin &gt;&gt; v &gt;&gt; e &gt;&gt; s)</data>
+    </node>
+    <node id="1000121">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,v &gt;&gt; e &gt;&gt; s)</data>
+    </node>
+    <node id="1000123">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,e &gt;&gt; s)</data>
+    </node>
+    <node id="1000128">
+      <data key="d4">(&lt;operator&gt;.lessThan,vector&lt;pair&lt;int)</data>
+    </node>
+    <node id="1000130">
+      <data key="d4">(&lt;operator&gt;.lessThan,pair&lt;int)</data>
+    </node>
+    <node id="1000133">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,ll&gt;&gt; t)</data>
+    </node>
+    <node id="1000136">
+      <data key="d4">(alist.push_back,alist.push_back(t))</data>
+    </node>
+    <node id="1000142">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,cin &gt;&gt; from &gt;&gt; to &gt;&gt; cost)</data>
+    </node>
+    <node id="1000144">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,from &gt;&gt; to &gt;&gt; cost)</data>
+    </node>
+    <node id="1000146">
+      <data key="d4">(&lt;operator&gt;.arithmeticShiftRight,to &gt;&gt; cost)</data>
+    </node>
+    <node id="1000149">
+      <data key="d4">(alist[from].push_back,alist[from].push_back(make_pair(cost,to)))</data>
+    </node>
+    <node id="1000150">
+      <data key="d4">(make_pair,make_pair(cost,to))</data>
+    </node>
+    <node id="1000154">
+      <data key="d4">(&lt;operator&gt;.assignment,distances = dijkstra(s,alist,v))</data>
+    </node>
+    <node id="1000156">
+      <data key="d4">(dijkstra,dijkstra(s,alist,v))</data>
+    </node>
+    <node id="1000161">
+      <data key="d4">(&lt;operator&gt;.lessThan,distances[i] &lt; inf)</data>
+    </node>
+    <node id="1000162">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,distances[i])</data>
+    </node>
+    <node id="1000166">
+      <data key="d4">(&lt;operator&gt;.shiftLeft,cout &lt;&lt; distances[i] &lt;&lt; endl)</data>
+    </node>
+    <node id="1000168">
+      <data key="d4">(&lt;operator&gt;.shiftLeft,distances[i] &lt;&lt; endl)</data>
+    </node>
+    <node id="1000169">
+      <data key="d4">(&lt;operator&gt;.indirectIndexAccess,distances[i])</data>
+    </node>
+    <node id="1000174">
+      <data key="d4">(&lt;operator&gt;.shiftLeft,cout &lt;&lt; &quot;INF&quot; &lt;&lt; endl)</data>
+    </node>
+    <node id="1000176">
+      <data key="d4">(&lt;operator&gt;.shiftLeft,&quot;INF&quot; &lt;&lt; endl)</data>
+    </node>
+    <node id="1000179">
+      <data key="d4">(METHOD_RETURN,int)</data>
+    </node>
+
+    <edge source="1000110" target="1000112">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000112" target="1000114">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000114" target="1000123">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000119" target="1000130">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000121" target="1000119">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000123" target="1000121">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000128" target="1000133">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000130" target="1000128">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000133" target="1000136">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000136" target="1000146">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000142" target="1000150">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000144" target="1000142">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000146" target="1000144">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000149" target="1000156">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000150" target="1000149">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000154" target="1000162">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000156" target="1000154">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000161" target="1000169">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000161" target="1000176">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000162" target="1000161">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000166" target="1000179">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000168" target="1000166">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000169" target="1000168">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000174" target="1000179">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000176" target="1000174">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Created by Graph::Easy v0.76 at Fri Jun 11 00:06:39 2021 -->
+
+  <key id="d0" for="edge" attr.name="arrowstyle" attr.type="string">
+    <default>open</default>
+  </key>
+  <key id="d1" for="graph" attr.name="colorscheme" attr.type="string">
+    <default>w3c</default>
+  </key>
+  <key id="d2" for="graph" attr.name="flow" attr.type="string">
+    <default>east</default>
+  </key>
+  <key id="d3" for="graph" attr.name="title" attr.type="string">
+    <default></default>
+  </key>
+  <key id="d4" for="node" attr.name="label" attr.type="string"/>
+  <key id="d5" for="edge" attr.name="label" attr.type="string"/>
+  <key id="d6" for="edge" attr.name="style" attr.type="string">
+    <default>solid</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+    <data key="d1">x11</data>
+    <data key="d2">south</data>
+    <data key="d3">ketawa</data>
+    <node id="1000673">
+      <data key="d4">(METHOD,ketawa)</data>
+    </node>
+    <node id="1000678">
+      <data key="d4">(&lt;operator&gt;.assignment,sum=0)</data>
+    </node>
+    <node id="1000681">
+      <data key="d4">(&lt;operator&gt;.assignmentPlus,sum+=(x%poow(sinsuu,i+1))/(poow(sinsuu,i)))</data>
+    </node>
+    <node id="1000683">
+      <data key="d4">(&lt;operator&gt;.division,(x%poow(sinsuu,i+1))/(poow(sinsuu,i)))</data>
+    </node>
+    <node id="1000684">
+      <data key="d4">(&lt;operator&gt;.modulo,x%poow(sinsuu,i+1))</data>
+    </node>
+    <node id="1000686">
+      <data key="d4">(poow,poow(sinsuu,i+1))</data>
+    </node>
+    <node id="1000688">
+      <data key="d4">(&lt;operator&gt;.addition,i+1)</data>
+    </node>
+    <node id="1000691">
+      <data key="d4">(poow,poow(sinsuu,i))</data>
+    </node>
+    <node id="1000694">
+      <data key="d4">(RETURN,return sum;,return sum;)</data>
+    </node>
+    <node id="1000696">
+      <data key="d4">(METHOD_RETURN,int)</data>
+    </node>
+
+    <edge source="1000673" target="1000678">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000678" target="1000688">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000681" target="1000694">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000683" target="1000681">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000684" target="1000691">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000686" target="1000684">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000688" target="1000686">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000691" target="1000683">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+    <edge source="1000694" target="1000696">
+      <data key="d0">filled</data>
+      <data key="d5"></data>
+    </edge>
+  </graph>
+</graphml>

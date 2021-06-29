@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int bubbleSort(int a[],int n){
+	bool reverse = true;
+	int count = 0;
+	while(reverse){
+		reverse = false;
+		for(int i=n-1;i>0;i--){
+			if(a[i]<a[i-1]) {
+				swap(a[i],a[i-1]);
+				reverse = true;
+				count ++;
+			}
+		}
+	}
+	return count;
+}
+
+int main(){
+	int n, count;
+	cin >> n;
+	
+	int a[n];
+	for(int i=0;i<n;i++){
+		cin >> a[i];
+	}
+	
+	count = bubbleSort(a,n);
+	
+	for(int i=0;i<n-1;i++) cout << a[i] << " ";
+	cout << a[n-1] << endl;
+	cout << count << endl;
+
+	return 0;
+}

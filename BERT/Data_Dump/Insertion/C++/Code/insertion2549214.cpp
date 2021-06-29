@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+//---------------------------------------
+void insertionSort(vector<int> &a);  // 0-?????????????????????A
+void print(vector<int> &a);
+//---------------------------------------
+
+int main(void)
+{
+	int num;  //??°?????????????????¨?????´??°num
+	vector<int> a;
+	
+	cin >> num;
+	
+	for(int i = 0; i < num; i++){
+		int num_card;  //?????????????¨?????????????????????°
+		cin >> num_card;
+		a.push_back(num_card);
+	}
+	
+	insertionSort(a); //????????????
+	
+	return 0;
+}
+
+//------------------------------------------
+void insertionSort(vector<int> &a)
+{
+	print(a);
+	for(int i = 1; i < a.size(); i++){
+		int v = a[i];  //????????????
+		
+		int j = i - 1;
+		while(j >= 0 && a[j] > v){
+			a[j+1] = a[j];
+			j--;
+		}
+		a[j+1] = v;
+		
+		print(a);
+	}
+}
+
+//--------------------------------------------
+void print(vector<int> &a)
+{
+	if(a.size() >= 1){
+	
+		cout << a[0];
+	}
+	for(int i = 1; i < a.size(); i++){
+		cout << ' ' << a[i] ;
+	}
+	
+	cout << endl;
+}

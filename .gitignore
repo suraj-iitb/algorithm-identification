@@ -55,3 +55,11 @@ Control/.ipynb_checkpoints/gk-checkpoint.ipynb
 Control/.ipynb_checkpoints/gk1-checkpoint.ipynb
 
 Graph-Kernels/ML/Data
+
+BERT/GraphCodeBERT/clonedetection/dataset/
+BERT/GraphCodeBERT/clonedetection/saved_models/
+BERT/GraphCodeBERT/clonedetection/__py*
+
+BERT/CodeBERT/codesearch/__py*
+BERT/CodeBERT/codesearch/models/
+BERT/CodeBERT/codesearch/runs/

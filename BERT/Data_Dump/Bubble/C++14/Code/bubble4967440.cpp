@@ -1,0 +1,145 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <string>
+#include <queue>
+#include <cstdio>
+#include <stack>
+#include <set>
+#include <map>
+#include <iomanip>
+#include <utility>
+#include <tuple>
+#include <functional>
+#include <bitset>
+#include <cassert>
+#include <complex>
+#include <stdio.h>
+#include <time.h>
+#include <numeric>
+#include <unordered_map>
+#include <unordered_set>
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+# define ll int64_t
+# define str string
+# define rep(i,n) for(ll i=0;i<n;i++)
+# define rrep(i,n) for(ll i=1;i<=n;i++)
+# define ALL(x) (x).begin(), (x).end()
+# define SZ(x) ((int)(x).size())
+# define pb push_back
+# define mod 1000000007
+# define PI 3.141592653589793
+# define vec vector
+#define dump(x) cerr<<#x<<"="<<x<<endl
+using namespace std;
+
+
+
+#define INF 2000000000
+#define MAX_V 10
+const int MAX_N =10000000;
+
+
+bool compare_by_b(pair<string,ll> a,pair<string,ll> b){
+    if(a.second != b.second) return a.second<b.second;
+    else return a.first<b.first;
+}
+
+bool my_compare(pair<ll,ll> a,pair<ll,ll> b){
+    if(a.first != b.first) return a.first<b.first;
+    if(a.second != b.second) return a.second>b.second;
+    else return true;
+}
+
+ll modpow(ll a,ll n) {
+    ll res=1;
+    while(n>0){
+        if(n&1) res=res*a%mod;
+        a = a*a%mod;
+        n >>= 1;
+    }
+    return res;
+}
+
+ll factorial(ll n){
+    ll x=1;
+    rrep(i,n) x*=i;
+    return x;
+}
+
+ll gcd(ll a,ll b) { return b ? gcd(b, a%b) : a; }
+
+ll func(ll a,ll b,ll& ans_x,ll& ans_y){
+    if(b == 0){
+        ans_x = 1;
+        ans_y = 0;
+        return a;
+    }else{
+        ll ret = func(b,(a%b),ans_y,ans_x);
+        ans_y -= (a/b)*ans_x;
+        return ret;
+    }
+}
+
+ll par[MAX_N],ranking[MAX_N];
+
+void init(ll n){
+    rep(i,n){
+        par[i]=i;
+        ranking[i]=0;
+    }
+}
+
+ll find(ll x){
+    if(par[x]==x) return x;
+    else return par[x]=find(par[x]);
+}
+
+void unite(ll x,ll y){
+    x=find(x);
+    y=find(y);
+    if(x==y) return;
+    
+    if(ranking[x]<ranking[y]) par[x]=y;
+    else{
+        par[y]=x;
+        if(ranking[x]==ranking[y]) ranking[x]++;
+    }
+}
+
+bool same(ll x,ll y){
+    return find(x)==find(y);
+}
+
+int main(){
+    cin.tie(0);
+    ios::sync_with_stdio(false);
+    
+    ll n,c=0;
+    cin>>n;
+    vector<ll> a(n);
+    rep(i,n) cin>>a[i];
+    
+    bool flag = 1;
+    while(flag){
+        flag = 0;
+        
+        for(ll i=n-1;i>=1;i--){
+            if(a[i]<a[i-1]){
+                ll x=a[i];
+                a[i]=a[i-1];
+                a[i-1]=x;
+                flag=1;
+                c++;
+            }
+        }
+    }
+    rep(j,n){
+        if(j!=n-1) cout<<a[j]<<" ";
+        else cout<<a[j]<<endl;
+    }
+    cout<<c<<endl;
+    return 0;
+}

@@ -1,0 +1,64 @@
+#include <iostream>
+
+#define rep(i, n) for (int i = 0; i < (int)(n); ++i)
+
+void printArray(int *A, int n) {
+  rep(i, n) {
+    std::cout << A[i];
+    if (i == n - 1)
+      std::cout << '\n';
+    else
+      std::cout << ' ';
+  }
+}
+
+int cnt = 0;
+
+void merge(int *A, int n, int left, int mid, int right) {
+  int n1 = mid - left;
+  int n2 = right - mid;
+  int L[n1 + 1], R[n2 + 1];
+
+  for (int i = left; i < mid; ++i)
+    L[i - left] = A[i];
+
+  for (int i = mid; i < right; ++i)
+    R[i - mid] = A[i];
+
+  L[n1] = R[n2] = (1 << 30);
+
+  int l = 0, r = 0;
+  for (int i = left; i < right; ++i) {
+    cnt++;
+    if (L[l] < R[r]) {
+      A[i] = L[l];
+      l++;
+    } else {
+      A[i] = R[r];
+      r++;
+    }
+  }
+}
+
+void mergeSort(int *A, int n, int left, int right) {
+  if (right - left <= 1)
+    return;
+
+  int mid = (left + right) / 2;
+  mergeSort(A, n, left, mid);
+  mergeSort(A, n, mid, right);
+  merge(A, n, left, mid, right);
+}
+
+int main() {
+  int n;
+  std::cin >> n;
+  int S[n];
+  rep(i, n) std::cin >> S[i];
+
+  mergeSort(S, n, 0, n);
+  printArray(S, n);
+  std::cout << cnt << '\n';
+  return 0;
+}
+

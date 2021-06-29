@@ -1,0 +1,27 @@
+#include<cstdio>
+int *insert_sort(int *a, int n){
+    for(int i = 0; i < n; i++){
+        int v = a[i];
+        int j = i-1;
+        while(j >= 0 && a[j] > v){
+            a[j+1] = a[j];
+            j--;
+        }
+        a[j+1] = v;
+        for(int j = 0; j < n-1; j++)
+            printf("%d ", a[j]);
+        printf("%d\n", a[n-1]);
+    }
+    return a;
+}
+
+
+int main(){
+    int n; scanf("%d", &n);
+    int a[10000];
+    for(int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    insert_sort(a, n);
+    return 0;
+}
+

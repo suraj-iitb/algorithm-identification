@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+  int i,n,*A,*B,C[10001];
+  scanf("%d",&n);
+  A=(int*)malloc(sizeof(int)*n);
+  B=(int*)malloc(sizeof(int)*n);
+  for(i=0;i<n;i++)
+    scanf("%d",&A[i]);
+
+  // CountingSort(A, B, k)
+  for (i=0;i<=10000;i++)
+    C[i]=0;
+
+  /* C[i] ??? i ???????????°????¨?????????? */
+  for (i=0;i<n;i++)
+    C[A[i]]++;
+
+  /* C[i] ??? i ??\????????°???????????°????¨??????????*/
+  for(i=0;i<=10000;i++)
+    C[i]=C[i]+C[i-1];
+  
+  for(i=n-1;i>=0;i--){
+    B[C[A[i]]-1]=A[i];
+    C[A[i]]--;
+  }
+  for(i=0;i<n;i++){
+    printf("%d",B[i]);
+	   if(i<n-1)
+	     printf(" ");
+	   }
+      printf("\n");
+    return 0;
+  }

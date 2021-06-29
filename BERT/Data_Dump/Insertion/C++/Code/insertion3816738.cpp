@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    int N;
+    cin >> N;
+    vector<int> A;
+    for(int i=0;i<N;i++){
+      int num;
+      cin >> num;
+      A.push_back(num);
+    }
+    cout<<A[0];
+    for (int i=1;i<N;i++){
+      cout<<" "<<A[i];
+    }
+    cout<<endl;
+    for (int i=1;i<=N-1;i++){
+      int v = A[i];
+      int j = i - 1;
+      while(j>=0 && A[j]>v){
+        A[j+1] = A[j];
+        j--;
+      }
+      A[j+1] = v;
+      cout<<A[0];
+      for(int k=1;k<N;k++){
+          cout<<" "<< A[k] ;
+      }
+      cout<<endl;
+    }
+}

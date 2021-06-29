@@ -1,0 +1,38 @@
+#include<stdio.h>
+//???????????????????????????????????????
+
+int main(){
+
+int N,i,j,k,l,m,v;
+int A[100];
+int count = 0;//???????????°
+
+scanf("%d\n",&N);
+for(i=0;i<=N-1;i++){
+  scanf("%d",&A[i]);
+}
+j=N-1;
+while(j>0){
+  for(k=N-1;k>=1;k--){
+  v=A[k];
+  l=k-1;
+  if(v<A[l]){
+    A[k]=A[l];
+    A[l]=v;
+    count++;
+  }
+  }
+j--;
+}
+for(m=0;m<=N-1;m++){
+  if(m>0){
+    printf(" ");
+  }
+  printf("%d",A[m]);
+  if(m==N-1){
+    printf("\n");
+  }
+}
+printf("%d\n",count);
+return 0;
+}

@@ -1,0 +1,137 @@
+	//	?????????????????????
+#include <stdio.h>
+#include <string.h>
+
+#define DEF_ELEM_MAX 100000
+
+typedef long long llong;
+
+typedef struct _CARD {
+	char mark;
+	int  value;
+} CARD;
+
+CARD A[DEF_ELEM_MAX];
+CARD O[DEF_ELEM_MAX];
+int N;
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+void swap(CARD *x, CARD *y)
+{
+	CARD tmp = *x;
+	*x = *y;
+	*y = tmp;
+	return;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+int partition(CARD *A, int p, int r)
+{
+	int j;
+	int x = A[r].value;
+	int i = p-1;
+
+	for ( j = p ; j < r ; j++ ) {
+		if ( A[j].value <= x ) {
+			i++;
+			swap(&A[i], &A[j]);
+		}
+	}
+	swap(&A[i+1], &A[r]);
+	return i+1;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+void quickSort(CARD *A, int p, int r)
+{
+	int q;
+	if ( p < r ) {
+		q = partition(A, p, r);
+		quickSort(A, p, q-1);
+		quickSort(A, q+1, r);
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+int checkArray(CARD *in_A, CARD out_A, int c)
+{
+	int j;
+	int d = 0;
+	for (j = 0; j < N; j++) {
+		if (in_A[j].value == out_A.value) {
+			if (c == d) {
+				if (in_A[j].mark != out_A.mark) {
+					return 0;
+				}
+				break;
+			}
+			d++;
+		}
+	}
+	return 1;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+int isStable(CARD *in_A, CARD *out_A)
+{
+	int i, j, a, b;
+	int c;
+	for ( i = 0 ; i < N ; i++ ) {
+		if ( i == 0 ) {
+			c = 0;
+		} else if ( out_A[i].value == out_A[i-1].value ) {
+			c++;
+		} else {
+			c = 0;
+		}
+		if ( checkArray( in_A, out_A[i], c ) == 0 ) {
+			return 0;
+		}
+	}
+	return 1;
+}
+////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+void printStable(CARD *in_A, CARD *out_A, int N)
+{
+	int flag = 0;
+
+	flag = isStable( in_A, out_A);
+
+	printf("%s\n", ((flag == 1) ? "Stable" : "Not stable"));
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+/////////////////////////////////////////////////////////////////////////////////
+int main(void)
+{
+	int i;
+//
+	scanf("%d", &N);
+	for ( i = 0 ; i < N ; i++ ) {
+		scanf(" %c %d", &A[i].mark, &A[i].value );
+		O[i] = A[i];
+	}
+
+	quickSort(A, 0, N-1);
+
+	printStable(O, A, N);
+
+	for ( i = 0 ; i < N ; i++ ) {
+		printf("%c %d\n", A[i].mark, A[i].value);
+	}
+
+	return 0;
+}

@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define N 100
+
+int main(void)
+{
+	int i,n,j,t,k,minj,A[N],fmin;
+	int count=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d",&A[i]);
+		
+	for(i=0;i<n;i++){
+		minj=i;
+		fmin=minj;
+		for(j=i;j<n;j++){
+			if(A[j]<A[minj])
+				minj=j;
+		}
+		t=A[i];
+		A[i]=A[minj];
+		A[minj]=t;
+		if(fmin!=minj)//minj??????????????´???????????????
+		count++;//???????????°???1?¢???????
+		
+	}
+
+	for(k=0;k<n-1;k++)
+	printf("%d ",A[k]);
+	
+	printf("%d\n",A[k]);	
+	printf("%d\n",count);
+	
+	return 0;
+}

@@ -1,7 +1,7 @@
 import os
 
 no = 6
-cnt = {"Bubble": 0, "Insertion": 0, "Selection": 0, "Counting": 0, "Merge": 0, "Quick": 0}
+cnt = {"Linear": 0, "Binary": 0, "BFS": 0, "DFS": 0}
 f1 = open('train.txt')
 f2 = open('valid.txt')
 f3 = open('test.txt')
@@ -16,72 +16,50 @@ with open('log.txt', 'w') as f:
                     file_path = os.path.join(lang_path, file)
                     print(file_path)
                     f.write(file_path+"\n")
-                    if algo == 'Bubble':
+                    if algo == 'Linear':
                         f1.write(str(count)+"\t0\n")
                         f2.write(str(count)+"\t0\n")
                         f3.write(str(count)+"\t0\n")
-                        cnt["Bubble"] += 1
-                        if cnt["Bubble"] % no == 0:
-                            os.system('echo -n "0<CODESPLIT>Bubble Sort<CODESPLIT>" >> data.txt')
+                        cnt["Linear"] += 1
+                        if cnt["Linear"] % no == 0:
+                            os.system('echo -n "0<CODESPLIT>Linear Search<CODESPLIT>" >> data.txt')
                             cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
                             os.system(cmd)
                             continue
-                        os.system('echo -n "0<CODESPLIT>Bubble Sort<CODESPLIT>" >> data.txt')
-                    elif algo == 'Insertion':
+                        os.system('echo -n "0<CODESPLIT>Linaer Search<CODESPLIT>" >> data.txt')
+                    elif algo == 'Binary':
                         f1.write(str(count)+"\t1\n")
                         f2.write(str(count)+"\t1\n")
                         f3.write(str(count)+"\t1\n")
-                        cnt["Insertion"] += 1
-                        if cnt["Insertion"] % no == 0:
-                            os.system('echo -n "1<CODESPLIT>Insertion Sort<CODESPLIT>" >> data.txt')
+                        cnt["Binary"] += 1
+                        if cnt["Binary"] % no == 0:
+                            os.system('echo -n "1<CODESPLIT>Binary Search<CODESPLIT>" >> data.txt')
                             cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
                             os.system(cmd)
                             continue
-                        os.system('echo -n "1<CODESPLIT>Insertion Sort<CODESPLIT>" >> data.txt')
-                    elif algo == 'Selection':
+                        os.system('echo -n "1<CODESPLIT>Binary Search<CODESPLIT>" >> data.txt')
+                    elif algo == 'BFS':
                         f1.write(str(count)+"\t2\n")
                         f2.write(str(count)+"\t2\n")
                         f3.write(str(count)+"\t2\n")
-                        cnt["Selection"] += 1
-                        if cnt["Selection"] % no == 0:
-                            os.system('echo -n "2<CODESPLIT>Selection Sort<CODESPLIT>" >> data.txt')
+                        cnt["BFS"] += 1
+                        if cnt["BFS"] % no == 0:
+                            os.system('echo -n "2<CODESPLIT>BFS<CODESPLIT>" >> data.txt')
                             cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
                             os.system(cmd)
                             continue
-                        os.system('echo -n "2<CODESPLIT>Selection Sort<CODESPLIT>" >> data.txt')
-                    elif algo == 'Counting':
+                        os.system('echo -n "2<CODESPLIT>BFS<CODESPLIT>" >> data.txt')
+                    elif algo == 'DFS':
                         f1.write(str(count)+"\t3\n")
                         f2.write(str(count)+"\t3\n")
                         f3.write(str(count)+"\t3\n")
-                        cnt["Counting"] += 1
-                        if cnt["Counting"] % no  == 0:
-                            os.system('echo -n "3<CODESPLIT>Counting Sort<CODESPLIT>" >> data.txt')
+                        cnt["DFS"] += 1
+                        if cnt["DFS"] % no  == 0:
+                            os.system('echo -n "3<CODESPLIT>DFS<CODESPLIT>" >> data.txt')
                             cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
                             os.system(cmd)
                             continue
-                        os.system('echo -n "3<CODESPLIT>Counting Sort<CODESPLIT>" >> data.txt')
-                    elif algo == 'Merge':
-                        f1.write(str(count)+"\t4\n")
-                        f2.write(str(count)+"\t4\n")
-                        f3.write(str(count)+"\t4\n")
-                        cnt["Merge"] += 1
-                        if cnt["Merge"] % no == 0:
-                            os.system('echo -n "4<CODESPLIT>Merge Sort<CODESPLIT>" >> data.txt')
-                            cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
-                            os.system(cmd)
-                            continue
-                        os.system('echo -n "4<CODESPLIT>Merge Sort<CODESPLIT>" >> data.txt')
-                    elif algo == 'Quick':
-                        f1.write(str(count)+"\t5\n")
-                        f2.write(str(count)+"\t5\n")
-                        f3.write(str(count)+"\t5\n")
-                        cnt["Quick"] += 1
-                        if cnt["Quick"] % no == 0:
-                            os.system('echo -n "5<CODESPLIT>Quick Sort<CODESPLIT>" >> data.txt')
-                            cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
-                            os.system(cmd)
-                            continue
-                        os.system('echo -n "5<CODESPLIT>Quick Sort<CODESPLIT>" >> data.txt')
+                        os.system('echo -n "3<CODESPLIT>DFS<CODESPLIT>" >> data.txt')
 
                     cmd = 'python tokenizer.py ' + file_path + '>> data.txt'
                     os.system(cmd)

@@ -1,10 +1,3 @@
-# algorithm-identification
-
-Algorithm Identification in Source Code of Programming Assignments
-
-Design a system which takes source code which is known to carry out a given functionality (e.g. sorting) as input, and identify algorithm used among a known set of algorithms for this functionality as output
-
-## Folder Structure:
 MTP
  |-- Execution: Time & Memory Analysis
        |-- Code: Sorting algorithms codes
@@ -70,4 +63,20 @@ MTP
         |-- Prediction: Contains prediction scores from SVM algorithm
         |-- pycparser: C Parser for parsing codes
         
- 
+ |-- BERT: Contains code for CodeBERT & GraphCodeBERT deep learning Models
+        |-- Data_Dump: Contains raw data which is crawled from AIZU Online judge
+        |-- data: Contains data splits for training, testing and validation
+        |-- CodeBERT/codesearch: Contains code related to CodeBERT models (multi-class classification)
+                |-- explain.py: Script using transformer-interpret library for explanantion
+                |-- pred.sh: Script for performing predictions
+                |-- run_classifier.py: CodeBERT model code
+                |-- run.sh: Script for performing training
+                |-- utils.py: Utility scripts for CodeBERT
+        |-- GraphCodeBERT/clonedetection: Contains code related to CodeBERT models (multi-class classification)
+                |-- parser: Contains codes and library for converting code into DFG (using tree-sitter) 
+                |-- data_split.py: Split data into training and test splits
+                |-- models.py: GraphCodeBERT models using Huggingface library 
+                |-- pred.sh: Script for performing predictions
+                |-- run.py: CodeBERT model code
+                |-- run.sh: Script for performing training
+                

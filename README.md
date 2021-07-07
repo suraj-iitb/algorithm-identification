@@ -19,7 +19,7 @@ There are various approaches which we have explored for this problem which is me
 ### Execution Information (All paths are relative to MTP/Execution/)
 **Requirements**: valgrind, matplotlib
 
-**Note**: See code and change parameters like path etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**) etc.
 
 
     1. Put the code you want to analyze into `Code` folder
@@ -28,7 +28,7 @@ There are various approaches which we have explored for this problem which is me
     3. Generate input to code using script `gen-input.py` in `Input` folder
     4. For runtime info for each algorithm independently over multiple runs:
         1. Get runtime info
-            $ bash time.sh
+            $ bash time.sh <output_filename>
         2. Preprocess runtime dump info
             $ python preprocess.py
         3. Generate plots for each algorithm seperately
@@ -59,7 +59,7 @@ There are various approaches which we have explored for this problem which is me
 ### MOSS (All paths are relative to MTP/MOSS/)
 **Requirements**: mosspy, requests
 
-**Note**: See code and change parameters like path etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**) etc.
 
     1. Crawl id's of the codes
         $ python crawl-id.py
@@ -83,7 +83,7 @@ There are various approaches which we have explored for this problem which is me
 ### Tree Kernel (All paths are relative to MTP/Tree-Kernels/)
 **Requirements**: sklearn
 
-**Note**: See code and change parameters like path etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**) etc.
 
     1. Generate AST
         $ cd pycparser
@@ -108,7 +108,7 @@ There are various approaches which we have explored for this problem which is me
 3. joern-cli (https://docs.joern.io/installation/)
 4. graph-easy (http://manpages.ubuntu.com/manpages/artful/man1/graph-easy.1p.html)
 
-**Note**: See code and change parameters like path etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**) etc.
 
     1. Generate CFG
         $ python cfg-generator.py
@@ -126,7 +126,7 @@ There are various approaches which we have explored for this problem which is me
 1. See requirements.txt file
 2. GPU is a must
 
-**Note**: See code and change parameters like path, language etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**), language etc.
 
     1. Crawl the dataset (Run once for each algorithm by changing the parameters like problem id and language by looking at AIZU online judge at https://judge.u-aizu.ac.jp/onlinejudge/finder.jsp?course=ALDS1)
         $ python crawl-id.py
@@ -160,7 +160,7 @@ There are various approaches which we have explored for this problem which is me
 1. See requirements.txt file
 2. GPU is a must
 
-**Note**: See code and change parameters like path, language etc.
+**Note**: See code and change parameters like path (**give path where code is crawled**), language etc.
 
     1. Crawl the dataset if not done already (Run once for each algorithm by changing the parameters like problem id and language by looking at AIZU online judge at https://judge.u-aizu.ac.jp/onlinejudge/finder.jsp?course=ALDS1)
         $ python crawl-id.py
@@ -197,7 +197,8 @@ We have explored 2 model explainability methods (these methods works at exmaple 
 
 ## Few common pitfalls:
 1. While crawling data if network error occurs then restart crawling from that point onwards (It is very frequent error while crawling data). 
-2. While running moss, sometimes when we are in IITB network we are unable to contact moss server so make sure to use mobile network.
-3. While running CodeBERT and GraphCodeBERT on server always login into internet.iitb.ac.in as it downloads models, tokenizer and config files from huggingface library.
+2. Some data crawled may be invalid (eg: it is a C code and contains C++ related stuff like headers etc)
+3. While running moss, sometimes when we are in IITB network we are unable to contact moss server so make sure to use mobile network.
+4. While running CodeBERT and GraphCodeBERT on server always login into internet.iitb.ac.in as it downloads models, tokenizer and config files from huggingface library.
 
 

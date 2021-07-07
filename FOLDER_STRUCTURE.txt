@@ -62,6 +62,11 @@ MTP
         |-- Models: Contains trained binary classification model using SVM and tree kernel
         |-- Prediction: Contains prediction scores from SVM algorithm
         |-- pycparser: C Parser for parsing codes
+        |-- svm-light-TK-1.5: SVM implementation with tree kernel along with custom scripts for multi-class classification
+                |-- classify.py: Testing predictions script
+                |-- learn.py: Training script using SVM
+                |-- multi-class.py: Multiclass classification script using one vs one technique
+                |-- metrics.py: Metrics like precison & recall calculation script 
         
  |-- BERT: Contains code for CodeBERT & GraphCodeBERT deep learning Models
         |-- Data_Dump: Contains raw data which is crawled from AIZU Online judge

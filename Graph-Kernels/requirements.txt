@@ -10,7 +10,7 @@ lime==0.2.0.1
 matplotlib==3.4.2
 networkx==2.5.1
 nose==1.3.7
-numpy==1.19.2
+numpy==1.22.0
 Pillow==8.2.0
 pyparsing==2.4.7
 python-dateutil==2.8.1
